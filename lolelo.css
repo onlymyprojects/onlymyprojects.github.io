@@ -1,0 +1,62 @@
+body{
+    padding:0;
+	margin:0;
+}
+#title big{
+	font-size: 135px;
+	color: white;
+	font-variant: small-caps;
+	font-weight: bold;
+	vertical-align: -250px;
+	font-family: 'Russo One', sans-serif;
+}
+header{
+	width: 100%;
+	height: 600px;
+	background: url(img/lo.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#movies{
+    text-align:center;
+	vertical-align:-350px;
+	color:orange;
+	font-family: 'Patua One', cursive;
+	font-size:50px;
+}
+#list-of{
+    font-size: 75px;
+    font-family: 'algerian' , sans-serif;
+    text-align: center;
+}
+#arrow{
+	vertical-align:-400px;
+	font-size:50px;
+}
+#fm{
+	width: 123px;
+	height: 123px;
+}
+#fm2{
+	width: 123px;
+	height: 123px;
+	margin-left: 120px;
+}
+#fm3{
+	width: 123px;
+	height: 123px;
+	margin-left: 120px;
+}
+#fm4{
+	width: 123px;
+	height: 123px;
+}
+#fm5{
+	width: 123px;
+	height: 123px;
+	margin-left: 120px;
+}
+.fm45{
+	margin-top: 60px;
+}
