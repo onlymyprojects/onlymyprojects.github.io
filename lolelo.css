@@ -12,7 +12,7 @@ body{
 }
 header{
 	width: 100%;
-	height: 600px;
+	height: 650px;
 	background: url(img/lo.png);
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -29,6 +29,8 @@ header{
     font-size: 75px;
     font-family: 'Faster One', cursive;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 #arrow{
 	vertical-align:-400px;
@@ -60,6 +62,56 @@ header{
 .fm45{
 	margin-top: 60px;
 }
-#downbutt{
+section{
+    width: 100%;
+    height: 100%;
+	background: url(img/b-fon.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.downbutt:link {
 	text-decoration: none;
+}
+.lolelo{
+	border: 2px solid red;
+    margin: 0px;
+	padding: 0px;
+	margin-top: 20px;
+	width: 170px;
+	height: 50px;
+	border-radius: 10px;
+	color: white;
+	background-color: red;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 30px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.lo{
+	margin-left: 50px;
+}
+.lolelo:hover {
+    background-color: rgb(220, 0, 0);
+    color: white;
+	cursor: pointer;
+}
+#super-title{
+	position: absolute;
+	font-size: 30px;
+	margin: 0px;
+	margin-top: 15px;
+	text-indent: 70px;
+	text-decoration: underline;
+	float: left;
+	font-family: 'Pangolin', cursive;
+}
+#article{
+	width: 350px;
+	height: 380px;
+	float: left;
+	overflow: scroll;
+	text-align: center;
+	margin-left: 50px;
+	margin-top: 60px;
 }
