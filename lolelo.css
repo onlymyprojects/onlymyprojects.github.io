@@ -71,14 +71,14 @@ section{
 }
 .lolelo{
 	border: 2px solid red;
-    margin: 0px;
+        margin: 0px;
 	padding: 0px;
 	margin-top: 20px;
 	width: 140px;
 	height: 40px;
 	border-radius: 10px;
 	color: white;
-	background-color: blue;
+	background-color: red;
 	font-family: 'Do Hyeon', sans-serif;
 	font-size: 25px;
 	-webkit-transition: 0.5s;
@@ -126,4 +126,8 @@ section{
 	background-size: cover;
 }
 
+.lolelo{
+	backgroun-color: yellow;
+}
+	
 }
