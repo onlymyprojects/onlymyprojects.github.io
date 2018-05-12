@@ -163,8 +163,8 @@ section{
 	
 	#arrow{
 	vertical-align:-90px;
-	width: 10px;
-	height: 10px;
+	width: 3px;
+	height: 3px;
 	
 }
 	
@@ -181,10 +181,10 @@ section{
 
 	#article{
 	width: 330px;
-	height: 100px;
+	height: 305px;
 	float: left;
 	overflow: scroll;
-	text-align: center;
+	
 	margin-top: 60px;
 }
 }
