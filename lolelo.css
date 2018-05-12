@@ -166,4 +166,24 @@ section{
 	font-size:10px;
 	
 }
+	
+	#super-title{
+	position: absolute;
+	font-size: 30px;
+	margin: 0px;
+	margin-top: 15px;
+	text-align: center;
+	text-decoration: underline;
+	float: left;
+	font-family: 'Pangolin', cursive;
+}
+
+	#article{
+	width: 330px;
+	height: 305px;
+	float: left;
+	overflow: scroll;
+	text-align: center;
+	margin-top: 60px;
+}
 }
