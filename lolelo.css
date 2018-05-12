@@ -115,7 +115,7 @@ section{
 	margin-top: 60px;
 }
 
-@media only screen and (max-device-width : 480px) {
+@media only screen and (max-device-width : 600px) {
 
     header{
 	width: 100%;
