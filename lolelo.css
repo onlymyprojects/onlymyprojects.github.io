@@ -131,8 +131,8 @@ section{
         margin: 0px;
 	padding: 0px;
 	margin-top: 20px;
-	width: 140px;
-	height: 40px;
+	width: 100px;
+	height: 20px;
 	border-radius: 10px;
 	color: white;
 	background-color: blue;
@@ -162,7 +162,7 @@ section{
 }
 	
 	#arrow{
-	vertical-align:-90px;
+	vertical-align:-20px;
 	width: 3px;
 	height: 3px;
 	
