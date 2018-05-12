@@ -142,4 +142,12 @@ section{
 	transition: 0.5s;
 }
 	
+	#title big{
+	font-size: 13px;
+	color: white;
+	font-variant: small-caps;
+	font-weight: bold;
+	vertical-align: -150px;
+	font-family: 'Russo One', sans-serif;
+	
 }
