@@ -170,19 +170,18 @@ section{
 	
 	#super-title{
 	position: absolute;
-	font-size: 25px;
+	font-size: 30px;
 	margin: 0px;
 	margin-top: 15px;
 	text-align: center;
 	text-decoration: underline;
-	float: left;
 	font-family: 'Pangolin', cursive;
 }
 
 	#article{
 	width: 300px;
 	height: 305px;
-	float: left;
+        text-align: center;
 	overflow: scroll;
 	mrgin: 0px;
 	margin-top: 60px;
