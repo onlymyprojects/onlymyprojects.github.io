@@ -186,4 +186,35 @@ section{
 	mrgin: 0px;
 	margin-top: 60px;
 }
+	
+	#list-of{
+    font-size: 50px;
+    font-family: 'Faster One', cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+	
+	.fmm{
+	width: 70px;
+	height: 70px;
+}
+#fm{
+	margin-left: 25px;
+}
+#fm2{
+	margin-left: 100px;
+}
+#fm3{
+	margin-left: 100px;
+}
+#fm4{
+	margin-left: 128px;
+}
+#fm5{
+	margin-left: 100px;
+}
+.fm45{
+	margin-top: 30px;
+}
 }
