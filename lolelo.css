@@ -182,25 +182,28 @@ section{
 }
 
 	#article{
-	width: 300px;
+	width: 320px;
 	height: 305px;
         text-align: center;
 	overflow: scroll;
 	margin: 0px;
 	margin-top: 60px;
+	-webkit-align-content: center;
+	align-content: center;
 }
 	
 	#list-of{
     font-size: 35px;
     font-family: 'Faster One', cursive;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
 }
 	
 	.fmm{
 	width: 70px;
 	height: 70px;
+	margin: 0px;
 }
 #fm2{
 	margin-left: 20px;
