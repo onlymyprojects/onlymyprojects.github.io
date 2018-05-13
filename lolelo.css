@@ -170,13 +170,12 @@ section{
 }
 	
 	#super-title{
-	
 	position: absolute;
 	font-size: 30px;
 	margin: 0px;
 	margin-top: 15px;
 	float: left;
-	text-align: center;
+	text-align: ;
 	text-decoration: underline;
 	font-family: 'Pangolin', cursive;
 }
@@ -188,8 +187,6 @@ section{
 	overflow: scroll;
 	margin: 0px;
 	margin-top: 60px;
-	-webkit-align-content: center;
-	align-content: center;
 }
 	
 	#list-of{
@@ -219,6 +216,7 @@ section{
 }
 	
 	.allbutt{
-		
+	margin: 0px;
+	padding: 0px;
 }
 }
