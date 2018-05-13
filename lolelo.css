@@ -188,7 +188,7 @@ section{
 }
 	
 	#list-of{
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Faster One', cursive;
     margin: 0;
     padding: 0;
@@ -200,13 +200,13 @@ section{
 	height: 70px;
 }
 #fm2{
-	margin-left: 40px;
+	margin-left: 20px;
 }
 #fm3{
-	margin-left: 40px;
+	margin-left: 20px;
 }
 #fm5{
-	margin-left: 40px;
+	margin-left: 20px;
 }
 .fm45{
 	margin-top: 30px;
