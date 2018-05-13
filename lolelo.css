@@ -140,6 +140,7 @@ section{
 	font-size: 25px;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
+	align-content: center;
 }
 	
 	#title big{
@@ -188,7 +189,7 @@ section{
 }
 	
 	#list-of{
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Faster One', cursive;
     margin: 0;
     padding: 0;
@@ -209,6 +210,10 @@ section{
 	margin-left: 20px;
 }
 .fm45{
-	margin-top: 30px;
+	margin-top: 20px;
+}
+	
+	.allbutt{
+		align-content: center;
 }
 }
