@@ -37,21 +37,20 @@ section{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.super-title{
-	position: relative;
+.sp{
 	font-size: 30px;
 	margin-top: 15px;
-	text-indent: 190px;
+	text-align: center;
 	text-decoration: underline;
 	font-family: 'Pangolin', cursive;
+	margin-left: 155px;
 }
 .article{
-	height: 305px;
 	width: 350px;
-	float: left;
+	height: 305px;
+	overflow: scroll;
+	margin-left: 175px;
 	text-align: center;
-	overflow-y: scroll; 
-	margin-left: 180px;
 }
 .lolelo{
 	border: 2px solid red;
@@ -143,15 +142,21 @@ section{
 	margin-left: auto;
 	margin-right: auto;
 }
-.super-title{
-	margin: 0px;
-	padding: 0px;
-	float: left;
+.sp{
+	margin-left: 0px;
 	font-size: 30px;
 	margin-top: 15px;
+	text-align: center;
 	text-decoration: underline;
 	font-family: 'Pangolin', cursive;
-	margin-left: -170px;
+}
+.article{
+	width: 350px;
+	height: 305px;
+	overflow: scroll;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 .lolelo{
 	border: 2px solid red;
@@ -168,14 +173,6 @@ section{
 }
 .lo{
 	margin-left: 10px;
-}
-.article{
-	height: 305px;
-	width: 350px;
-	float: left;
-	text-align: center;
-	overflow-y: scroll; 
-	margin-left: 4px;
 }
 #list-of{
     font-size: 40px;
@@ -203,28 +200,6 @@ section{
 	margin-top: 30px;
 }
 .ad-al{
-	margin-right: auto;
-	margin-left: auto;
-}
-}
-
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
-	.super-title{
-	margin: 0px;
-	padding: 0px;
-	float: left;
-	font-size: 30px;
-	margin-top: 15px;
-	text-decoration: underline;
-	font-family: 'Pangolin', cursive;
-	margin-left: -160px;
-}
-.article{
-	height: 305px;
-	width: 350px;
-	float: left;
 	text-align: center;
-	overflow-y: scroll; 
-	margin-left: 12px;
 }
 }
