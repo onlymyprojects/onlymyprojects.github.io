@@ -36,21 +36,22 @@ section{
 	background-image: url(img/b-fon.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed; 
 }
 .sp{
 	font-size: 30px;
 	margin-top: 15px;
-	text-align: center;
+	text-align: right;
 	text-decoration: underline;
 	font-family: 'Pangolin', cursive;
-	margin-left: 155px;
+	margin-right: 20px;
 }
 .article{
+	text-align: center;
 	width: 350px;
 	height: 305px;
 	overflow: scroll;
-	margin-left: 175px;
-	text-align: center;
+	float: right;
 }
 .lolelo{
 	border: 2px solid red;
@@ -105,6 +106,14 @@ section{
 .downbutt:link {
 	text-decoration: none;
 }
+.all{
+	width: 75%;
+	height: 400px;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 /*---------------------------------Адаптация-------------------------------------*/
 
@@ -143,17 +152,18 @@ section{
 	margin-right: auto;
 }
 .sp{
-	margin-left: 0px;
-	font-size: 30px;
+	margin-right: 0px;
+	font-size: 27px;
 	margin-top: 15px;
 	text-align: center;
 	text-decoration: underline;
 	font-family: 'Pangolin', cursive;
 }
 .article{
-	width: 350px;
+	width: 300px;
 	height: 305px;
 	overflow: scroll;
+	float: none;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -161,13 +171,13 @@ section{
 .lolelo{
 	border: 2px solid red;
 	margin-top: 20px;
-	width: 108px;
+	width: 95px;
 	height: 40px;
 	border-radius: 10px;
 	color: white;
 	background-color: red;
 	font-family: 'Do Hyeon', sans-serif;
-	font-size: 19px;
+	font-size: 16.5px;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
@@ -175,14 +185,14 @@ section{
 	margin-left: 10px;
 }
 #list-of{
-    font-size: 40px;
+    font-size: 36px;
     font-family: 'Faster One', cursive;
     margin: 0;
     padding: 0;
 }
 .fmm{
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 }
 #fm2{
 	margin-left: 50px;
@@ -201,5 +211,12 @@ section{
 }
 .ad-al{
 	text-align: center;
+}
+.all{
+	width: 90%;
+	height: 400px;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
 }
 }
