@@ -108,7 +108,7 @@ section{
 }
 .all{
 	width: 75%;
-	height: 400px;
+	height: 100%;
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
@@ -177,7 +177,7 @@ section{
 	color: white;
 	background-color: red;
 	font-family: 'Do Hyeon', sans-serif;
-	font-size: 16.5px;
+	font-size: 16px;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
@@ -214,7 +214,7 @@ section{
 }
 .all{
 	width: 90%;
-	height: 400px;
+	height: 100%;
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
