@@ -57,7 +57,7 @@ section{
 	position: absolute;
 	border: 2px solid red;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: white;
 	background-color: red;
 	font-family: 'Do Hyeon', sans-serif;
@@ -246,7 +246,7 @@ section{
 	position: absolute;
 	border: 2px solid red;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: white;
 	background-color: red;
 	font-family: 'Do Hyeon', sans-serif;
