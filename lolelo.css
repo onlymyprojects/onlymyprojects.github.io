@@ -54,10 +54,9 @@ section{
 	float: right;
 }
 .lolelo{
+	position: absolute;
 	border: 2px solid red;
-	margin-top: 20px;
-	width: 140px;
-	height: 40px;
+	padding: 5px;
 	border-radius: 10px;
 	color: white;
 	background-color: red;
@@ -65,14 +64,89 @@ section{
 	font-size: 25px;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
+	overflow: hidden;
 }
-.lo{
-	margin-left: 50px;
+.lo1{
+	margin-left: 15px;
+}
+.lo2{
+	padding-right: 25px;
+	padding-left: 25px;
+	margin-left: 190px;
+}
+.lo3{
+	padding-right: 48px;
+	padding-left: 48px;
+	margin-left: 375px;
+}
+.loo{
+	margin-top: 20px;
+}
+.lolelo:link{
+	text-decoration: none;
 }
 .lolelo:hover {
     background-color: #B70B0B;
+    border: 2px solid #B70B0B;
     color: white;
 	cursor: pointer;
+}
+.lo1:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -40px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo1:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo1:active{
+	border: 2px solid #FF4646;
+}
+.lo2:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -60px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo2:hover::before{
+	left: 160px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo2:active{
+	border: 2px solid #FF4646;
+}
+.lo3:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -60px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo3:hover::before{
+	left: 160px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo3:active{
+	border: 2px solid #FF4646;
 }
 .fmm{
 	width: 100px;
@@ -102,6 +176,7 @@ section{
     margin: 0;
     padding: 0;
     text-indent: 10px;
+    margin-top: 35px;
 }
 .downbutt:link {
 	text-decoration: none;
@@ -168,20 +243,102 @@ section{
 	text-align: center;
 }
 .lolelo{
+	position: absolute;
 	border: 2px solid red;
-	margin-top: 20px;
-	width: 95px;
-	height: 30px;
+	padding: 5px;
 	border-radius: 10px;
 	color: white;
 	background-color: red;
 	font-family: 'Do Hyeon', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
+	overflow: hidden;
+	left: 9.6%;
+	top: -25px;
+
 }
-.lo{
-	margin-left: 10px;
+.lo1{
+	margin-left: 0;
+}
+.lo2{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: 100px;
+}
+.lo3{
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-left: 200px;
+}
+.loo{
+	margin-top: 20px;
+}
+.lolelo:link{
+	text-decoration: none;
+}
+.lolelo:hover {
+    background-color: #B70B0B;
+    border: 2px solid #B70B0B;
+    color: white;
+	cursor: pointer;
+}
+.lo1:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -40px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo1:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo1:active{
+	border: 2px solid #FF4646;
+}
+.lo2:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -60px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo2:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo2:active{
+	border: 2px solid #FF4646;
+}
+.lo3:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -60px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo3:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo3:active{
+	border: 2px solid #FF4646;
 }
 #list-of{
     font-size: 36px;
