@@ -188,6 +188,67 @@ section{
 	margin-left: auto;
 	margin-right: auto;
 }
+.nb *{
+	margin: 0;
+	padding: 0;
+}
+.nb-menu ul{
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+.nb-menu ul li a{
+	display: block;
+	background-color: black;
+	color: white;
+	padding: 10px 30px 10px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+.nb-menu ul li{
+	border-right: 1px solid gray;
+}
+.nb-menu ul li:first-child{
+	border-left: 2px solid red;
+}
+.nb-menu ul li:last-child{
+	border-right: 1px solid red;
+}
+.nb-menu ul li a:hover{
+	background-color: gray;
+	box-shadow: 1px 7px 10px -5px black;
+	transition: 0.5s;
+}
+.nb-menu ul li a:active{
+	box-shadow: 1px 5px 10px -5px black;
+	transform: translateY(2px);
+	transition: 0s;
+}
+.nb-menu li ul{
+	position: absolute;
+	min-width: 100px;
+	display: none;
+}
+.nb-menu li ul li{
+	border-bottom: 1px solid gray;
+}
+.nb-menu li ul li a{
+	text-transform: none;
+	font-size: 13px;
+	padding: 10px;
+}
+.nb-menu li ul li:first-child{
+	border-left: 0;
+}
+.nb-menu li ul li:last-child{
+	border-right: 0;
+}
+.nb-menu li:hover ul{
+	display: block;
+	z-index: 10;
+}
 
 
 /*---------------------------------Адаптация-------------------------------------*/
@@ -374,5 +435,21 @@ section{
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
+}
+.nb-menu ul li a{
+	display: block;
+	background-color: black;
+	color: white;
+	padding: 6px;
+	font-size: 11px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+.nb-menu ul{
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	margin-bottom: 0;
 }
 }
