@@ -217,7 +217,6 @@ section{
 	border-left: 2px solid red;
 }
 .nb-menu ul li:last-child{
-	border-right: 0px;
 	border-right: 2px solid red;
 }
 .nb-menu ul li a:hover{
