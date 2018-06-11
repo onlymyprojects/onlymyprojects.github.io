@@ -109,6 +109,7 @@ section{
 }
 .lo1:active{
 	border: 2px solid #FF4646;
+	transition: 0s;
 }
 .lo2:before{
 	content: '';
@@ -128,6 +129,7 @@ section{
 }
 .lo2:active{
 	border: 2px solid #FF4646;
+	transition: 0s;
 }
 .lo3:before{
 	content: '';
@@ -147,6 +149,7 @@ section{
 }
 .lo3:active{
 	border: 2px solid #FF4646;
+	transition: 0s;
 }
 .fmm{
 	width: 100px;
