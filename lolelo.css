@@ -18,7 +18,6 @@ body{
 	font-weight: bold;
 	font-family: 'Russo One', sans-serif;
 	margin-top: 60px;
-
 }
 .cover img{
 	height: 200px;
@@ -203,7 +202,12 @@ section{
 }
 .nb-menu ul li a{
 	display: block;
-	background-color: black;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+    background: #45484d; /* Old browsers */
+    background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 	color: white;
 	padding: 10px 30px 10px 30px;
 	text-decoration: none;
@@ -220,9 +224,22 @@ section{
 	border-right: 2px solid red;
 }
 .nb-menu ul li a:hover{
-	background-color: gray;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+    background: #7d7e7d; /* Old browsers */
+    background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 	box-shadow: 1px 7px 10px -5px black;
+}
+.nb-menu ul li a:after{
+	content: '';
+	position: absolute;
+	opacity: 0;
 	transition: 0.5s;
+}
+.nb-menu ul li a:hover:after{
+	opacity: 1;
 }
 .nb-menu ul li a:active{
 	box-shadow: 1px 5px 10px -5px black;
@@ -256,7 +273,213 @@ section{
 
 /*---------------------------------Адаптация-------------------------------------*/
 
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+@media only screen and (max-device-width : 425px) {
+	*{
+		overflow-x: hidden;
+	}
+	.title{
+	margin: 0px;
+	padding: 0px;
+	font-size: 60px;
+	color: white;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: 'Russo One', sans-serif;
+	margin-top: 10px;
+}
+.cover{
+	max-width: 100%;
+	background: url(img/lo.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.movies{
+	margin: 0px;
+	padding: 0px;
+	color:orange;
+	font-family: 'Patua One', cursive;
+	font-size: 30px;
+}
+.cover img{
+	margin: 0px;
+	padding: 0px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sp{
+	margin-right: 0px;
+	font-size: 32px;
+	margin-top: 15px;
+	text-align: center;
+	text-decoration: underline;
+	font-family: 'Pangolin', cursive;
+}
+.article{
+	width: 330px;
+	height: 315px;
+	overflow: scroll;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.lolelo{
+	position: absolute;
+	border: 2px solid red;
+	padding: 5px;
+	border-radius: 20px;
+	color: white;
+	background-color: red;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 20px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	overflow: hidden;
+	left: 9.6%;
+	top: -25px;
+	margin-top: 27px;
+}
+.lo1{
+	left: 15px;
+}
+.lo2{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: 120px;
+}
+.lo3{
+	padding-right: 35px;
+	padding-left: 35px;
+	margin-left: 245px;
+}
+.loo{
+	margin-top: 20px;
+}
+.lolelo:link{
+	text-decoration: none;
+}
+.lolelo:hover {
+    background-color: #B70B0B;
+    border: 2px solid #B70B0B;
+    color: white;
+	cursor: pointer;
+}
+.lo1:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -40px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo1:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo1:active{
+	border: 2px solid #FF4646;
+}
+.lo2:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -60px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo2:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo2:active{
+	border: 2px solid #FF4646;
+}
+.lo3:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -60px;
+	height:  60px;
+	width: 50px;
+	background: white;
+	transform: skewX(-45deg);
+	opacity: 0;
+}
+.lo3:hover::before{
+	left: 155px;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.lo3:active{
+	border: 2px solid #FF4646;
+}
+#list-of{
+    font-size: 45px;
+    font-family: 'Faster One', cursive;
+    margin-top: 40px;
+    padding: 0;
+}
+.fmm{
+	width: 70px;
+	height: 70px;
+}
+#fm2{
+	margin-left: 50px;
+}
+#fm3{
+	margin-left: 50px;
+}
+#fm4{
+	margin-left: 0px;
+}
+#fm5{
+	margin-left: 50px;
+}
+.fm45{
+	margin-top: 30px;
+}
+.ad-al{
+	text-align: center;
+}
+.all{
+	width: 390px;
+	height: 100%;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nb-menu ul li a{
+	display: block;
+	background-color: black;
+	color: white;
+	padding: 6px;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+.nb-menu ul{
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	margin-bottom: 0;
+}
+}
+
+@media only screen and (max-device-width : 375px) {
+	*{
+		overflow-x: hidden;
+	}
 	.title{
 	margin: 0px;
 	padding: 0px;
@@ -266,7 +489,6 @@ section{
 	font-weight: bold;
 	font-family: 'Russo One', sans-serif;
 	margin-top: 10px;
-
 }
 .cover{
 	max-width: 100%;
@@ -320,7 +542,7 @@ section{
 	overflow: hidden;
 	left: 9.6%;
 	top: -25px;
-
+	margin-top: 27px;
 }
 .lo1{
 	margin-left: 0;
@@ -407,7 +629,7 @@ section{
 #list-of{
     font-size: 36px;
     font-family: 'Faster One', cursive;
-    margin: 0;
+    margin-top: 30px;
     padding: 0;
 }
 .fmm{
@@ -454,5 +676,50 @@ section{
 	list-style: none;
 	justify-content: center;
 	margin-bottom: 0;
+}
+}
+
+@media only screen and (max-device-width : 320px) {
+	*{
+		overflow-x: hidden;
+	}
+	.all{
+	width: 300px;
+	height: 100%;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+   .nb-menu ul li a{
+	display: block;
+	background-color: black;
+	color: white;
+	padding: 6px;
+	font-size: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+    .lo1{
+	left: 20px;
+}
+    .lo2{
+    left: 20px;
+    }
+    .lo3{
+    left: 20px;
+    }
+    #fm{
+    margin-left: 0px;
+    }
+    .title{
+	margin: 0px;
+	padding: 0px;
+	font-size: 45px;
+	color: white;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: 'Russo One', sans-serif;
+	margin-top: 10px;
 }
 }
