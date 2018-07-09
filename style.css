@@ -706,6 +706,13 @@ ul li a {
 	height: 100px;
 	width: 310px;
 }
+.img2 {
+	display: inline-block;
+	height: 270px;
+	background: #F3F3F3;
+	overflow: hidden;
+	margin-right: 20px;
+}
 }
 
 @media only screen and (max-device-width : 320px) {
