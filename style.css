@@ -25,7 +25,7 @@ header .container .row .navbar-default {
 	border: none;
 	margin: 0;
 	padding-top: 40px;
-	margin-right: 90px;
+	margin-left: 3%;
 }
 header .container .row .navbar .container .collapse ul li a:hover {
 	color: #21409a;
@@ -33,6 +33,7 @@ header .container .row .navbar .container .collapse ul li a:hover {
 }
 header .container .row .navbar .container .navbar-header button {
 	margin-bottom: 15px;
+	margin-right: 70px;
 }
 header .lng ul li {
 	list-style: none;
@@ -45,8 +46,8 @@ header .lng ul li a {
 }
 header .lng {
 	float: right;
-	margin-right: 5%;
 	margin-top: -41px;
+	margin-right: 10px;
 }
 #cover-img {
 	background-image: url('cover.jpg');
@@ -56,52 +57,41 @@ header .lng {
 	width: 100%;
 	height: 450px;
 }
-.align {
-	width: 1366px;
-	height: 100%;
-	margin-right: auto;
-	margin-left: auto;
-}
 #fly-title {
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
 	font-size: 110px;
-	text-indent: 60px;
 	margin-top: 15px;
+	text-indent: 10px;
 }
 #flytext {
 	margin: 0;
 	padding: 0;
-	font-size: 22px;
+	font-size: 27px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
 	margin-top: 75px;
 	color: #23409c;
-	margin-left: 515px;
+	margin-left: 465px;
 }
 #flytext2 {
 	float: left;
 	font-size: 27px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-left: 65px;
 	margin-top: 80px;
 	color: #23409c;
+	margin-left: 15px;
 }
 .magazine {
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 }
-.magazine div {
-	width: 286px;
-	height: 415px;
-	margin-left: 30px;
-	border: 1px solid black;
-}
 .magazine img {
 	border: 1px solid grey;
+	width: 100%;
 }
 .magazine p {
 	margin: 0;
@@ -115,20 +105,18 @@ header .lng {
 	#flytext {
 	margin: 0;
 	padding: 0;
-	font-size: 22px;
+	font-size: 27px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-top: 60px;
 	color: #23409c;
 	margin-top: 140px;
-	margin-left: 70px;
+	margin-left: 15px;
 }
 #flytext2 {
 	float: left;
 	font-size: 25px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-left: 70px;
 	margin-top: 120px;
 	color: #23409c;
 }
@@ -140,25 +128,22 @@ header .lng {
 	padding: 0;
 	font-weight: bold;
 	font-size: 80px;
-	text-indent: 65px;
 }
 	#flytext {
 	margin: 0;
 	padding: 0;
-	font-size: 22px;
+	font-size: 27px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-top: 60px;
 	color: #23409c;
 	margin-top: 100px;
-	margin-left: 70px;
+	margin-left: 15px;
 }
 #flytext2 {
 	float: left;
 	font-size: 25px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-left: 70px;
 	margin-top: 120px;
 	color: #23409c;
 }
@@ -170,26 +155,25 @@ header .lng {
 	padding: 0;
 	font-weight: bold;
 	font-size: 50px;
-	text-indent: 65px;
+	text-align: center;
 }
 	#flytext {
 	margin: 0;
 	padding: 0;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-top: 60px;
 	color: #23409c;
 	margin-top: 70px;
-	margin-left: 65px;
+	text-align: center;
 }
 #flytext2 {
 	float: left;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-left: 70px;
-	margin-top: 210px;
+	margin-top: 150px;
 	color: #23409c;
+	text-align: center;
 }
 }
