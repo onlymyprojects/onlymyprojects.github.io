@@ -4,7 +4,7 @@
 header .img {
 	text-align: center;
 	margin-top: 30px;
-	margin-right: 65%;
+	margin-right: 75%;
 	margin-bottom: -80px;
 	padding-right: 100px;
 }
@@ -14,6 +14,8 @@ header .container .row .navbar .container .collapse ul li a {
 	font-weight: bold;
 	color: #21409a;
 	padding-bottom: 20px;
+	padding-top: 80px;
+	margin-top: -20px;
 }
 header .container .row .navbar .container .collapse ul {
 	float: right;
@@ -22,17 +24,17 @@ header .container .row .navbar .container .collapse ul {
 header .container .row .navbar-default {
 	background: transparent;
 	box-shadow: none;
-	border: none;
 	margin: 0;
-	padding-top: 40px;
-	margin-left: 3%;
+	border: none;
+	margin-left: -10%;
 }
 header .container .row .navbar .container .collapse ul li a:hover {
 	color: #21409a;
 	background-color: #cdeaf8;
 }
 header .container .row .navbar .container .navbar-header button {
-	margin-bottom: 15px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	margin-right: 70px;
 }
 header .lng ul li {
@@ -47,7 +49,6 @@ header .lng ul li a {
 header .lng {
 	float: right;
 	margin-top: -41px;
-	margin-right: 10px;
 }
 #cover-img {
 	background-image: url('cover.jpg');
@@ -71,7 +72,7 @@ header .lng {
 	font-size: 27px;
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
-	margin-top: 75px;
+	margin-top: 65px;
 	color: #23409c;
 	margin-left: 465px;
 }
@@ -85,7 +86,6 @@ header .lng {
 	margin-left: 15px;
 }
 .magazine {
-	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 }
@@ -99,7 +99,95 @@ header .lng {
 	font-size: 15px;
 	margin-top: 10px;
 }
+.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 203px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+#img img {
+	width: 150px;
+	height: 75px;
+}
+.prefooter-align {
+	padding-bottom: 30px;
+}
+#intrebari {
+	margin-top: 20px;
+}
+#intrebari p {
+	text-align: center;
+	font-size: 15px;
+}
+#noutati img {
+	width: 40px;
+	height: 40px;
+}
+#noutati p {
+	font-size: 15px;
+}
+footer {
+	background: #4bb6ea;
+	width: 100%;
+	height: 185px;
+}
+#foot1 {
+	float: left;
+	margin-left: 8%;
+	margin-top: 20px;
+	padding-right: 30px;
+}
+.foot p {
+	font-size: 12px;
+}
+.foot p a {
+	color: white;
+}
+#foot2 {
+	float: right;
+	margin-top: 20px;
+	margin-right: 5%;
+}
 
+
+@media screen and (min-width: 1550px) {
+	.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 253px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+}
+
+@media screen and (max-width: 1300px) {
+	.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 160px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+}
+
+@media screen and (max-width: 1050px) {
+	.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 130px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+}
 
 @media screen and (max-width: 991px) {
 	#flytext {
@@ -110,7 +198,7 @@ header .lng {
 	font-family: 'Roboto', sans-serif;
 	color: #23409c;
 	margin-top: 140px;
-	margin-left: 15px;
+	margin-left: 10px;
 }
 #flytext2 {
 	float: left;
@@ -119,6 +207,80 @@ header .lng {
 	font-family: 'Roboto', sans-serif;
 	margin-top: 120px;
 	color: #23409c;
+}
+#cover-img {
+	background-image: url('cover.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 350px;
+}
+}
+
+@media screen and (max-width: 850px) {
+		.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 115px;
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+}
+
+@media screen and (max-width: 767px) {
+	header .lng {
+	float: right;
+	margin-top: -55px;
+}
+header .container .row .navbar .container .collapse ul li a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #21409a;
+	padding-bottom: 20px;
+	padding-top: 40px;
+	margin-top: -20px;
+}
+}
+
+@media screen and (max-width: 750px) {
+		.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 90px;
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+}
+
+@media screen and (max-width: 650px) {
+	#foot1 {
+	float: none;
+	margin-left: 0;
+	margin-top: 20px;
+	padding-right: 0;
+}
+#foot2 {
+	float: none;
+	margin-top: 20px;
+	margin-right: 0;
+}
+}
+
+@media screen and (max-width: 600px) {
+		.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 80px;
+	margin-top: 150px;
+	margin-bottom: 150px;
 }
 }
 
@@ -137,7 +299,7 @@ header .lng {
 	font-family: 'Roboto', sans-serif;
 	color: #23409c;
 	margin-top: 100px;
-	margin-left: 15px;
+	margin-left: 10px;
 }
 #flytext2 {
 	float: left;
@@ -146,6 +308,35 @@ header .lng {
 	font-family: 'Roboto', sans-serif;
 	margin-top: 120px;
 	color: #23409c;
+}
+#cover-img {
+	background-image: url('cover.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 250px;
+}
+	.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 70px;
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+}
+
+@media screen and (max-width: 465px) {
+		.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 60px;
+	margin-top: 150px;
+	margin-bottom: 150px;
 }
 }
 
@@ -166,6 +357,7 @@ header .lng {
 	color: #23409c;
 	margin-top: 70px;
 	text-align: center;
+	margin-left: 10px;
 }
 #flytext2 {
 	float: left;
@@ -175,5 +367,34 @@ header .lng {
 	margin-top: 150px;
 	color: #23409c;
 	text-align: center;
+}
+#cover-img {
+	background-image: url('cover.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 150px;
+}
+	.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 50px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+}
+
+@media screen and (max-width: 365px) {
+		.last {
+	background-image: url('last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 45px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 }
