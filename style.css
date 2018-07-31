@@ -26,7 +26,6 @@ header .container .row .navbar-default {
 	box-shadow: none;
 	margin: 0;
 	border: none;
-	margin-left: -10%;
 }
 header .container .row .navbar .container .collapse ul li a:hover {
 	color: #21409a;
@@ -243,6 +242,10 @@ header .container .row .navbar .container .collapse ul li a {
 	padding-bottom: 20px;
 	padding-top: 40px;
 	margin-top: -20px;
+}
+header .container .row .navbar .container .collapse ul {
+	float: left;
+	margin-right: 0px;
 }
 }
 
