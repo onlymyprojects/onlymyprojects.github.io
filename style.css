@@ -8,7 +8,7 @@ header .img {
 	margin-bottom: -80px;
 	padding-right: 100px;
 }
-header .container .row .navbar .container .collapse ul li a {
+header .row .navbar .container .collapse ul li a {
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -17,37 +17,40 @@ header .container .row .navbar .container .collapse ul li a {
 	padding-top: 80px;
 	margin-top: -20px;
 }
-header .container .row .navbar .container .collapse ul {
+header .row .navbar .container .collapse ul {
 	float: right;
-	margin-right: 60px;
 }
-header .container .row .navbar-default {
+header .row .navbar-default {
 	background: transparent;
 	box-shadow: none;
 	margin: 0;
 	border: none;
+	margin-left: -150px;
+	margin-right: 80px;
 }
-header .container .row .navbar .container .collapse ul li a:hover {
+header .row {
+	padding-right: 0;
+}
+header .row .navbar .container .collapse ul li a:hover {
 	color: #21409a;
 	background-color: #cdeaf8;
 }
-header .container .row .navbar .container .navbar-header button {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	margin-right: 70px;
-}
-header .lng ul li {
-	list-style: none;
-	display: inline-block;
-}
-header .lng ul li a {
+header .limba ul li a {
 	font-size: 15px;
 	font-weight: bold;
 	color: #21409a;
 }
-header .lng {
+header .limba ul li {
+	display: inline-block;
+}
+header .limba {
 	float: right;
-	margin-top: -41px;
+	margin-top: -42px;
+}
+header .row .navbar .container .navbar-header button {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-right: 0;
 }
 #cover-img {
 	background-image: url('cover.jpg');
@@ -230,11 +233,7 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-	header .lng {
-	float: right;
-	margin-top: -55px;
-}
-header .container .row .navbar .container .collapse ul li a {
+header .row .navbar .container .collapse ul li a {
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -243,9 +242,21 @@ header .container .row .navbar .container .collapse ul li a {
 	padding-top: 40px;
 	margin-top: -20px;
 }
-header .container .row .navbar .container .collapse ul {
+header .row .navbar .container .collapse ul {
 	float: left;
 	margin-right: 0px;
+}
+header .row .navbar-default {
+	background: transparent;
+	box-shadow: none;
+	margin: 0;
+	border: none;
+	margin-left: 0;
+	margin-right: 80px;
+}
+header .limba {
+	float: right;
+	margin-top: -45px;
 }
 }
 
@@ -397,7 +408,7 @@ header .container .row .navbar .container .collapse ul {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 45px;
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 70px;
+	margin-bottom: 70px;
 }
 }
