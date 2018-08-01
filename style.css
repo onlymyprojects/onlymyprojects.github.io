@@ -241,6 +241,7 @@ header .row .navbar .container .collapse ul li a {
 	padding-bottom: 20px;
 	padding-top: 40px;
 	margin-top: -20px;
+	padding-right: 100%;
 }
 header .row .navbar .container .collapse ul {
 	float: left;
@@ -257,6 +258,12 @@ header .row .navbar-default {
 header .limba {
 	float: right;
 	margin-top: -45px;
+}
+.magazine div {
+	margin-top: 30px;
+}
+.magazine .m1 {
+	margin-top: 0;
 }
 }
 
