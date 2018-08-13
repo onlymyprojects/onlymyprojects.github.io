@@ -8,7 +8,7 @@ header .img {
 	margin-bottom: -80px;
 	padding-right: 100px;
 }
-header .row .navbar .container .collapse ul li a {
+header .navbar .container .navbar-collapse ul li a {
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -17,10 +17,10 @@ header .row .navbar .container .collapse ul li a {
 	padding-top: 80px;
 	margin-top: -20px;
 }
-header .row .navbar .container .collapse ul {
+header .navbar .container .navbar-collapse ul {
 	float: right;
 }
-header .row .navbar-default {
+header .navbar-default {
 	background: transparent;
 	box-shadow: none;
 	margin: 0;
@@ -28,10 +28,7 @@ header .row .navbar-default {
 	margin-left: -150px;
 	margin-right: 80px;
 }
-header .row {
-	padding-right: 0;
-}
-header .row .navbar .container .collapse ul li a:hover {
+header .navbar .container .navbar-collapse ul li a:hover {
 	color: #21409a;
 	background-color: #cdeaf8;
 }
@@ -47,7 +44,7 @@ header .limba {
 	float: right;
 	margin-top: -42px;
 }
-header .row .navbar .container .navbar-header button {
+header .navbar .container .navbar-header button {
 	margin-top: 40px;
 	margin-bottom: 20px;
 	margin-right: 0;
@@ -233,7 +230,7 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-header .row .navbar .container .collapse ul li a {
+header .navbar .container .navbar-collapse ul li a {
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -241,13 +238,12 @@ header .row .navbar .container .collapse ul li a {
 	padding-bottom: 20px;
 	padding-top: 40px;
 	margin-top: -20px;
-	padding-right: 100%;
 }
-header .row .navbar .container .collapse ul {
+header .navbar .container .navbar-collapse ul {
 	float: left;
 	margin-right: 0px;
 }
-header .row .navbar-default {
+header .navbar-default {
 	background: transparent;
 	box-shadow: none;
 	margin: 0;
