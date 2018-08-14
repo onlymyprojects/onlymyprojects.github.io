@@ -1,0 +1,283 @@
+* {
+	overflow-x: hidden;
+}
+header .img {
+	text-align: center;
+	margin-top: 30px;
+	margin-right: 75%;
+	margin-bottom: -80px;
+	padding-right: 100px;
+}
+header .navbar .container .navbar-collapse ul li a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #21409a;
+	padding-bottom: 20px;
+	padding-top: 80px;
+	margin-top: -20px;
+}
+header .navbar .container .navbar-collapse ul {
+	float: right;
+}
+header .navbar-default {
+	background: transparent;
+	box-shadow: none;
+	margin: 0;
+	border: none;
+	margin-left: -150px;
+	margin-right: 80px;
+}
+header .navbar .container .navbar-collapse ul li a:hover {
+	color: #21409a;
+	background-color: #cdeaf8;
+}
+header .limba ul li a {
+	font-size: 15px;
+	font-weight: bold;
+	color: #21409a;
+}
+header .limba ul li {
+	display: inline-block;
+}
+header .limba {
+	float: right;
+	margin-top: -42px;
+}
+header .navbar .container .navbar-header button {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-right: 0;
+}
+#cover-img {
+	background-image: url('../img/cover-info.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 450px;
+}
+#fly-title {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 110px;
+	margin-top: 15px;
+	margin-left: -8px;
+}
+#flytext {
+	margin: 0;
+	padding: 0;
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 103px;
+	color: #23409c;
+	margin-left: 447px;
+}
+
+.iulie19 {
+	color: #1f419b;
+	font-size: 15px;
+}
+.anul2016 {
+	font-size: 17px;
+	font-weight: 900;
+}
+.conceputa2015 {
+	font-size: 15px;
+}
+.aprilie28 {
+	color: #213f99;
+	font-weight: bold;
+}
+.data p {
+	font-size: 15px;
+}
+.lists ul {
+	margin-top: 30px;
+	float: left;
+	padding-left: 50px;
+}
+.lists ul li {
+	overflow-x: visible;
+	list-style: none;
+}
+.lists ul li::before {
+	content: "•"; 
+	color: red
+}
+.lists ul li::before {
+	content: "•"; 
+	color: #204097;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+#img img {
+	width: 150px;
+	height: 75px;
+}
+.prefooter-align {
+	padding-bottom: 30px;
+	padding-top: 120px;
+}
+#intrebari {
+	margin-top: 20px;
+}
+#intrebari p {
+	text-align: center;
+	font-size: 15px;
+}
+#noutati img {
+	width: 40px;
+	height: 40px;
+}
+#noutati p {
+	font-size: 15px;
+}
+footer {
+	background: #4bb6ea;
+	width: 100%;
+	height: 185px;
+}
+#foot1 {
+	float: left;
+	margin-left: 8%;
+	margin-top: 20px;
+	padding-right: 30px;
+}
+.foot p {
+	font-size: 12px;
+}
+.foot p a {
+	color: white;
+}
+#foot2 {
+	float: right;
+	margin-top: 20px;
+	margin-right: 5%;
+}
+
+
+@media screen and (max-width: 991px) {
+	#flytext {
+	margin: 0;
+	padding: 0;
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	color: #23409c;
+	margin-top: 140px;
+}
+#cover-img {
+	background-image: url('../img/cover-info.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 350px;
+}
+.iulie19 {
+	margin-top: 70px;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+header .navbar .container .navbar-collapse ul li a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #21409a;
+	padding-top: 40px;
+}
+header .navbar .container .navbar-collapse ul {
+	float: left;
+	margin-right: 0px;
+}
+header .navbar-default {
+	background: transparent;
+	box-shadow: none;
+	margin: 0;
+	border: none;
+	margin-left: 0;
+	margin-right: 80px;
+}
+header .limba {
+	float: right;
+	margin-top: -45px;
+}
+}
+
+
+@media screen and (max-width: 650px) {
+	#foot1 {
+	float: none;
+	margin-left: 0;
+	margin-top: 20px;
+	padding-right: 0;
+}
+#foot2 {
+	float: none;
+	margin-top: 20px;
+	margin-right: 0;
+}
+}
+
+
+@media screen and (max-width: 564px) {
+	#fly-title {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 80px;
+}
+	#flytext {
+	margin: 0;
+	padding: 0;
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	color: #23409c;
+	margin-top: 100px;
+	margin-left: 5px;
+}
+#cover-img {
+	background-image: url('../img/cover-info.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 250px;
+}
+}
+
+
+@media screen and (max-width: 394px) {
+	#fly-title {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 50px;
+	text-align: center;
+}
+	#flytext {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	color: #23409c;
+	margin-top: 70px;
+	text-align: center;
+}
+#cover-img {
+	background-image: url('../img/cover-info.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 150px;
+}
+}
