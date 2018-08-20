@@ -97,6 +97,22 @@ header .navbar .container .navbar-header button {
 	color: #23409c;
 	text-decoration: none;
 }
+.post-content .position {
+	margin-left: -13px; 
+	padding-bottom: 50px;
+}
+.post-content .position .icons-1-3 {
+	float: left; 
+	margin-right: 5px;
+}
+.post-content .position .icon-2 {
+	float: left; 
+	margin-right: 5px; 
+	margin-top: 3px;
+}
+.post-content .position .font-size {
+	font-size: 15px;
+}
 
 #img img {
 	width: 150px;
