@@ -1,4 +1,4 @@
-body {
+body{
 	overflow-x: hidden;
 }
 header .img {
@@ -91,7 +91,7 @@ header .navbar .container .navbar-header button {
 	margin-right: 0;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-oferte.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -116,77 +116,56 @@ header .navbar .container .navbar-header button {
 	margin-top: -70px;
 	margin-left: 447px;
 }
-.feedback {
-	font-weight: bold;
+.second-title {
+	font-size: 30px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
 	color: #23409c;
-	font-size: 17px;
+	margin-top: 100px;
+	margin-bottom: -40px;
 }
-.feedback-space {
-	height: 185px; 
-	width: 100%; 
-	border: 1px solid #e2e7e9;
+.voronej {
+	margin-top: 50px;
 }
-
-
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
-  font-family: Arial;
-  border: 1px solid #e2e7e9;
-  border-radius: 10px;
-  margin: auto;
+.voronej img {
+	width: 100%;
 }
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
+.img-text {
+	width: 295px;
+	hyphens: 70px;
+	background: white;
+	margin-top: -73px;
+	position: absolute;
 }
-.select-selected {
-  
+.img-title {
+	font-size: 20px;
+	color: #23409c;
+	margin-top: 5px;
+	font-weight: 600;
+	margin-left: 10px;
 }
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #008ed2 transparent transparent transparent;
+.img-text-color {
+    color: #23409c;
+    float: left;
+    margin-left: 10px;
 }
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #008ed2 transparent;
-  top: 7px;
+.img-text-color-2 {
+	color: #23409c;
+    float: right;
 }
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  padding: 8px 16px;
-  cursor: pointer;
-  user-select: none;
+.euro {
+	margin: 0;
+	font-size: 30px;
+	font-weight: 900;
+	margin-top: -18px;
+	padding-left: 4px;
+	color: #23409c;
+	float: right;
+	margin-right: 5px;
 }
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background: white;
-  border-top: none;
-  border: 1px solid #e2e7e9;
-  border-radius: 10px;
-  height: 250px;
-  overflow-y: scroll;
+.euro sup {
+	font-size: 18px;
 }
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 
 #img img {
 	width: 150px;
@@ -239,6 +218,7 @@ footer {
 }
 
 
+
 @media screen and (max-width: 991px) {
 	header .navbar .container .navbar-collapse ul {
 	float: right;
@@ -262,7 +242,7 @@ header .img {
 	color: #23409c;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-oferte.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -270,7 +250,6 @@ header .img {
 	height: 350px;
 }
 }
-
 
 @media screen and (max-width: 767px) {
 header .navbar .container .navbar-collapse ul li a {
@@ -305,7 +284,6 @@ header .limba {
 }
 }
 
-
 @media screen and (max-width: 650px) {
 	#foot1 {
 	float: none;
@@ -319,7 +297,6 @@ header .limba {
 	margin-right: 0;
 }
 }
-
 
 @media screen and (max-width: 564px) {
 	#fly-title {
@@ -337,7 +314,7 @@ header .limba {
 	color: #23409c;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-oferte.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -366,7 +343,7 @@ header .limba {
 	margin-bottom: -30px;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-oferte.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;

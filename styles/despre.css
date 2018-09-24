@@ -7,7 +7,6 @@ header .img {
 	margin-right: 75%;
 	margin-bottom: -80px;
 	padding-right: 100px;
-	position: relative;
 }
 header .navbar .container .navbar-collapse ul li a {
 	font-size: 15px;
@@ -91,7 +90,7 @@ header .navbar .container .navbar-header button {
 	margin-right: 0;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-info.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -116,78 +115,50 @@ header .navbar .container .navbar-header button {
 	margin-top: -70px;
 	margin-left: 447px;
 }
-.feedback {
-	font-weight: bold;
-	color: #23409c;
+
+.iulie19 {
+	color: #1f419b;
+	font-size: 15px;
+	margin-top: 70px;
+}
+.content-text-bold {
 	font-size: 17px;
+	font-weight: 900;
 }
-.feedback-space {
-	height: 185px; 
-	width: 100%; 
-	border: 1px solid #e2e7e9;
+.conceputa2015 {
+	font-size: 15px;
 }
-
-
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
-  font-family: Arial;
-  border: 1px solid #e2e7e9;
-  border-radius: 10px;
-  margin: auto;
+.aprilie28 {
+	color: #213f99;
+	font-weight: bold;
 }
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
+.data p {
+	font-size: 15px;
 }
-.select-selected {
-  
+.two-rows {
+	min-width: 170px;
+	display: inline-block;
 }
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #008ed2 transparent transparent transparent;
+.lists ul {
+	margin-top: 30px;
+	float: left;
+	padding-left: px;
 }
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #008ed2 transparent;
-  top: 7px;
+.lists ul li {
+	overflow-x: visible;
+	list-style: none;
 }
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  padding: 8px 16px;
-  cursor: pointer;
-  user-select: none;
+.lists ul li::before {
+	content: "•"; 
+	color: red
 }
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background: white;
-  border-top: none;
-  border: 1px solid #e2e7e9;
-  border-radius: 10px;
-  height: 250px;
-  overflow-y: scroll;
+.lists ul li::before {
+	content: "•"; 
+	color: #204097;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-
 #img img {
 	width: 150px;
 	height: 75px;
@@ -244,15 +215,6 @@ footer {
 	float: right;
 	margin-right: 235px;
 }
-header .img {
-	position: absolute;
-	z-index: 1;
-	text-align: center;
-	margin-top: 30px;
-	margin-right: 75%;
-	margin-bottom: -80px;
-	padding-right: 100px;
-}
 	#flytext {
 	margin: 0;
 	padding: 0;
@@ -262,12 +224,15 @@ header .img {
 	color: #23409c;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-info.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
 	width: 100%;
 	height: 350px;
+}
+.iulie19 {
+	margin-top: 70px;
 }
 }
 
@@ -337,7 +302,7 @@ header .limba {
 	color: #23409c;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-info.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -366,7 +331,7 @@ header .limba {
 	margin-bottom: -30px;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover-info.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;

@@ -7,7 +7,6 @@ header .img {
 	margin-right: 75%;
 	margin-bottom: -80px;
 	padding-right: 100px;
-	position: relative;
 }
 header .navbar .container .navbar-collapse ul li a {
 	font-size: 15px;
@@ -91,7 +90,7 @@ header .navbar .container .navbar-header button {
 	margin-right: 0;
 }
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -113,81 +112,30 @@ header .navbar .container .navbar-header button {
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif;
 	color: #23409c;
-	margin-top: -70px;
+	margin-top: -107px;
 	margin-left: 447px;
 }
-.feedback {
-	font-weight: bold;
+#flytext2 {
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 80px;
 	color: #23409c;
-	font-size: 17px;
 }
-.feedback-space {
-	height: 185px; 
-	width: 100%; 
-	border: 1px solid #e2e7e9;
+.magazine {
+	margin-left: -13px;
+	margin-top: 20px;
 }
-
-
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
-  font-family: Arial;
-  border: 1px solid #e2e7e9;
-  border-radius: 10px;
-  margin: auto;
+.magazine img {
+	border: 1px solid grey;
+	width: 100%;
 }
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
+.magazine p {
+	margin: 0;
+	color: #23409c;
+	font-size: 15px;
+	margin-top: 10px;
 }
-.select-selected {
-  
-}
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #008ed2 transparent transparent transparent;
-}
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #008ed2 transparent;
-  top: 7px;
-}
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  padding: 8px 16px;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background: white;
-  border-top: none;
-  border: 1px solid #e2e7e9;
-  border-radius: 10px;
-  height: 250px;
-  overflow-y: scroll;
-}
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-
 #img img {
 	width: 150px;
 	height: 75px;
@@ -239,19 +187,11 @@ footer {
 }
 
 
+
 @media screen and (max-width: 991px) {
 	header .navbar .container .navbar-collapse ul {
 	float: right;
 	margin-right: 235px;
-}
-header .img {
-	position: absolute;
-	z-index: 1;
-	text-align: center;
-	margin-top: 30px;
-	margin-right: 75%;
-	margin-bottom: -80px;
-	padding-right: 100px;
 }
 	#flytext {
 	margin: 0;
@@ -261,8 +201,15 @@ header .img {
 	font-family: 'Roboto', sans-serif;
 	color: #23409c;
 }
+#flytext2 {
+	font-size: 25px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 120px;
+	color: #23409c;
+}
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -303,6 +250,42 @@ header .limba {
 	float: right;
 	margin-top: -45px;
 }
+#fly-title {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 110px;
+	margin-top: 15px;
+	margin-left: -8px;
+	text-align: center;
+}
+#flytext {
+	margin: 0;
+	padding: 0;
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	color: #23409c;
+	text-align: center;
+}
+#flytext2 {
+	font-size: 25px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 120px;
+	color: #23409c;
+	text-align: center;
+}
+.magazine {
+	margin-left: 0px;
+	margin-top: 20px;
+}
+.magazine div {
+	margin-top: 30px;
+}
+.magazine .m1 {
+	margin-top: 0;
+}
 }
 
 
@@ -336,8 +319,15 @@ header .limba {
 	font-family: 'Roboto', sans-serif;
 	color: #23409c;
 }
+#flytext2 {
+	font-size: 25px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 120px;
+	color: #23409c;
+}
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -365,8 +355,16 @@ header .limba {
 	text-align: center;
 	margin-bottom: -30px;
 }
+#flytext2 {
+	font-size: 20px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 150px;
+	color: #23409c;
+	text-align: center;
+}
 #cover-img {
-	background-image: url('../img/cover-contacte.jpg');
+	background-image: url('../img/cover.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
