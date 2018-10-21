@@ -14,6 +14,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Shrikhand" rel="stylesheet">
     <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+    <script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
 </head>
 <body>
 <header>
@@ -51,11 +54,15 @@
          <div class="col-md-12">
           <div class="post-content">
             <p class="feedback">Отзывы:</p>
-
-
-<script type="text/javascript">
-  VK.init({apiId: API_ID, onlyWidgets: true});
-</script>
+            <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="https://onlymyprojects.github.io/feedback.html" data-width="500" data-numposts="10"></div>
 
 <!-- Put this div tag to the place, where the Comments block will be -->
 <div id="vk_comments"></div>
