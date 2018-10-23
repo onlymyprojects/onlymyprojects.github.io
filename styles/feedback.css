@@ -72,6 +72,105 @@ header .container .name {
 	font-family: 'Cuprum', sans-serif;
 	margin-left: 20px;
 }
+.post-content .switcher {
+	margin-left: 20px;
+}
+.post-content .switcher .switcher__input {
+    display: none;
+}
+
+.post-content .switcher .switcher__input:checked + .switcher__label {
+    color: #000;
+}
+
+.post-content .switcher .switcher__input:checked + .switcher__label:before {
+    background-color: #38cae5;
+}
+
+.post-content .switcher .switcher__input:checked + .switcher__label:after {
+    transform: translateX(23px);
+}
+
+.post-content .switcher .switcher__input:checked + .switcher__label:active:after {
+    transform: translateX(12px);
+}
+
+.post-content .switcher .switcher__input:checked + .switcher__label:active:before {
+    background-color: #b4effa;
+}
+.post-content .switcher .switcher__input:checked +  .switcher__label .switcher__text1 {
+	color: #ccc;
+}
+.post-content .switcher .switcher__label {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 50px;
+
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+
+    position: relative;
+
+    transition: color .1s linear;
+}
+.post-content .switcher .switcher__label:before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 22px;
+
+    background-color: #0066FF;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 70px;
+    z-index: 1;
+
+    transition: background-color .1s linear;
+}
+
+.post-content .switcher .switcher__label:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2px;
+    left: 72px;
+    z-index: 2;
+
+    transition: transform .1s linear;
+}
+
+.post-content .switcher .switcher__label:active:after {
+    transform: translateX(12px);
+}
+
+.post-content .switcher .switcher__label:active:before {
+    background-color: #b4effa;
+}
+
+.post-content .switcher .switcher__text2 {
+    line-height: 22px;
+    margin-left: 70px;
+}
+.post-content .switcher .switcher__text1 {
+	position: absolute;
+	left: 0px;
+	color: black;
+}
+.vk {
+	display: none;
+}
+.post-content .switcher .switcher__input:checked + .vk {
+	display: none;
+}
 footer {
 	height: 200px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
