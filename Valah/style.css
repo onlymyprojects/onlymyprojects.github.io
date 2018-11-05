@@ -89,6 +89,7 @@ header .limba .autentificare {
 }
 
 
+/* ----------navbar---------- */
 header .navbar .container .navbar-collapse ul li a {
   color: white;
   text-transform: uppercase;
@@ -156,8 +157,56 @@ header .mouse {
   display: block; 
   margin-top: 8px;
 }
-
-
+.post-content .title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.post-content .title-line {
+  border: 2px solid #2961C1;
+  width: 60px;
+  margin-top: 5px;
+}
+.post-content .row .serv img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 210px;
+}
+.post-content .row .serv1 {
+  background-image: url('img/serv1.jpg');
+}
+.post-content .row .serv2 {
+  background-image: url('img/serv2.jpg');
+}
+.post-content .row .serv3 {
+  background-image: url('img/serv3.jpg');
+}
+.post-content .row .serv {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  border: 2px solid white;
+}
+.post-content .row .serv p {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+.post-content .benef img {
+  margin-top: 50px;
+  float: left;
+  margin-right: 20px;
+}
+.post-content .benef .benef-title {
+  margin-top: 60px;
+  font-size: 19px;
+}
+.post-content .benef .benef-text {
+  margin-left: 84px;
+}
 
 
 
@@ -183,6 +232,7 @@ header .mouse {
 @media screen and (max-width: 674px) {
   header .header-text {
     font-size: 30px;
+    margin-top: 80px;
   }
 }
 
@@ -217,6 +267,7 @@ header .mouse {
 @media screen and (max-width: 513px) {
   header .header-text {
     font-size: 25px;
+    margin-top: 50px;
   }
 }
 
