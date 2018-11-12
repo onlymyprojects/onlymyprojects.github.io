@@ -118,6 +118,7 @@ header .navbar-default {
   border: none;
   box-shadow: none;
   margin-top: 22px;
+  margin-left: -230px;
 }
 header .header-text {
   color: white;
@@ -312,6 +313,9 @@ body .parteners img {
   header .navbar .container .navbar-header button:hover {
     background: white;
     transition: 0.5s;
+  }
+  header .navbar-default {
+    margin-left: 0;
   }
   .post-content .calc1 {
     -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
