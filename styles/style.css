@@ -80,7 +80,7 @@ header .container .name {
   font-size: 40px;
   font-weight: bold;
   font-family: 'Cuprum', sans-serif;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .post-content .title-line {
   border: 2px solid #2961C1;
@@ -91,14 +91,24 @@ header .container .name {
 .post-content .text {
   font-family: 'Source Code Pro', monospace;
   font-size: 16px;
-  margin-right: 20px;
-  float: left;
+}
+.post-content .text2 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
   text-align: left;
+  margin-right: 20px;
+}
+.post-content .text3 {
+  text-align: right;
+  color: white;
+  margin-top: 100px;
 }
 .post-content .first-img {
+	width: 230px;
+	margin-top: 20px;
+}
+.post-content .first-img2 {
 	width: 250px;
-	margin-top: 10px;
-	float: right;
 }
 .post-content .effect {
 	width: 100%;
@@ -188,6 +198,7 @@ footer .container .copyright a {
     .post-content .text {
         float: none;
         text-align: center;
+        margin-right: 20px;
         margin-left: 20px;
 }
 }
