@@ -201,6 +201,9 @@ footer .container .copyright a {
         margin-right: 20px;
         margin-left: 20px;
 }
+.post-content .text3 {
+	margin-top: 30px;
+}
 }
 @media screen and (max-width: 733px) {
 	header .container .name {
