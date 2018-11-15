@@ -3,6 +3,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+
 }
 /*--------------Navbar---------------*/
 header .navbar .container .navbar-collapse ul li a {
@@ -59,6 +60,7 @@ header .container .name {
 	margin-top: 35px;
 	box-shadow: 0px 0px 20px white;
 	border-radius: 25px;
+	margin-left: 0;
 }
 .float-left {
 	float: left;
@@ -94,8 +96,8 @@ header .container .name {
   text-align: left;
 }
 .post-content .first-img {
-	width: 200px;
-	margin-top: 60px;
+	width: 250px;
+	margin-top: 10px;
 	float: right;
 }
 
@@ -160,10 +162,10 @@ footer .container .copyright a {
     	position: absolute;
     }
 	header .container .logo {
-		width: 250px;
+		width: ;
 	}
 	header .container .name {
-	    width: 350px;
+	    width: ;
     }
     .post-content .first-img {
     	float: none;
@@ -186,41 +188,36 @@ footer .container .copyright a {
         margin-left: 20px;
 }
 }
-@media screen and (max-width: 667px) {
-	header .container .logo {
-		width: 200px;
-	}
+@media screen and (max-width: 733px) {
 	header .container .name {
-	    width: 300px;
+	    margin-bottom: 50px;
     }
 }
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 500px) {
 	header .container .logo {
-		width: 150px;
+		width: 250px;
 	}
 	header .container .name {
-	    width: 250px;
+	    width: 350px;
     }
 }
-@media screen and (max-width: 467px) {
+@media screen and (max-width: 425px) {
 	header .container .logo {
-		width: 110px;
+		width: 230px;
 		padding-bottom: 20px;
 	}
 	header .container .name {
-	    width: 210px;
+	    width: 330px;
 	    border-radius: 15px;
 	    margin-top: 0;
     }
 }
-@media screen and (max-width: 367px) {
+@media screen and (max-width: 375px) {
 	header .container .logo {
-		width: 90px;
-		margin-top: -10px;
+		width: 185px;
 		padding-bottom: 20px;
 	}
 	header .container .name {
-	    width: 190px;
-	    margin-top: -10px;
+	    width: 285px;
     }
 }
