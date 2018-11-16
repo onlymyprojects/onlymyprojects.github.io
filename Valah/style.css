@@ -9,6 +9,7 @@ header {
   object-fit: cover;
   object-position: center center;
   z-index: 2;
+  height: 670px;
 }
 @keyframes sliderFadeInOut {
   0% {
@@ -286,6 +287,9 @@ body .parteners img {
   .post-content .map {
     margin-top: 20px;
   }
+  header .header-text {
+    font-size: 32px;
+  }
 }
 
 
@@ -329,6 +333,12 @@ body .parteners img {
     -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
+  header .header-text {
+    margin-top: 100px;
+  }
+  #slider img {
+    height: 590px;
+  }
 }
 
 
@@ -383,6 +393,21 @@ body .parteners img {
   header .header-text {
     font-size: 25px;
     margin-top: 50px;
+  }
+  #slider img {
+    height: 530px;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  #slider img {
+    height: 570px;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  #slider img {
+    height: 600px;
   }
 }
 
