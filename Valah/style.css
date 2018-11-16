@@ -411,7 +411,7 @@ body .parteners img {
   }
 }
 
-@media screen and (max-width: 369px) {
+@media screen and (max-width: 374px) {
   header .broker {
     width: 200px;
     font-size: 13px;
