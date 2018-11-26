@@ -47,54 +47,56 @@
           <div class="post-content">
             <p class="feedback">Отзывы:</p>
 
-            <img src="img/facebook.jpg" id="fb" class="switch-img">
-            <label class="switch">
-              <input type="checkbox">
-              <div class="slider"></div>
-            </label>
-            <img src="img/twitter.jpg" id="tw" class="switch-img" style="opacity: 0.5;">
+            <div style="margin-left: 20px;">
+              <img src="img/facebook.jpg" id="fb" class="switch-img">
+              <label class="switch">
+                <input type="checkbox">
+                <div class="slider"></div>
+              </label>
+              <img src="img/vk.jpg" id="vk" class="switch-img" style="opacity: 0.5;">
+            </div>
             <hr>
 
-            <div style="width: 100%;" class="fb-comments" data-href="https://onlymyprojects.github.io/NothingImposible/feedback.html" data-numposts="10"></div>
+            <div id="fb_comments" class="fb-comments" data-href="https://onlymyprojects.github.io/NothingImposible/feedback.html" data-width="1140" data-numposts="10"></div>
+
+
+
+            <!-- VK -->
+            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+
+            <script type="text/javascript">
+              VK.init({apiId: 6727595, onlyWidgets: true});
+            </script>
+
+            <div id="vk_comments" style="display: none;"></div>
+            <script type="text/javascript">
+              VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+            </script>
+            <!-- VK -->
+
+
+
+
+
+            <!-- Fb -->
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.2';
+              fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <!-- Fb -->
 
 
 
 
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.2';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-
-
-
-
-            <div id="disqus_thread" style="padding-right: 20px; padding-left: 20px;"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-var disqus_config = function () {
-this.page.url = 'https://onlymyprojects.github.io/feedback.html';  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = feedback.html; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://there-is-nothing-imposible.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        
+                    
           </div>
          </div>
         </div>
@@ -108,7 +110,6 @@ s.setAttribute('data-timestamp', +new Date());
 
 
     <script src="js/switch.js"></script>
-    <script id="dsq-count-scr" src="//there-is-nothing-imposible.disqus.com/count.js" async></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

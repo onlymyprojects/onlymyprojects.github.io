@@ -1,16 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
 var checkbox = document.querySelector('input[type="checkbox"]');
+var fb = document.getElementById('fb');
+var vk = document.getElementById('vk');
+var fbComments = document.getElementById('fb_comments');
+var vkComments = document.getElementById('vk_comments');
 
 checkbox.addEventListener('change', function () {
 if (checkbox.checked) {
-document.getElementById('tw').style.opacity = '1';
-document.getElementById('fb').style.opacity = '0.5';
-document.getElementById('tw').style.transition = '0.5s';
-document.getElementById('fb').style.transition = '0.5s';
+vk.style.opacity = '1';
+fb.style.opacity = '0.5';
+vk.style.transition = '0.5s';
+fb.style.transition = '0.5s';
+vkComments.style.display = 'initial';
+fbComments.style.display = 'none';
  console.log('Checked');
 } else {
-document.getElementById('tw').style.opacity = '0.5';
-document.getElementById('fb').style.opacity = '1';
+vk.style.opacity = '0.5';
+fb.style.opacity = '1';
+vkComments.style.display = 'none';
+fbComments.style.display = 'initial';
 console.log('Not checked');
 }
 });
