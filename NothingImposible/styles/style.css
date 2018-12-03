@@ -155,12 +155,13 @@ footer .container .nonagon:hover {
 	transition: 0.5s;
 	transform: rotate(360deg);
 }
-footer .container .copyright {
+footer .container .copyright-content {
 	color: white;
 	margin: 0;
 	margin-top: -5px;
+	margin-left: -280px;
 }
-footer .container .copyright a {
+footer .container .copyright-content a {
 	color: white;
 	text-decoration: underline;
 }
