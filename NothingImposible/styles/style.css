@@ -151,16 +151,15 @@ footer .container a img {
 	border-radius: 30px;
 	padding: 5px;
 }
-footer .container .nonagon:hover {
+footer .nonagon:hover {
 	transition: 0.5s;
 	transform: rotate(360deg);
 }
-footer .container .copyright-content {
+footer .copyright-content {
 	color: white;
 	margin: 0;
-	margin-top: -5px;
 }
-footer .container .copyright-content a {
+footer .copyright-content a {
 	color: white;
 	text-decoration: underline;
 }
