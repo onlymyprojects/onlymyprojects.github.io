@@ -5,9 +5,9 @@
 .logo {
 	position: absolute;
 	height: 8.52359208523592vh;
-	max-height: ; /* 56px */
+	max-height: 56px;
 	object-fit: contain;
-	top: 4.38%;
+	top: 4.5%;
 	left: 2.43%;
 	z-index: 100;
 }
@@ -43,14 +43,19 @@
 	color: #C8A060;
 }
 
+.content {
+	
+}
 .block {
 	width: 45.5vw; /* 660px */
+	min-width: ;
 	height: 62vh; /* 500px */
+	max-height: 500px;
 	position: absolute;
-    left: 11.11%;
-    top: 12.5%;
 	background: linear-gradient(142.85deg, #2E2D2D 0%, #232323 100%);
 	box-shadow: 0 40px 100px -45px black;
+	top: 12.5%;
+	left: 11.11%;
 }
 .title {
 	position: absolute;
@@ -59,31 +64,31 @@
 	color: #C8A060;
 	font-weight: bold;
 	font-family: Playfair Display;
-	top: 20%;
-	left: 9.03%;
+	top: 12%;
+	left: -30px;
 }
 .text {
 	position: absolute;
 	color: #DCDCDC;
 	font-size: 2.5875190258751903vh;
-	left: 9.03%;
-	top: 41.25%;
-	line-height: 3.8051750380517504vh
+	line-height: 3.8051750380517504vh;
+	top: 46.5%;
+	left: -30px;
 }
 .button {
 	color: #232323;
 	background: #C8A060;
 	font-weight: bold;
 	position: absolute;
-    left: 9.03%;
-    top: 57.5%;
     outline: none;
     border: none;
-    width: 21.961932650073205vw; /* 300px */
     height: 9.132420091324201vh;
-    max-height: ; /* 60px */
+    width: 300px;
+    max-height: 60px; /* 60px */
     font-size: 2.5875190258751903vh;
     transition: 0.5s;
+    top: 72.5%;
+    left: -30px;
 }
 .button:hover {
 	background: transparent;
@@ -95,14 +100,14 @@
 	position: absolute;
 	left: 2.43%;
 	height: 4.566210045662101vh;
-	max-height: ; /* 30px */
+	max-height: 30px; /* 30px */
 	object-fit: contain;
 	z-index: 100;
 }
 .copyright {
 	color: #464646;
 	position: absolute;
-	top: 93%;
+	bottom: 2.5%;
 	left: 11.11%;
 	font-size: 1.97869101978691vh;
 	z-index: 100;
@@ -112,7 +117,7 @@
 	bottom: 2.43%;
 	right: 2.43%;
 	height: 10.654490106544902vh;
-	max-height: ; /* 70px */
+	max-height: 70px; /* 70px */
 	object-fit: contain;
 }
 
@@ -236,17 +241,20 @@
 
 @media screen and (min-height: 660px) {
 	.text {
-		font-size: ; /* 17px */
-		line-height: ; /* 25px */
+		font-size: 17px; /* 17px */
+		line-height: 25px; /* 25px */
 	}
 	.title {
-		font-size: ; /* 57px */
-		line-height: ; /* 65px */
+		font-size: 57px; /* 57px */
+		line-height: 65px; /* 65px */
 	}
 	.navbar .navbar-collapse ul li a {
-		font-size: ; /* 13px */
+		font-size: 13px; /* 13px */
 	}
 	.button {
-		font-size: ; /* 17px */
+		font-size: 17px; /* 17px */
+	}
+	.copyright {
+		font-size: 13px;
 	}
 }
