@@ -35,7 +35,7 @@
 }
 .menu-line {
 	position: absolute;
-	border: 0.15220700152207vh solid #C8A060;
+	border: 1px solid #C8A060;
 	top: 50%;
     width: 39px;
 	right: 11.5%;
@@ -44,7 +44,7 @@
 }
 .menu-line2 {
 	position: absolute;
-	border: 0.15220700152207vh solid #C8A060;
+	border: 1px solid #C8A060;
 	top: 50%;
 	width: 80px;
 	right: 57%;
