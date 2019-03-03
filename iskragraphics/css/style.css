@@ -23,20 +23,37 @@
 .navbar .navbar-collapse ul li a {
 	font-size: 1.97869101978691vh;
 	font-weight: bold;
+	z-index: 2;
 }
 .navbar .navbar-collapse ul li .button1 {
 	color: #464646;
 	margin-right: 50px;
+	transition: 0.5s;
 }
 .navbar .navbar-collapse ul li .button2 {
 	color: #C8A060;
-	border-bottom: 1px solid #C8A060;
-	padding-left: 0;
-	padding-right: 0;
-	padding-bottom: 1.06544901065449vh;
+}
+.menu-line {
+	position: absolute;
+	border: 0.15220700152207vh solid #C8A060;
+	top: 50%;
+    width: 39px;
+	right: 11.5%;
+	transition: 0.5s;
+	z-index: 2;
+}
+.menu-line2 {
+	position: absolute;
+	border: 0.15220700152207vh solid #C8A060;
+	top: 50%;
+	width: 80px;
+	right: 57%;
+	transition: 0.5s;
+	z-index: 2;
 }
 .navbar .navbar-collapse ul li .button1:hover{
-	color: #464646;
+	color: #C8A060;
+	transition: 0.5s;
 }
 .navbar .navbar-collapse ul li .button2:hover{
 	color: #C8A060;
@@ -86,7 +103,7 @@
     left: -30px;
 }
 .button:hover {
-	background: transparent;
+	background: #232323;
 	color: #C8A060;
 	border: 1px solid #C8A060;
 	transition: 0.5s;
@@ -120,6 +137,11 @@
 	height: 10.654490106544902vh;
 	max-height: 70px; /* 70px */
 	object-fit: contain;
+	transition: 0.5s;
+}
+.contact:hover {
+	bottom: 3%;
+	transition: 0.5s;
 }
 
 
@@ -207,8 +229,13 @@
 .menu ul .button1 {
 	color: #C8A060;
 }
+.menu ul .button2:hover {
+	color: #C8A060;
+	transition: 0.5s;
+}
 .menu ul .button2 {
 	color: #464646;
+	transition: 0.5s;
 }
 .close-contact {
 	position: absolute;
