@@ -10,46 +10,30 @@ $(document).ready(function() {
 
 
 	$('.instagram').hover(function() {
-		$('.instagram').fadeOut(function() {
-			$(this).attr("src", "img/instagram2.png").fadeIn();
-		});
+		$(this).attr("src", "img/instagram2.png");
 	});
 	$('.instagram').mouseout(function() {
-		$('.instagram').fadeOut(function() {
-			$(this).attr("src", "img/instagram.png").fadeIn();
-		});
+		$(this).attr("src", "img/instagram.png");
 	});
 
 	$('.facebook').hover(function() {
-		$('.facebook').fadeOut(function() {
-			$(this).attr("src", "img/facebook2.png").fadeIn();
-		});
+		$(this).attr("src", "img/facebook2.png");
 	});
 	$('.facebook').mouseout(function() {
-		$('.facebook').fadeOut(function() {
-			$(this).attr("src", "img/facebook.png").fadeIn();
-		});
+		$(this).attr("src", "img/facebook.png");
 	});
 
 	$('.Dribble').hover(function() {
-		$('.Dribble').fadeOut(function() {
-			$(this).attr("src", "img/Dribble2.png").fadeIn();
-		});
+		$(this).attr("src", "img/Dribble2.png");
 	});
 	$('.Dribble').mouseout(function() {
-		$('.Dribble').fadeOut(function() {
-			$(this).attr("src", "img/Dribble.png").fadeIn();
-		});
+		$(this).attr("src", "img/Dribble.png");
 	});
 
 	$('.Behance').hover(function() {
-		$('.Behance').fadeOut(function() {
-			$(this).attr("src", "img/Behance2.png").fadeIn();
-		});
+		$(this).attr("src", "img/Behance2.png");
 	});
 	$('.Behance').mouseout(function() {
-		$('.Behance').fadeOut(function() {
-			$(this).attr("src", "img/Behance.png").fadeIn();
-		});
+		$(this).attr("src", "img/Behance.png");
 	});
 });
