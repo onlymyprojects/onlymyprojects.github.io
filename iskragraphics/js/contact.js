@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$('#contact').click(function(){
-		$('#page-contact').removeClass('contact-animation2');
 		$('#page-contact').removeClass('hide');
 		$('#page-contact').addClass('contact-animation');
     });
@@ -8,7 +7,6 @@ $(document).ready(function() {
 
     $('.close-contact').click(function() {
     	$('#page-contact').removeClass('contact-animation');
-    	$('#page-contact').addClass('contact-animation2');
     	$('#page-contact').addClass('hide');
     });
 

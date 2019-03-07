@@ -7,8 +7,8 @@
 	height: 8.52359208523592vh;
 	max-height: 56px;
 	object-fit: contain;
-	top: 4.5%;
-	left: 2.43%;
+	top: 3.24%;
+	left: 1.82%;
 }
 
 .body .navbar-default {
@@ -16,8 +16,8 @@
 	background: transparent;
 	border: none;
     box-shadow: none;
-    top: 4.38%;
-    right: 2.43%;
+    top: 3.24%;
+    right: 1.82%;
     z-index: 2;
 }
 .navbar .navbar-collapse ul li a {
@@ -84,11 +84,11 @@
 }
 .block {
 	width: 660px;
-	height: 62vh; /* 500px */
+	height: 62vh;
 	max-height: 500px;
 	position: absolute;
 	background: linear-gradient(142.85deg, #2E2D2D 0%, #232323 100%);
-	box-shadow: 0 40px 100px -45px black;
+	box-shadow: 0 60px 90px -70px black;
 	left: 5%;
 	top: 12%;
 }
@@ -117,6 +117,7 @@
 	position: absolute;
     outline: none;
     border: none;
+    border: 1px solid #C8A060;
     height: 9.132420091324201vh;
     width: 300px;
     max-height: 60px; /* 60px */
@@ -128,7 +129,6 @@
 .button:hover {
 	background: #232323;
 	color: #C8A060;
-	border: 1px solid #C8A060;
 	transition: 0.5s;
 }
 .content {
@@ -150,13 +150,12 @@
 }
 .social img {
 	position: absolute;
-	left: 2.43%;
+	left: 1.82%;
 	height: 4.566210045662101vh;
 	max-height: 30px; /* 30px */
-	object-fit: contain;
 }
 .instagram {
-	bottom: 19.12%;
+	bottom: 19.12%
 }
 .facebook {
 	bottom: 14.12%;
@@ -169,9 +168,10 @@
 }
 .copyright {
 	color: #464646;
+	margin: 0;
 	position: absolute;
 	bottom: 2.5%;
-	left: 11.11%;
+	left: 8.33%;
 	font-size: 1.97869101978691vh;
 }
 #contact {
@@ -181,7 +181,7 @@
 	border-radius: 50%;
 	background: #C8A060;
 	bottom: 3%;
-	right: 2.43%;
+	right: 1.82%;
 	transition: 0.5s;
 }
 .contact {
@@ -194,6 +194,7 @@
 }
 #contact:hover {
 	transition: 0.5s;
+	bottom: 4%;
 	box-shadow: 0 6px 15px black;
 }
 
@@ -220,25 +221,6 @@
 .contact-animation {
 	animation: 0.3s contact;
 }
-
-@keyframes contactt {
-	from {
-		width: 100vw;
-		height: 100vh;
-		bottom: 0;
-		right: 0;
-	}
-	to {
-		width: 0;
-	    height: 0;
-	    bottom: 0;
-		right: 0;
-	}
-}
-.contact-animation2 {
-	animation: 0.3s contactt;
-}
-
 
 
 .hide {
@@ -271,8 +253,8 @@
 }
 .menu ul {
 	position: absolute;
-	top: 37.5%;
-	left: 24%;
+	top: 42%;
+	left: 35%;
 	list-style: none;
 }
 .menu ul li a {
@@ -298,8 +280,8 @@
 }
 .close-contact {
 	position: absolute;
-	top: 4.38%;
-	right: 2.43%;
+	right: 2.34%;
+    top: 3.24%;
 	z-index: 100;
 	cursor: pointer;
 	height: 7.610350076103501vh;
@@ -307,8 +289,8 @@
 }
 .form {
 	position: absolute;
-	left: 49%;
-	top: 20%;
+	left: 52%;
+	top: 27%;
 }
 .form-title {
 	margin: 0;
@@ -323,15 +305,14 @@
 	top: 140%;
 }
 .form form p {
-	margin: 0;
-	margin-bottom: -2.2831050228310503vh;
+	position: absolute;
 	font-size: 1.97869101978691vh;
 	color: #C8A060;
-	margin-top: 3vh;
 	opacity: 0;
 }
 .form .input {
 	outline: none;
+	position: absolute;
 	border: none;
 	border-bottom: 1px solid #8C8C8C;
 	background: #F9F9FB;
@@ -349,7 +330,8 @@
 	transition: 0.5s;
 }
 .form .send {
-	margin-top: 10vh;
+	position: absolute;
+	top: 280%;
 	width: 21.961932650073205vw;
 	max-width: 300px;
 	height: 8vh;
@@ -366,6 +348,7 @@
 	color: white;
 	background: #C8A060;
 	border: none;
+	border: 1px solid #C8A060;
 	transition: 0.5s;
 }
 
@@ -390,6 +373,15 @@
 	}
 	.max {
 		top: 6%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.navbar .navbar-collapse ul li .button1:after {
+		display: none;
+	}
+	.navbar .navbar-collapse ul li .button2:after {
+		display: none;
 	}
 }
 
@@ -427,15 +419,18 @@
 		font-size: 17px;
 	}
 	.instagram {
-	bottom: 154px;
+	    bottom: 154px;
     }
     .facebook {
-	bottom: 114px;
+	    bottom: 114px;
     }
     .Dribble {
-	bottom: 74px;
+	    bottom: 74px;
     }
     .Behance {
-	bottom: 36px;
+	    bottom: 36px;
+    }
+    .copyright {
+    	bottom: 35px;
     }
 }
