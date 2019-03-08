@@ -24,6 +24,7 @@
 	font-size: 1.97869101978691vh;
 	font-weight: bold;
 	z-index: 2;
+	text-shadow: none;
 }
 .navbar .navbar-collapse ul li .button1 {
 	color: #464646;
@@ -133,7 +134,7 @@
 }
 .content {
 	width: 1200px;
-	height: 94.3683409436834vh;
+	height: 100vh;
 	max-height: 620px;
 	position: absolute;
 	top: 50%;
@@ -166,12 +167,21 @@
 .Behance {
 	bottom: 4.38%;
 }
+.copyright-block {
+	width: 1200px;
+	height: 100vh;
+	max-height: 60px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+}
 .copyright {
 	color: #464646;
 	margin: 0;
 	position: absolute;
-	bottom: 2.5%;
-	left: 8.33%;
+	bottom: 40%;
+	left: 5%;
 	font-size: 1.97869101978691vh;
 }
 #contact {
@@ -253,6 +263,7 @@
 }
 .menu ul {
 	position: absolute;
+	padding: 0;
 	top: 42%;
 	left: 35%;
 	list-style: none;
@@ -326,7 +337,6 @@
 	font-size: 1.97869101978691vh;
 }
 .form .input:focus {
-	border-bottom: 1px solid #C8A060;
 	transition: 0.5s;
 }
 .form .send {
