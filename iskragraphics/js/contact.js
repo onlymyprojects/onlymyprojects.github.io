@@ -12,29 +12,29 @@ $(document).ready(function() {
 
 
 	$('#input1').focus(function() {
-		$('#input-text1').css({"opacity": "1", "transition": "0.5s"});
+		$('#input-text1').css({"opacity": "1"});
 		$('#input1').css({"border-bottom": "1px solid #C8A060"});
 	});
 	$('#input2').focus(function() {
-		$('#input-text2').css({"opacity": "1", "transition": "0.5s"});
+		$('#input-text2').css({"opacity": "1"});
 		$('#input2').css({"border-bottom": "1px solid #C8A060"});
 	});
 	$('#input3').focus(function() {
-		$('#input-text3').css({"opacity": "1", "transition": "0.5s"});
+		$('#input-text3').css({"opacity": "1"});
 		$('#input3').css({"border-bottom": "1px solid #C8A060"});
 	});
 
 
 	$('#input1').focusout(function() {
-		$('#input-text1').css({"opacity": "0", "transition": "0.5s"});
+		$('#input-text1').css({"opacity": "0"});
 		$('#input1').css({"border-bottom": "1px solid #8C8C8C"});
 	});
 	$('#input2').focusout(function() {
-		$('#input-text2').css({"opacity": "0", "transition": "0.5s"});
+		$('#input-text2').css({"opacity": "0"});
 		$('#input2').css({"border-bottom": "1px solid #8C8C8C"});
 	});
 	$('#input3').focusout(function() {
-		$('#input-text3').css({"opacity": "0", "transition": "0.5s"});
+		$('#input-text3').css({"opacity": "0"});
 		$('#input3').css({"border-bottom": "1px solid #8C8C8C"});
 	});
 
