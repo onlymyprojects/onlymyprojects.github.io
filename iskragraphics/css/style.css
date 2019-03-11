@@ -88,23 +88,23 @@
 	height: 62vh;
 	max-height: 500px;
 	position: absolute;
-	background: linear-gradient(142.85deg, #2E2D2D 0%, #232323 100%);
+	background-image: url('../img/BG.png');
 	box-shadow: 0 60px 90px -70px black;
 	left: 5%;
 	top: 12%;
 }
 @keyframes titlee {
 	0% {
-		font-size: 0;
+		color: transparent;
 	}
 	25% {
-		font-size: 0;
+		color: transparent;
 	}
 	50% {
-		font-size: 0;
+		color: transparent;
 	}
 	100% {
-		font-size: 8.67579908675799vh;
+		color: #C8A060;
 	}
 }
 .title {
@@ -116,31 +116,31 @@
 	font-family: Playfair Display;
 	top: 12%;
 	left: -30px;
-	animation: .5s titlee;
+	animation: .7s titlee;
 }
 @keyframes title {
 	0% {
 		top: 39.5%;
 		width: 0;
-		height: 4px;
+		height: 3%;
 	}
 	25% {
 		top: 39.5%;
 	    left: 0;
 	    width: 285px;
-	    height: 4px;
+	    height: 3%;
 	}
 	50% {
 		top: 0;
 	    left: 0;
         width: 285px;
-	    height: 55px;
+	    height: 40%;
 	}
 	100% {
 		top: 0;
 	    left: 0;
-        width: 0;
-	    height: 55px;
+        width: 285px;
+	    height: 0;
 	}
 }
 .title:before {
@@ -150,32 +150,32 @@
 	top: 0;
 	left: 0;
     width: 0;
-	height: 55px;
+	height: 40%;
 	animation: .8s title;
 }
 @keyframes titleee {
 	0% {
 		top: 96.5%;
 		width: 0;
-		height: 4px;
+		height: 3%;
 	}
 	25% {
 		top: 96.5%;
 	    left: 0;
 	    width: 335px;
-	    height: 4px;
+	    height: 3%;
 	}
 	50% {
 		top: 57%;
 	    left: 0;
         width: 335px;
-	    height: 55px;
+	    height: 40%;
 	}
 	100% {
 		top: 57%;
 	    left: 0;
-        width: 0;
-	    height: 55px;
+        width: 335px;
+	    height: 0;
 	}
 }
 .title:after {
@@ -185,21 +185,21 @@
 	top: 57%;
 	left: 0;
     width: 0;
-	height: 55px;
+	height: 40%;
 	animation: .8s titleee;
 }
 @keyframes textt {
 	0% {
-		font-size: 0;
+		color: transparent;
 	}
 	25% {
-		font-size: 0;
+		color: transparent;
 	}
 	50% {
-		font-size: 0;
+		color: transparent;
 	}
 	100% {
-		font-size: 2.5875190258751903vh;
+		color: #DCDCDC;
 	}
 }
 .text {
@@ -209,31 +209,31 @@
 	line-height: 3.8051750380517504vh;
 	top: 46.5%;
 	left: -30px;
-	animation: .5s textt;
+	animation: .7s textt;
 }
 @keyframes texttt {
 	0% {
 		top: 39.5%;
 		width: 0;
-		height: 4px;
+		height: 3%;
 	}
 	25% {
 		top: 39.5%;
 	    left: 0;
 	    width: 315px;
-	    height: 4px;
+	    height: 3%;
 	}
 	50% {
 		top: 0;
 	    left: 0;
         width: 315px;
-	    height: 25px;
+	    height: 40%;
 	}
 	100% {
 		top: 0;
 	    left: 0;
-        width: 0;
-	    height: 25px;
+        width: 315px;
+	    height: 0;
 	}
 }
 .text:before {
@@ -243,32 +243,32 @@
 	top: 0;
 	left: 0;
     width: 0;
-	height: 25px;
+	height: 40%;
 	animation: .8s texttt;
 }
 @keyframes textttt {
 	0% {
 		top: 96.5%;
 		width: 0;
-		height: 4px;
+		height: 3%;
 	}
 	25% {
 		top: 96.5%;
 	    left: 0;
 	    width: 120px;
-	    height: 4px;
+	    height: 3%;
 	}
 	50% {
 		top: 57%;
 	    left: 0;
         width: 120px;
-	    height: 25px;
+	    height: 40%;
 	}
 	100% {
 		top: 57%;
 	    left: 0;
-        width: 0;
-	    height: 25px;
+        width: 120px;
+	    height: 0;
 	}
 }
 .text:after {
@@ -278,7 +278,7 @@
 	top: 57%;
 	left: 0;
     width: 0;
-	height: 25px;
+	height: 40%;
 	animation: .8s textttt;
 }
 .button {
@@ -447,17 +447,45 @@
 	color: #464646;
 	transition: 0.5s
 }
+.menu ul .button1:before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 15%;
+	background: #C8A060;
+	top: 15%;
+	opacity: .3;
+	transition: .5s;
+}
 .menu ul .button1:hover {
 	color: #C8A060;
+	transition: 0.5s;
+}
+.menu ul .button1:hover:before {
+	transition: .5s;
+	width: 45px;
+}
+.menu ul .button2 {
+	color: #464646;
 	transition: 0.5s;
 }
 .menu ul .button2:hover {
 	color: #C8A060;
 	transition: 0.5s;
 }
-.menu ul .button2 {
-	color: #464646;
-	transition: 0.5s;
+.menu ul .button2:before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 15%;
+	background: #C8A060;
+	top: 90%;
+	opacity: .3;
+	transition: .5s;
+}
+.menu ul .button2:hover:before {
+	transition: .5s;
+	width: 83px;
 }
 .close-contact {
 	position: absolute;
