@@ -1,12 +1,20 @@
 $(document).ready(function() {
 	$('#contact').click(function(){
 		$('#page-contact').removeClass('hide');
+		$('.block').hide();
+		$('.block').removeClass('animated');
+		$('.button').removeClass('animated');
+		$('.cp').removeClass('copyright-block');
+		$('.copyright').css({"left": "13.2%", "bottom": "3.6%"});
 		$('#page-contact').addClass('contact-animation');
     });
 
 
     $('.close-contact').click(function() {
     	$('#page-contact').removeClass('contact-animation');
+    	$('.block').show();
+		$('.cp').addClass('copyright-block');
+		$('.copyright').css({"left": "5%", "bottom": "40%"});
     	$('#page-contact').addClass('hide');
     });
 

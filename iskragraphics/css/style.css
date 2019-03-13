@@ -392,8 +392,8 @@
 		right: 0;
 	}
 	to {
-		width: 100vw;
-	    height: 100vh;
+		width: 65.28%;
+	    height: 100%;
 	    bottom: 0;
 		right: 0;
 	}
@@ -420,34 +420,29 @@
 
 .page-contact {
 	position: absolute;
-	width: 100vw;
-	height: 100vh;
+	width: 65.28%;
+	height: 100%;
+	right: 0;
 	background: #F9F9FB;
 	z-index: 99;
 }
-.menu {
-	height: 100%;
-	width: 34.72%;
-	background: #232323;
-	position: absolute;
-}
-.menu ul {
+.page-contact ul {
 	position: absolute;
 	padding: 0;
 	top: 42%;
-	left: 35%;
+	left: -33%;
 	list-style: none;
 }
-.menu ul li a {
+.page-contact ul li a {
 	text-decoration: none;
 	font-size: 1.97869101978691vh;
 	font-weight: bold;
 }
-.menu ul .button1 {
+.page-contact ul .button1 {
 	color: #464646;
 	transition: 0.5s
 }
-.menu ul .button1:before {
+.page-contact ul .button1:before {
 	content: '';
 	position: absolute;
 	width: 0;
@@ -457,23 +452,23 @@
 	opacity: .3;
 	transition: .5s;
 }
-.menu ul .button1:hover {
+.page-contact ul .button1:hover {
 	color: #C8A060;
 	transition: 0.5s;
 }
-.menu ul .button1:hover:before {
+.page-contact ul .button1:hover:before {
 	transition: .5s;
 	width: 45px;
 }
-.menu ul .button2 {
+.page-contact ul .button2 {
 	color: #464646;
 	transition: 0.5s;
 }
-.menu ul .button2:hover {
+.page-contact ul .button2:hover {
 	color: #C8A060;
 	transition: 0.5s;
 }
-.menu ul .button2:before {
+.page-contact ul .button2:before {
 	content: '';
 	position: absolute;
 	width: 0;
@@ -483,7 +478,7 @@
 	opacity: .3;
 	transition: .5s;
 }
-.menu ul .button2:hover:before {
+.page-contact ul .button2:hover:before {
 	transition: .5s;
 	width: 83px;
 }
@@ -498,7 +493,7 @@
 }
 .form {
 	position: absolute;
-	left: 52%;
+	left: 27%;
 	top: 27%;
 }
 .form-title {
@@ -608,7 +603,7 @@
 	.copyright {
 		font-size: 13px;
 	}
-	.menu ul li a {
+	.page-contact ul li a {
 		font-size: 13px;
 	}
 	.form-title {
