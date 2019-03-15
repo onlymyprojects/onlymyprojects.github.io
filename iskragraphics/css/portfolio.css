@@ -1,0 +1,25 @@
+.all-blocks {
+	position: absolute;
+	width: 1120px;
+	height: 79.1476407914764vh;
+	max-height: 520px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.all-blocks a img {
+	position: absolute;
+	height: 36.529680365296805vh;
+	max-height: 240px;
+	transition: 0.3s;
+}
+.first-4:hover {
+	margin-top: -1%;
+	box-shadow: 0 25px 35px -20px black;
+	transition: 0.3s;
+}
+.last-4:hover {
+	margin-bottom: 1%;
+	box-shadow: 0 25px 35px -20px black;
+	transition: 0.3s;
+}

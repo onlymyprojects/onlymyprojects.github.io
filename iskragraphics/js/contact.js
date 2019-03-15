@@ -7,6 +7,8 @@ $(document).ready(function() {
 		$('.cp').removeClass('copyright-block');
 		$('.copyright').css({"left": "13.2%", "bottom": "3.6%"});
 		$('#page-contact').addClass('contact-animation');
+		$('.all-blocks').hide();
+		$('.all-blocks').children().removeClass('animated');
     });
 
 
@@ -16,6 +18,7 @@ $(document).ready(function() {
 		$('.cp').addClass('copyright-block');
 		$('.copyright').css({"left": "5%", "bottom": "40%"});
     	$('#page-contact').addClass('hide');
+    	$('.all-blocks').show();
     });
 
 
