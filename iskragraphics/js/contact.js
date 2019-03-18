@@ -1,14 +1,13 @@
 $(document).ready(function() {
 	$('#contact').click(function(){
 		$('#page-contact').removeClass('hide');
-		$('.block').hide();
-		$('.block').removeClass('animated');
+		$('.block').hide().removeClass('animated');
 		$('.button').removeClass('animated');
 		$('.cp').removeClass('copyright-block');
 		$('.copyright').css({"left": "13.2%", "bottom": "3.6%"});
 		$('#page-contact').addClass('contact-animation');
 		$('.all-blocks').hide();
-		$('.all-blocks').children().removeClass('animated');
+		$('.max').hide().removeClass('animated');
     });
 
 
@@ -19,6 +18,7 @@ $(document).ready(function() {
 		$('.copyright').css({"left": "5%", "bottom": "40%"});
     	$('#page-contact').addClass('hide');
     	$('.all-blocks').show();
+    	$('.max').show();
     });
 
 

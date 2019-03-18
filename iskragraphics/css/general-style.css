@@ -14,7 +14,6 @@ body {
 	left: 1.82%;
 	z-index: 2;
 }
-
 .body .navbar-default {
 	position: absolute;
 	background: transparent;
@@ -91,7 +90,7 @@ body {
 	position: absolute;
 	left: 1.82%;
 	height: 4.566210045662101vh;
-	max-height: 30px; /* 30px */
+	max-height: 30px;
 }
 .instagram {
 	bottom: 19.12%
@@ -106,7 +105,8 @@ body {
 	bottom: 4.38%;
 }
 .copyright-block {
-	width: 1200px;
+	width: 100vw;
+	max-width: 1200px;
 	height: 100vh;
 	max-height: 60px;
 	position: absolute;
@@ -142,7 +142,7 @@ body {
 }
 #contact:hover {
 	transition: 0.2s;
-	bottom: 4%;
+	bottom: 3.5%;
 	box-shadow: 0 6px 15px black;
 }
 
@@ -153,13 +153,19 @@ body {
 
 
 @keyframes contact {
-	from {
+	0% {
 		width: 0;
 		height: 0;
 		bottom: 0;
 		right: 0;
 	}
-	to {
+	50% {
+		width: 65.28%;
+	    height: 20%;
+	    bottom: 0;
+		right: 0;
+	}
+	100% {
 		width: 65.28%;
 	    height: 100%;
 	    bottom: 0;
@@ -167,7 +173,7 @@ body {
 	}
 }
 .contact-animation {
-	animation: 0.3s contact;
+	animation: .5s contact;
 }
 
 
