@@ -119,7 +119,7 @@ body {
 	margin: 0;
 	position: absolute;
 	bottom: 40%;
-	left: 5%;
+	left: 59px;
 	font-size: 1.97869101978691vh;
 }
 #contact {
@@ -268,15 +268,77 @@ body {
 .form {
 	position: absolute;
 	left: 27%;
-	top: 27%;
+	top: 41%;
+	opacity: 0;
+	animation: 1.2s formm;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+}
+@keyframes formm {
+	from {
+		left: 100%;
+		opacity: 0;
+	}
+	to {
+		left: 27%;
+		opacity: 1;
+	}
 }
 .form-title {
 	margin: 0;
 	font-weight: bold;
-    line-height: 9.89345509893455vh;
     font-size: 8.67579908675799vh;
     color: #464646;
     font-family: Playfair Display;
+    visibility: hidden;
+    animation: .5s form-title-visibilityy;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+    position: relative;
+}
+@keyframes form-title-visibilityy {
+	from {
+		visibility: hidden;
+	}
+	to {
+		visibility: initial;
+	}
+}
+.form-title:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: #C8A060;
+	visibility: hidden;
+	animation: .8s form-title;
+	animation-delay: 1s;
+}
+@keyframes form-title {
+	0% {
+		bottom: 0;
+		width: 0;
+		height: 3%;
+	}
+	25% {
+		bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 3%;
+	    visibility: initial;
+	}
+	50% {
+	    left: 0;
+        width: 100%;
+	    height: 100%;
+	    visibility: initial;
+	}
+	100% {
+	    left: 0;
+        width: 100%;
+	    height: 0;
+	    visibility: initial;
+	}
 }
 .form form {
 	position: absolute;

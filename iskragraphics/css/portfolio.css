@@ -65,14 +65,14 @@
 		visibility: initial;
 		width: 0;
 		right: 22px;
-		height: 20px;
+		height: 40px;
 		top: 40px;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
 		right: 22px;
-		height: 20px;
+		height: 40px;
 		top: 40px;
 	}
 	50% {
@@ -87,6 +87,13 @@
 		width: 250px;
 		right: 22px;
 		height: 240px;
+		bottom: 0;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
 		bottom: 0;
 	}
 	100% {
@@ -115,14 +122,14 @@
 		visibility: initial;
 		width: 0;
 		left: 22px;
-		height: 20px;
+		height: 40px;
 		bottom: 0;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
 		left: 22px;
-		height: 20px;
+		height: 40px;
 		bottom: 0;
 	}
 	50% {
@@ -137,6 +144,12 @@
 		width: 250px;
 		left: 22px;
 		height: 240px;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 0;
 	}
 	100% {
 		visibility: initial;
@@ -163,14 +176,14 @@
 		visibility: initial;
 		width: 0;
 		left: 22px;
-		height: 20px;
+		height: 40px;
 		top: 40px;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
 		left: 22px;
-		height: 20px;
+		height: 40px;
 		top: 40px;
 	}
 	50% {
@@ -185,6 +198,13 @@
 		width: 250px;
 		left: 22px;
 		height: 240px;
+		bottom: 0;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
 		bottom: 0;
 	}
 	100% {
@@ -213,14 +233,14 @@
 		visibility: initial;
 		width: 0;
 		right: 22px;
-		height: 20px;
+		height: 40px;
 		bottom: 0;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
 		right: 22px;
-		height: 20px;
+		height: 40px;
 		bottom: 0;
 	}
 	50% {
@@ -235,6 +255,12 @@
 		width: 250px;
 		right: 22px;
 		height: 240px;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
 	}
 	100% {
 		visibility: initial;
