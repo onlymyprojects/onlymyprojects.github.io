@@ -269,20 +269,6 @@ body {
 	position: absolute;
 	left: 27%;
 	top: 41%;
-	opacity: 0;
-	animation: 1.2s formm;
-	animation-delay: 2s;
-	animation-fill-mode: both;
-}
-@keyframes formm {
-	from {
-		left: 100%;
-		opacity: 0;
-	}
-	to {
-		left: 27%;
-		opacity: 1;
-	}
 }
 .form-title {
 	margin: 0;
@@ -309,7 +295,7 @@ body {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: #C8A060;
+	background: #464646;
 	visibility: hidden;
 	animation: .8s form-title;
 	animation-delay: 1s;
