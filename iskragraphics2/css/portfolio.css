@@ -1,0 +1,271 @@
+.all-blocks {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.all-blocks a img {
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 36.529680365296805vh;
+	max-height: 240px;
+	transition: 0.3s;
+	object-fit: contain;
+	margin-top: 40px;
+}
+.all-blocks a:hover {
+	transition: .3s;
+	margin-top: -20px;
+	padding-bottom: 20px;
+}
+.all-blocks a img:hover {
+	box-shadow: 0 25px 35px -20px black;
+	transition: .3s;
+}
+.all-blocks a {
+	transition: .3s;
+}
+.visibility {
+	opacity: 0;
+	animation: .2s visibilityy;
+	animation-delay: 1.2s;
+	animation-fill-mode: both;
+}
+@keyframes visibilityy {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.visibility2 {
+	opacity: 0;
+	animation: .2s visibilityy;
+	animation-delay: 2.2s;
+	animation-fill-mode: both;
+}
+.block-1-7:before {
+	position: absolute;
+	content: '';
+	width: 100vw;
+	max-width: 250px;
+	height: 100vh;
+	max-height: 240px;
+	background: #C8A060;
+	visibility: hidden;
+	animation: 1.2s blockk;
+	animation-delay: .6s;
+	z-index: 2;
+}
+@keyframes blockk {
+	0% {
+		visibility: initial;
+		width: 0;
+		right: 22px;
+		height: 3%;
+		top: 40px;
+	}
+	35% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 3%;
+		top: 40px;
+	}
+	50% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 240px;
+		top: 40px;
+	}
+	65% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 240px;
+		bottom: 0;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
+		bottom: 0;
+	}
+	100% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
+		bottom: 0;
+	}
+}
+.block-2-8:before {
+	position: absolute;
+	content: '';
+	width: 100vw;
+	max-width: 250px;
+	height: 100vh;
+	max-height: 240px;
+	background: #C8A060;
+	visibility: hidden;
+	animation: 1.2s blockkk;
+	animation-delay: .6s;
+	z-index: 2;
+}
+@keyframes blockkk {
+	0% {
+		visibility: initial;
+		width: 0;
+		left: 22px;
+		height: 3%;
+		bottom: 0;
+	}
+	35% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 3%;
+		bottom: 0;
+	}
+	50% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 240px;
+		bottom: 0;
+	}
+	65% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 240px;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 0;
+	}
+	100% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 0;
+	}
+}
+.block-3-5:before {
+	position: absolute;
+	content: '';
+	width: 100vw;
+	max-width: 250px;
+	height: 100vh;
+	max-height: 240px;
+	background: #C8A060;
+	visibility: hidden;
+	animation: 1.2s blockkkk;
+	animation-delay: 1.6s;
+	z-index: 2;
+}
+@keyframes blockkkk {
+	0% {
+		visibility: initial;
+		width: 0;
+		left: 22px;
+		height: 3%;
+		top: 40px;
+	}
+	35% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 3%;
+		top: 40px;
+	}
+	50% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 240px;
+		top: 40px;
+	}
+	65% {
+		visibility: initial;
+		width: 250px;
+		left: 22px;
+		height: 240px;
+		bottom: 0;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
+		bottom: 0;
+	}
+	100% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
+		bottom: 0;
+	}
+}
+.block-4-6:before {
+	position: absolute;
+	content: '';
+	width: 100vw;
+	max-width: 250px;
+	height: 100vh;
+	max-height: 240px;
+	background: #C8A060;
+	visibility: hidden;
+	animation: 1.2s blockkkkk;
+	animation-delay: 1.6s;
+	z-index: 2;
+}
+@keyframes blockkkkk {
+	0% {
+		visibility: initial;
+		width: 0;
+		right: 22px;
+		height: 3%;
+		bottom: 0;
+	}
+	35% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 3%;
+		bottom: 0;
+	}
+	50% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 240px;
+		bottom: 0;
+	}
+	65% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 240px;
+	}
+	85% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
+	}
+	100% {
+		visibility: initial;
+		width: 250px;
+		right: 22px;
+		height: 0;
+	}
+}
