@@ -8,6 +8,7 @@ $(document).ready(function() {
 		$('#page-contact').addClass('contact-animation');
 		$('.all-blocks').hide();
 		$('.max').hide().removeClass('animated');
+		
     });
 
 
