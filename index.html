@@ -1,40 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-    <link rel="shortcut icon" href="" />
+    <title></title>
+    <link rel="shortcut icon" href=""/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/general-style.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
-<body style="background: grey;">
-    <header></header>
+<body class="body">
 
-    <div class="container">     
-        <div class="row">
-         <div class="col-md-12">
-          <div class="post-content">
-            
-            <div class="text-center">
-              <a href="NothingImposible/index.html"><img src="img/logo.png"></a>
-              <a href="Valah/index.html"><img src="img/logo2.png"></a>
+        <a href="index.html"><img src="img/logo.png" class="logo animated fadeIn delay-4s"></a>
+
+        <div class="navbar navbar-default animated fadeIn delay-4s">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-
-          </div>
-         </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="portfolio.html" class="button1" id="button1">PORTFOLIO</a></li>
+                    <li><a href="index.html" class="button2" id="button2">HOME</a></li>
+                 </ul>
+            </div>
         </div>
-    </div>
+
+
+
+          	<div class="content">
+          	    <div class="block animated fadeIn delay-1s">
+          		    <p class="title">Welcome to<br/> iskragraphics</p>
+          		    <p class="text">More than 7 years of UI/UX, branding and<br/> logotype design</p>
+          		    <button class="button animated fadeIn delay-4s" onclick="window.location.href=''">CLICK HERE</button>
+          	    </div>
+          	    <img src="img/max.png" class="max animated fadeIn delay-4s">
+            </div>
+          	<div class="social animated fadeIn delay-4s">
+          		<a href="#">
+          			<img src="img/instagram.png" class="instagram">
+          		</a>
+          		<a href="#">
+          			<img src="img/facebook.png" class="facebook">
+          		</a>
+          		<a href="#">
+          			<img src="img/Dribble.png" class="Dribble">
+          		</a>
+          		<a href="#">
+          			<img src="img/Behance.png" class="Behance">
+          		</a>
+          	</div>
+          	<div class="copyright-block cp">
+          	    <p class="copyright animated fadeIn delay-4s">All Rights Reserved / 2019</p>
+          	</div>
+          	<a href="#" id="contact" class="animated fadeIn delay-4s">
+          		<img src="img/Message.png" class="contact">
+          	</a>
 
 
 
 
 
+
+
+
+
+
+
+
+
+          	<div class="page-contact hide" id="page-contact">
+          		<ul class="animated fadeIn delay-3s">
+          			<li><a href="#" class="button1">HOME</a></li>
+          			<li style="margin-top: 50%;"><a href="#" class="button2">PORTFOLIO</a></li>
+          		</ul>
+
+          		<img src="img/Close.png" class="close-contact animated fadeIn delay-2s">
+
+          		<div style="position: absolute; left: 27%; top: 27%;">
+                    <p class="form-title">Contact me</p>
+                </div>
+
+          		<div class="form animated fadeIn delay-2s">
+          			<form>
+                      <p id="input-text1" style="top: 5%;">Name</p><br/>
+                      <input id="input1" class="input" style="top: 30%;" type="text" required="" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'"><br/>
+                      <p id="input-text2" style="top: 80%;">Email</p><br>
+                      <input id="input2" class="input" style="top: 105%;" type="email" required="" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"><br/>
+                      <p id="input-text3" style="top: 155%;">Subject</p><br/>
+                      <input id="input3" class="input" style="top: 180%;" type="text" required="" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
+                      <input type="submit" value="SEND MESSAGE" class="send">
+                    </form>
+          		</div>
+          	</div>
+
+
+
+<footer>
+
+</footer>
+
+
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+    <script type="text/javascript" src="js/menu-hover.js"></script>
+    <script type="text/javascript" src="js/text-display-none.js"></script>
+    <script type="text/javascript" src="js/modernizr-custom.js"></script>
 </body>
-<footer></footer>
 </html>
