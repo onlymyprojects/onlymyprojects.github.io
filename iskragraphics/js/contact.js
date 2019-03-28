@@ -7,8 +7,7 @@ $(document).ready(function() {
 		$('.copyright').css({"left": "13.2%", "bottom": "3.6%"});
 		$('#page-contact').addClass('contact-animation');
 		$('.all-blocks').hide();
-		$('.max').hide().removeClass('animated');
-		
+		$('.max').hide().removeClass('animated');	
     });
 
 
