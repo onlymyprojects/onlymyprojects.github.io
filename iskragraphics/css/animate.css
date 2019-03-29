@@ -3568,44 +3568,9 @@
   animation-iteration-count: infinite;
 }
 
-.animated.delay-02s {
-  -webkit-animation-delay: .2s;
-  animation-delay: .2s;
-}
-
-.animated.delay-04s {
-  -webkit-animation-delay: .4s;
-  animation-delay: .4s;
-}
-
-.animated.delay-06s {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
-}
-
-.animated.delay-08s {
-  -webkit-animation-delay: .8s;
-  animation-delay: .8s;
-}
-
 .animated.delay-1s {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
-}
-
-.animated.delay-1and02s {
-  -webkit-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-}
-
-.animated.delay-1and04s {
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
-}
-
-.animated.delay-1and06s {
-  -webkit-animation-delay: 1.6s;
-  animation-delay: 1.6s;
 }
 
 .animated.delay-2s {
@@ -3626,10 +3591,6 @@
 .animated.delay-5s {
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
-}
-.animated.delay-6s {
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
 }
 
 .animated.fast {
