@@ -4,7 +4,7 @@
 	max-height: 500px;
 	position: absolute;
 	background-image: url('../img/BG.png');
-	box-shadow: 0 60px 90px -70px black;
+	box-shadow: 0 50px 85px -90px black;
 	left: 5%;
 	top: 12%;
 }
