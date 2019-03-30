@@ -113,6 +113,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 0;
+	background: #232323;
 }
 .copyright {
 	color: #464646;
