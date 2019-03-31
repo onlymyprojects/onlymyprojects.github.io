@@ -1,4 +1,4 @@
-.body {
+body {
 	background: #232323;
 	overflow: hidden;
 }
@@ -14,7 +14,7 @@
 	left: 1.82%;
 	z-index: 2;
 }
-.body .navbar-default {
+body .navbar-default {
 	position: absolute;
 	background: transparent;
 	border: none;
