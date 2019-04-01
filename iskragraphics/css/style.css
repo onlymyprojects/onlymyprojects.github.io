@@ -31,7 +31,7 @@
 	font-family: Playfair Display;
 	top: 12%;
 	left: -30px;
-	animation: ;
+	animation: .7s titlee;
 }
 @keyframes title {
 	0% {
@@ -65,7 +65,7 @@
 	top: 0;
 	left: 0;
 	height: 40%;
-	animation: ;
+	animation: .8s title;
 }
 @keyframes titleee {
 	0% {
@@ -99,7 +99,7 @@
 	top: 57%;
 	left: 0;
 	height: 40%;
-	animation: ;
+	animation: .8s titleee;
 }
 @keyframes textt {
 	0% {
@@ -122,7 +122,7 @@
 	line-height: 3.8051750380517504vh;
 	top: 46.5%;
 	left: -30px;
-	an
+	animation: 2s textt;
 }
 @keyframes texttt {
 	0% {
@@ -156,8 +156,8 @@
 	top: 0;
 	left: 0;
 	height: 40%;
-	animation: .;
-	animation-delay: ;
+	animation: .8s texttt;
+	animation-delay: .8s;
 }
 @keyframes textttt {
 	0% {
@@ -191,8 +191,8 @@
 	top: 57%;
 	left: 0;
 	height: 40%;
-	animation: ;
-	animation-delay: ;
+	animation: .8s textttt;
+	animation-delay: .8s;
 }
 .button {
 	color: #232323;
@@ -223,6 +223,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background: #232323;
 }
 .max {
 	position: absolute;
