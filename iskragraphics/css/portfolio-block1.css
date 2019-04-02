@@ -5,14 +5,14 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
-.content img {
-	margin-left: -25px;
-}
 .zebra-title {
 	font-size: 8.67579908675799vh;
 	color: #C8A060;
 	font-weight: bold;
 	font-family: Playfair Display;
+}
+.content img {
+	box-shadow: 0 30px 25px -35px black;
 }
 .text-content {
 	float: right;

@@ -21,7 +21,7 @@
 	padding-bottom: 20px;
 }
 .all-blocks a img:hover {
-	box-shadow: 0 25px 35px -20px black;
+	box-shadow: 0 25px 25px -30px black;
 	transition: .3s;
 }
 .all-blocks a {
