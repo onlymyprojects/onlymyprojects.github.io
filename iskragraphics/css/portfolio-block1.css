@@ -1,5 +1,51 @@
+.display-none {
+	display: none;
+}
+.all-blocks2 {
+	position: absolute;
+	height: 530px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.i1 {
+	border: 1px solid #464646;
+}
+.all-blocks2 .block img {
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 36.529680365296805vh;
+	max-height: 240px;
+	transition: 0.3s;
+	object-fit: contain;
+	animation: 1.2s portfolioblock;
+	animation-fill-mode: both;
+}
+.all-blocks .block {
+	transition: .3s;
+	padding-bottom: 20px;
+}
+
+@keyframes portfolioblock {
+	from {
+		height: 36.529680365296805vh;
+	    max-height: 240px;
+	    margin-left: 6px;
+	    margin-top: 0;
+	}
+	to {
+		margin-left: 27px;
+		margin-top: 4px;
+		height: 79.1476407914764vh;
+	    max-height: 520px;
+	}
+}
+
+
 .content {
-	width: 1000px;
+	width: 1085px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -19,6 +65,7 @@
 	width: 360px;
 	height: 303px;
 	margin-top: 30px;
+	margin-right: 85px;
 }
 .zebra-description {
 	font-size: 1.97869101978691vh;

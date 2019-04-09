@@ -1,6 +1,9 @@
 .opacity-0 {
 	opacity: 0;
 }
+.opacity-1 {
+	opacity: 1;
+}
 .logo {
 	position: absolute;
 	height: 8.52359208523592vh;

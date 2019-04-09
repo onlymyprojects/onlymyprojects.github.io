@@ -4,7 +4,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.all-blocks a img {
+.all-blocks .block img {
 	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -15,16 +15,17 @@
 	object-fit: contain;
 	margin-top: 40px;
 }
-.all-blocks a:hover {
+.all-blocks .block {
+	cursor: pointer;
+	transition: .3s;
+}
+.all-blocks .block:hover {
 	transition: .3s;
 	margin-top: -20px;
 	padding-bottom: 20px;
 }
-.all-blocks a img:hover {
+.all-blocks .block img:hover {
 	box-shadow: 0 25px 25px -30px black;
-	transition: .3s;
-}
-.all-blocks a {
 	transition: .3s;
 }
 .visibility {
@@ -121,34 +122,34 @@
 	0% {
 		visibility: initial;
 		width: 0;
-		left: 22px;
+		left: 21px;
 		height: 3%;
 		bottom: 0;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 3%;
 		bottom: 0;
 	}
 	50% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 240px;
 		bottom: 0;
 	}
 	65% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 240px;
 	}
 	85% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 0;
 	}
 	100% {
@@ -175,42 +176,42 @@
 	0% {
 		visibility: initial;
 		width: 0;
-		left: 22px;
+		left: 21px;
 		height: 3%;
 		top: 40px;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 3%;
 		top: 40px;
 	}
 	50% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 240px;
 		top: 40px;
 	}
 	65% {
 		visibility: initial;
 		width: 250px;
-		left: 22px;
+		left: 21px;
 		height: 240px;
 		bottom: 0;
 	}
 	85% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		left: 21px;
 		height: 0;
 		bottom: 0;
 	}
 	100% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		right: 23px;
 		height: 0;
 		bottom: 0;
 	}
@@ -232,40 +233,40 @@
 	0% {
 		visibility: initial;
 		width: 0;
-		right: 22px;
+		right: 21px;
 		height: 3%;
 		bottom: 0;
 	}
 	35% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		right: 21px;
 		height: 3%;
 		bottom: 0;
 	}
 	50% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		right: 21px;
 		height: 240px;
 		bottom: 0;
 	}
 	65% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		right: 21px;
 		height: 240px;
 	}
 	85% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		right: 21px;
 		height: 0;
 	}
 	100% {
 		visibility: initial;
 		width: 250px;
-		right: 22px;
+		right: 21px;
 		height: 0;
 	}
 }
