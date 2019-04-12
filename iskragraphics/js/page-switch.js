@@ -13,9 +13,9 @@ $(document).ready(function() {
 		$('.bb2').css({'padding-bottom': '20px', 'margin-top': '-20px'});
 		setTimeout(function(){
 			$('.i2').attr('src', 'img/logo-23.png').animate({'width': '543px', 'margin-left': '-287px'}, 600).animate({'width': '250px', 'margin-left': '-287px'}, 600);
-	    }, 1000);
+	    }, 500);
 	    setTimeout(function(){
 			$(location).attr('href', 'portfolio-block1.html');
-	    }, 2200);
+	    }, 1700);
     });
 });
