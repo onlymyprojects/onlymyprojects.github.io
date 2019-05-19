@@ -7,9 +7,67 @@
 }
 .work-title {
 	font-size: 8.67579908675799vh;
-	color: #C8A060;
+	color: transparent;
 	font-weight: bold;
 	font-family: Playfair Display;
+	animation: .5s work-title;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+@keyframes work-title {
+	0% {
+		color: transparent;
+	}
+	25% {
+		color: transparent;
+	}
+	50% {
+		color: transparent;
+	}
+	100% {
+		color: #C8A060;
+	}
+}
+.work-title:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 8.5%;
+	left: 59%;
+	height: 10%;
+	width: 24%;
+	animation: .8s work-titlee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titlee {
+	0% {
+		top: 17.5%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 17.5%;
+	    left: 59%;
+	    width: 24%;
+	    height: 1%;
+	    visibility: initial;
+	}
+	50% {
+		top: 8.5%;
+	    left: 59%;
+        width: 24%;
+	    height: 10%;
+	    visibility: initial;
+	}
+	100% {
+		top: 8.5%;
+	    left: 59%;
+        width: 24%;
+	    height: 0;
+	    visibility: initial;
+	}
 }
 .content img {
 	box-shadow: 0 30px 25px -35px black;
@@ -24,7 +82,7 @@
 	margin-right: 85px;
 }
 .work-description {
-	font-size: 1.97869101978691vh;
+	font-size: 2.3026315789473686vh;
 	line-height: 3.8051750380517504vh;
 	color: #8C8C8C;
 }
@@ -36,7 +94,7 @@
 	margin-top: 35px;
 }
 .work-tags {
-	font-size: 1.97869101978691vh;
+	font-size: 2.3026315789473686vh;
 	color: #DCDCDC;
 	word-spacing: 20px;
 	line-height: 4.566210045662101vh;
@@ -46,11 +104,12 @@
 }
 .work-number {
 	position: absolute;
-	bottom: 0;
-	font-family: 'Playfair Display', serif;
+	font-family: Playfair Display;
     font-weight: bold;
     font-size: 2.5875190258751903vh;
     color: #DCDCDC;
+    margin: 0;
+    bottom: -5px;
 }
 .prev {
 	position: absolute;
@@ -142,11 +201,11 @@
 		font-size: 57px;
 	}
 	.work-description {
-	    font-size: 13px;
+	    font-size: 14px;
 	    line-height: 25px;
     }
     .work-tags {
-    	font-size: 13px;
+    	font-size: 14px;
     	line-height: 30px;
     }
     .work-number {

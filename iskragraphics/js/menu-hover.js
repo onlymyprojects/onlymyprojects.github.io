@@ -36,4 +36,13 @@ $(document).ready(function() {
 	$('.Behance').mouseout(function() {
 		$(this).attr("src", "img/Behance.png");
 	});
+
+
+
+	$('.close-contact').hover(function() {
+		$(this).attr("src", "img/Close2.svg");
+	});
+	$('.close-contact').mouseout(function() {
+		$(this).attr("src", "img/Close.png");
+	});
 });
