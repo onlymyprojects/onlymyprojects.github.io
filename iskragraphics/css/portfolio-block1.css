@@ -13,8 +13,6 @@
 	animation: .5s work-title;
 	animation-delay: 1s;
 	animation-fill-mode: both;
-	line-height: 0;
-	margin-top: 30px;
 }
 @keyframes work-title {
 	0% {
@@ -44,27 +42,27 @@
 }
 @keyframes work-titlee {
 	0% {
-		top: 10%;
+		top: 12%;
 		width: 0;
 		height: 1%;
 		visibility: initial;
 	}
 	25% {
-		top: 10%;
+		top: 12%;
 	    left: 0;
 	    width: 73%;
 	    height: 1%;
 	    visibility: initial;
 	}
 	50% {
-		top: 1%;
+		top: 3%;
 	    left: 0;
         width: 73%;
 	    height: 10%;
 	    visibility: initial;
 	}
 	100% {
-		top: 1%;
+		top: 3%;
 	    left: 0;
         width: 73%;
 	    height: 0;
@@ -96,15 +94,14 @@
 	width: 50px;
 	border: 1px solid #464646;
 	float: left;
-	margin: 0;
-	margin-top: 33px;
+	margin-top: 40px;
 }
 .work-tags {
 	font-size: 2.3026315789473686vh;
 	color: #DCDCDC;
 	word-spacing: 20px;
 	line-height: 4.566210045662101vh;
-	margin-top: 20px;
+	margin-top: 24px;
 }
 .text-content span {
 	color: #C8A060;
