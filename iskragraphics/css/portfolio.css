@@ -18,14 +18,14 @@
 		opacity: 1;
 	}
 }
-.row {
-}
 .all-blocks {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 1120px;
+	width: 100vw;
+	max-width: 1120px;
+
 }
 .block {
 	width: 250px;
@@ -69,14 +69,14 @@
 	0% {
 		visibility: initial;
 		width: 0;
-		height: 3%;
+		height: 2%;
 		top: 0;
 		right: 0;
 	}
 	30% {
 		visibility: initial;
         width: 250px;
-		height: 3%;
+		height: 2%;
 		top: 0;
 		right: 0;
 	}
@@ -112,13 +112,13 @@
 	0% {
 		visibility: initial;
 		width: 0;
-		height: 3%;
+		height: 2%;
 		bottom: 0;
 	}
 	30% {
 		visibility: initial;
 		width: 250px;
-		height: 3%;
+		height: 2%;
 		bottom: 0;
 	}
 	55% {
@@ -147,13 +147,13 @@
 	0% {
 		visibility: initial;
 		width: 0;
-		height: 3%;
+		height: 2%;
 		top: 0;
 	}
 	30% {
 		visibility: initial;
 		width: 250px;
-		height: 3%;
+		height: 2%;
 		top: 0;
 	}
 	55% {
@@ -185,14 +185,14 @@
 		visibility: initial;
 		width: 0;
 		right: 0;
-		height: 3%;
+		height: 2%;
 		bottom: 0;
 	}
 	30% {
 		visibility: initial;
 		width: 250px;
 		right: 0;
-		height: 3%;
+		height: 2%;
 		bottom: 0;
 	}
 	55% {

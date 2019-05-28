@@ -13,6 +13,9 @@
 	animation: .5s work-title;
 	animation-delay: 1s;
 	animation-fill-mode: both;
+	margin: 0;
+	line-height: 0;
+	margin-top: 40px;
 }
 @keyframes work-title {
 	0% {
@@ -87,20 +90,23 @@
 	font-size: 2.3026315789473686vh;
 	line-height: 3.8051750380517504vh;
 	color: #8C8C8C;
-	margin-top: 40px;
+	margin: 0;
+	margin-top: 59px;
 }
 .content .text-content hr {
-	width: 50px;
+	width: 40px;
 	border: 1px solid #464646;
 	float: left;
-	margin-top: 40px;
+	margin: 0;
+	margin-top: 45px;
 }
 .work-tags {
 	font-size: 2.3026315789473686vh;
 	color: #DCDCDC;
 	word-spacing: 20px;
 	line-height: 4.566210045662101vh;
-	margin-top: 24px;
+	margin: 0;
+	margin-top: 27px;
 }
 .text-content span {
 	color: #C8A060;
@@ -117,8 +123,6 @@
 }
 .prev {
 	position: absolute;
-	bottom: ;
-	right: ;
 	width: 18px;
 	height: 18px;
 	border: 1px solid #8C8C8C;
