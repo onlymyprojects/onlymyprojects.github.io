@@ -214,3 +214,54 @@
 		height: 0;
 	}
 }
+
+.load-more {
+	position: absolute;
+	z-index: 3;
+	background: transparent;
+	width: 180px;
+	height: 40px;
+	color: #464646;
+	font-family: Roboto;
+	top: 92vh;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid #464646;
+	outline: none;
+	font-size: 2.13089802130898vh;
+	transition: .3s;
+	animation: 1s loadMore;
+	animation-fill-mode: both;
+	animation-delay: 2.5s;
+}
+
+.load-more:hover {
+	border: 1px solid #C8A060;
+	color: #C8A060;
+	transition: .3s;
+}
+
+@keyframes loadMore {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+@media screen and (min-height: 660px) {
+	.load-more {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-height: 920px) {
+	.load-more {
+		top: 83.3vh;
+	}
+}

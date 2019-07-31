@@ -351,6 +351,326 @@
 	    visibility: initial;
 	}
 }
+.work-title-porter:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeee {
+	0% {
+		top: 14%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 14%;
+		left: 0;
+		width: 77%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 77%;
+	    height: 12%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 77%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-magic:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeee {
+	0% {
+		top: 14%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 14%;
+		left: 0;
+		width: 75%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 75%;
+	    height: 12%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 75%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-hive:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeeee {
+	0% {
+		top: 12%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 12%;
+		left: 0;
+		width: 60%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 60%;
+	    height: 10%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 60%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-whaleberry:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeeeee {
+	0% {
+		top: 14%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 14%;
+		left: 0;
+		width: 80%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 80%;
+	    height: 12%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 80%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-everest:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeeeeee {
+	0% {
+		top: 12%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 12%;
+		left: 0;
+		width: 50%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 50%;
+	    height: 10%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 50%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-adelun:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeeeeeee {
+	0% {
+		top: 12%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 12%;
+		left: 0;
+		width: 49%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 49%;
+	    height: 10%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 49%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-tenno:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeeeeeeee {
+	0% {
+		top: 12%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 12%;
+		left: 0;
+		width: 80%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 80%;
+	    height: 10%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 80%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
+.work-title-vitamins:before {
+	content: '';
+	position: absolute;
+	background: #C8A060;
+	top: 2%;
+	left: 0;
+	height: 10%;
+	animation: .8s work-titleeeeeeeeeeeeeeeee;
+	animation-delay: 1s;
+	visibility: hidden;
+}
+@keyframes work-titleeeeeeeeeeeeeeeee {
+	0% {
+		top: 12%;
+		width: 0;
+		height: 1%;
+		visibility: initial;
+	}
+	25% {
+		top: 12%;
+		left: 0;
+		width: 60%;
+		height: 1%;
+		visibility: initial;
+	}
+	50% {
+		top: 3%;
+	    left: 0;
+    	width: 60%;
+	    height: 10%;
+	    visibility: initial;
+	}
+	100% {
+		top: 3%;
+	    left: 0;
+        width: 60%;
+	    height: 0;
+	    visibility: initial;
+	}
+}
 .content img {
 	box-shadow: 0 30px 25px -35px black;
 	height: 79.1476407914764vh;

@@ -54,4 +54,60 @@ $(document).ready(function() {
 	$('.i8').mouseout(function() {
 		$('.i8').attr('src', 'img/planar-passive.png');
 	});
+
+	$('.i9').hover(function() {
+		$('.i9').attr('src', 'img/porter-hover.png');
+	});
+	$('.i9').mouseout(function() {
+		$('.i9').attr('src', 'img/porter-passive.png');
+	});
+
+	$('.i10').hover(function() {
+		$('.i10').attr('src', 'img/magic-hover.png');
+	});
+	$('.i10').mouseout(function() {
+		$('.i10').attr('src', 'img/magic-passive.png');
+	});
+
+	$('.i11').hover(function() {
+		$('.i11').attr('src', 'img/hive-hover.png');
+	});
+	$('.i11').mouseout(function() {
+		$('.i11').attr('src', 'img/hive-passive.png');
+	});
+
+	$('.i12').hover(function() {
+		$('.i12').attr('src', 'img/whaleberry-hover.png');
+	});
+	$('.i12').mouseout(function() {
+		$('.i12').attr('src', 'img/whaleberry-passive.png');
+	});
+
+	$('.i13').hover(function() {
+		$('.i13').attr('src', 'img/everest-hover.png');
+	});
+	$('.i13').mouseout(function() {
+		$('.i13').attr('src', 'img/everest-passive.png');
+	});
+
+	$('.i14').hover(function() {
+		$('.i14').attr('src', 'img/adelun-hover.png');
+	});
+	$('.i14').mouseout(function() {
+		$('.i14').attr('src', 'img/adelun-passive.png');
+	});
+
+	$('.i15').hover(function() {
+		$('.i15').attr('src', 'img/tenno-hover.png');
+	});
+	$('.i15').mouseout(function() {
+		$('.i15').attr('src', 'img/tenno-passive.png');
+	});
+
+	$('.i16').hover(function() {
+		$('.i16').attr('src', 'img/vitamins-hover.png');
+	});
+	$('.i16').mouseout(function() {
+		$('.i16').attr('src', 'img/vitamins-passive.png');
+	});
 });

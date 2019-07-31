@@ -117,4 +117,140 @@ $(document).ready(function() {
 			$('.i8').attr('src', 'img/planar-hover.png');
 		});
 	});
+
+
+	$('.i9').click(function(){
+		$('.i10, .i11, .i12, .i13, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i9').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i9').removeClass('visibility').animate({'opacity': '0'}, 150);
+	    }, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block9.html');
+		}, 1000);
+		$('.i9').mouseout(function() {
+			$('.i9').attr('src', 'img/porter-hover.png');
+		});
+    });
+
+
+	$('.i10').click(function(){
+		$('.i9, .i11, .i12, .i13, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i10').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i10').removeClass('visibility').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block10.html');
+		}, 1000);
+		$('.i10').mouseout(function() {
+			$('.i10').attr('src', 'img/magic-hover.png');
+		});
+	});
+
+
+	$('.i11').click(function(){
+		$('.i9, .i10, .i12, .i13, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i11').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i11').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block11.html');
+		}, 1000);
+		$('.i11').mouseout(function() {
+			$('.i11').attr('src', 'img/hive-hover.png');
+		});
+	});
+
+
+	$('.i12').click(function(){
+		$('.i9, .i10, .i11, .i13, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i12').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i12').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block12.html');
+		}, 1000);
+		$('.i12').mouseout(function() {
+			$('.i12').attr('src', 'img/whaleberry-hover.png');
+		});
+	});
+
+
+	$('.i13').click(function(){
+		$('.i9, .i10, .i11, .i12, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i13').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i13').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block13.html');
+		}, 1000);
+		$('.i13').mouseout(function() {
+			$('.i13').attr('src', 'img/everest-hover.png');
+		});
+	});
+
+
+	$('.i14').click(function(){
+		$('.i9, .i10, .i11, .i12, .i13, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i14').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i14').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block14.html');
+		}, 1000);
+		$('.i14').mouseout(function() {
+			$('.i14').attr('src', 'img/adelun-hover.png');
+		});
+	});
+
+
+	$('.i15').click(function(){
+		$('.i9, .i10, .i11, .i12, .i13, .i14, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i15').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i15').removeClass('visibility').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block15.html');
+		}, 1000);
+		$('.i15').mouseout(function() {
+			$('.i15').attr('src', 'img/tenno-hover.png');
+		});
+	});
+
+
+	$('.i16').click(function(){
+		$('.i9, .i10, .i11, .i12, .i13, .i14, .i15').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		$('.i16').css({'margin-top': '-20px', 'box-shadow': '0 25px 25px -30px black'});
+		setTimeout(function(){
+			$('.i16').removeClass('visibility').animate({'opacity': '0'}, 150);
+		}, 500);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio-block16.html');
+		}, 1000);
+		$('.i16').mouseout(function() {
+			$('.i16').attr('src', 'img/vitamins-hover.png');
+		});
+	});
+
+
+
+	$('.lm1').click(function() {
+		$('.i1, .i2, .i3, .i4, .i5, .i6, .i7, .i8').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio2.html');
+		}, 500);
+	});
+
+	$('.lm2').click(function() {
+		$('.i9, .i10, .i11, .i12, .i13, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
+		setTimeout(function(){
+			$(location).attr('href', 'portfolio.html');
+		}, 500);
+	});
 });

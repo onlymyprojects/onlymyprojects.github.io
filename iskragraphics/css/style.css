@@ -208,7 +208,7 @@
     font-size: 2.5875190258751903vh;
     transition: 0.5s;
     top: 72.5%;
-    left: -30px;
+	left: -30px;
 }
 .button:hover {
 	background: #232323;

@@ -20,7 +20,7 @@ body .navbar-default {
     box-shadow: none;
     top: 3.24%;
     right: 1.82%;
-    z-index: 2;
+	z-index: 2;
 }
 .navbar .navbar-collapse ul li a {
 	font-size: 2.13089802130898vh;
@@ -205,6 +205,7 @@ body .navbar-default {
 	top: 42%;
 	left: -33%;
 	list-style: none;
+	opacity: 0;
 }
 .page-contact ul li a {
 	text-decoration: none;
@@ -263,11 +264,13 @@ body .navbar-default {
 	cursor: pointer;
 	height: 7.610350076103501vh;
 	max-height: 50px;
+	opacity: 0;
 }
 .form {
 	position: absolute;
 	left: 27%;
 	top: 41%;
+	opacity: 0;
 }
 .form-title {
 	margin: 0;

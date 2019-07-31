@@ -34,7 +34,10 @@ $(document).ready(function() {
     	$('#page-contact').addClass('hide');
     	$('.all-blocks').show();
     	$('.max').show();
-    	$('.portfolio-block').show();
+		$('.portfolio-block').show();
+		$('.contact-menu').css({'opacity': '0'});
+		$('.close-contact').css({'opacity': '0'});
+		$('.form').css({'opacity': '0'});
     });
 
 
@@ -104,5 +107,22 @@ $(document).ready(function() {
 			    $('#input3').css({"border-bottom": "1px solid #C8A060"});
 	        });
         }
-    });
+	});
+	
+
+
+
+	$('#contact').click(function() {
+		setTimeout(function(){ 
+			$('.contact-menu').css({'opacity': '1', 'transition': '1s'});
+		}, 3000);
+
+		setTimeout(function(){ 
+			$('.close-contact').css({'opacity': '1', 'transition': '1s'});
+		}, 2000);
+
+		setTimeout(function(){ 
+			$('.form').css({'opacity': '1', 'transition': '1s'});
+		}, 2000);
+	});
 });
