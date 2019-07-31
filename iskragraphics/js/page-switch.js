@@ -11,6 +11,7 @@ $(document).ready(function() {
 		$('.i1').mouseout(function() {
 			$('.i1').attr('src', 'img/ecoride-hover.png');
 		});
+		$('.load-more').hide(200);
     });
 
 
@@ -26,6 +27,7 @@ $(document).ready(function() {
 		$('.i2').mouseout(function() {
 			$('.i2').attr('src', 'img/rmetre-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -41,6 +43,7 @@ $(document).ready(function() {
 		$('.i3').mouseout(function() {
 			$('.i3').attr('src', 'img/yetikids-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -56,6 +59,7 @@ $(document).ready(function() {
 		$('.i4').mouseout(function() {
 			$('.i4').attr('src', 'img/restavrator-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -71,6 +75,7 @@ $(document).ready(function() {
 		$('.i5').mouseout(function() {
 			$('.i5').attr('src', 'img/odyssey-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -86,6 +91,7 @@ $(document).ready(function() {
 		$('.i6').mouseout(function() {
 			$('.i6').attr('src', 'img/avigo-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -101,6 +107,7 @@ $(document).ready(function() {
 		$('.i7').mouseout(function() {
 			$('.i7').attr('src', 'img/sivart-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -116,6 +123,7 @@ $(document).ready(function() {
 		$('.i8').mouseout(function() {
 			$('.i8').attr('src', 'img/planar-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -131,6 +139,7 @@ $(document).ready(function() {
 		$('.i9').mouseout(function() {
 			$('.i9').attr('src', 'img/porter-hover.png');
 		});
+		$('.load-more').hide(200);
     });
 
 
@@ -146,6 +155,7 @@ $(document).ready(function() {
 		$('.i10').mouseout(function() {
 			$('.i10').attr('src', 'img/magic-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -161,6 +171,7 @@ $(document).ready(function() {
 		$('.i11').mouseout(function() {
 			$('.i11').attr('src', 'img/hive-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -176,6 +187,7 @@ $(document).ready(function() {
 		$('.i12').mouseout(function() {
 			$('.i12').attr('src', 'img/whaleberry-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -191,6 +203,7 @@ $(document).ready(function() {
 		$('.i13').mouseout(function() {
 			$('.i13').attr('src', 'img/everest-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -206,6 +219,7 @@ $(document).ready(function() {
 		$('.i14').mouseout(function() {
 			$('.i14').attr('src', 'img/adelun-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -221,6 +235,7 @@ $(document).ready(function() {
 		$('.i15').mouseout(function() {
 			$('.i15').attr('src', 'img/tenno-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
@@ -236,6 +251,7 @@ $(document).ready(function() {
 		$('.i16').mouseout(function() {
 			$('.i16').attr('src', 'img/vitamins-hover.png');
 		});
+		$('.load-more').hide(200);
 	});
 
 
