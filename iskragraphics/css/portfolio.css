@@ -237,7 +237,7 @@
 
 .load-more:hover {
 	border: 1px solid #C8A060;
-	color: #C8A060;
+	background: #C8A060;
 	transition: .3s;
 }
 
