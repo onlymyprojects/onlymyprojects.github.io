@@ -6,8 +6,8 @@ $(document).ready(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail/mail.php", //Change
-			data: th.serialize()
+			url: "/mail/mail.php", //Change
+			data: th.parents('form').serialize()
 		}).done(function() {
 			alert("Thank you!");
 			setTimeout(function() {
