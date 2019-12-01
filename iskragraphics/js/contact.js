@@ -10,7 +10,7 @@ $(document).ready(function() {
 		$('.max').hide().removeClass('animated');
 		$('.portfolio-block').hide();
 		setTimeout(function(){	    
-    	    $('.copyright').css({"left": "13.2%", "bottom": "3.6%"});
+    	    $('.copyright').css({"left": "13%", "bottom": "3.6%"});
     	    $('.cp').removeClass('copyright-block');
         }, 1000);
 		setTimeout(function(){	    

@@ -214,12 +214,39 @@
 		height: 0;
 	}
 }
-
+@media screen and (min-width: 768px) {
+	.load-more {
+		position: absolute;
+		z-index: 1;
+		background: transparent;
+		width: 100px;
+		height: 40px;
+		color: #464646;
+		font-family: Roboto;
+		top: 92vh;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 1px solid #464646;
+		outline: none;
+		font-size: 2.13089802130898vh;
+		font-weight: bold;
+		transition: .3s;
+		animation: 1s loadMore;
+		animation-fill-mode: both;
+		animation-delay: 2.5s;
+	}
+	
+	.load-more:hover {
+		border: 1px solid #C8A060;
+		background: #C8A060;
+		transition: .3s;
+	}
+}
 .load-more {
 	position: absolute;
-	z-index: 3;
+	z-index: 1;
 	background: transparent;
-	width: 180px;
+	width: 100px;
 	height: 40px;
 	color: #464646;
 	font-family: Roboto;
@@ -229,7 +256,7 @@
 	border: 1px solid #464646;
 	outline: none;
 	font-size: 2.13089802130898vh;
-	transition: .3s;
+	font-weight: bold;
 	animation: 1s loadMore;
 	animation-fill-mode: both;
 	animation-delay: 2.5s;
@@ -238,7 +265,6 @@
 .load-more:hover {
 	border: 1px solid #C8A060;
 	background: #C8A060;
-	transition: .3s;
 }
 
 @keyframes loadMore {
@@ -249,9 +275,33 @@
 		opacity: 1;
 	}
 }
+.hideee {
+	display: none;
+}
 
 
 
+
+@media screen and (max-width: 991px){
+	.block img {
+		width: 190px;
+		height: 175px;
+	}
+	.all-blocks {
+		width: 600px;
+	}
+	.block {
+		width: 220px;
+		height: 210px;
+		margin: 0;
+	}
+	.all-blocks .block .orange-block {
+		animation: none;
+	}
+	.all-blocks .mobile-b .block {
+		float: right;
+	}
+}
 
 
 @media screen and (min-height: 660px) {
@@ -263,5 +313,66 @@
 @media screen and (min-height: 920px) {
 	.load-more {
 		top: 83.3vh;
+	}
+}
+
+
+
+@media screen and (max-width: 767px) {
+	.all-blocks .mobile-b .block {
+		float: none;
+	}
+	.block img {
+		width: 150px;
+		height: 144px;
+	}
+	.hidee {
+		display: none;
+	}
+	.hideee {
+		display: block;
+	}
+	.block {
+		width: 150px;
+		height: 144px;
+		left: 49%;
+		transform: translateX(-50%);
+		margin-top: 15px;
+	}
+	.all-blocks {
+		top: 44%;
+		width: 330px;
+	}
+	.all-blocks .block .orange-block {
+		animation: none;
+	}
+	.visibility {
+		opacity: 0;
+		animation: .7s visibilityy;
+		animation-delay: .7s;
+		animation-fill-mode: both;
+	}
+	.visibility2 {
+		opacity: 0;
+		animation: .7s visibilityy;
+		animation-delay: 1.7s;
+		animation-fill-mode: both;
+	}
+	.load-more {
+		top: 73.18%;
+	}
+}
+
+@media screen and (max-width: 375px){
+	.block img {
+		width: 138px;
+		height: 132px;
+	}
+	.all-blocks {
+		width: 305px;
+	}
+	.block {
+		width: 138px;
+		height: 132px;
 	}
 }

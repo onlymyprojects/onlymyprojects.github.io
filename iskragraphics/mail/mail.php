@@ -2,14 +2,6 @@
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-$txt = "John Doe\n";
-fwrite($myfile, $txt);
-$txt = "Jane Doe\n";
-fwrite($myfile, $txt);
-fwrite($myfile, $method);
-fclose($myfile);
-
 //Script Foreach
 $c = true;
 if ( $method === 'POST' ) {

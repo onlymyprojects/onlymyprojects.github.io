@@ -1,5 +1,9 @@
+.br2 {
+	display: none;
+}
 .block {
-	width: 660px;
+	width: 100vw;
+	max-width: 660px;
 	height: 62vh;
 	max-height: 500px;
 	position: absolute;
@@ -168,19 +172,19 @@
 	25% {
 		top: 96.5%;
 	    left: 0;
-	    width: 39%;
+	    width: 42%;
 	    height: 3%;
 	}
 	50% {
 		top: 57%;
 	    left: 0;
-        width: 39%;
+        width: 42%;
 	    height: 40%;
 	}
 	100% {
 		top: 57%;
 	    left: 0;
-        width: 39%;
+        width: 42%;
 	    height: 0;
 	}
 }
@@ -200,12 +204,12 @@
 	font-weight: bold;
 	position: absolute;
     outline: none;
-    border: none;
     border: 1px solid #C8A060;
-    height: 9.132420091324201vh;
-    width: 300px;
+	height: 9.132420091324201vh;
+	width: 100vw;
+    max-width: 300px;
     max-height: 60px; /* 60px */
-    font-size: 2.5875190258751903vh;
+	font-size: 2.5875190258751903vh;
     transition: 0.5s;
     top: 72.5%;
 	left: -30px;
@@ -216,7 +220,8 @@
 	transition: 0.5s;
 }
 .content {
-	width: 1200px;
+	width: 100vw;
+	max-width: 1200px;
 	height: 100vh;
 	max-height: 620px;
 	position: absolute;
@@ -272,5 +277,97 @@
 	}
 	.button {
 		font-size: 17px;
+	}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1230px) {
+	.max {
+		display: none !important;
+	}
+	.block {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.block {
+		transform: translateY(-50%);
+		width: 75%;
+		left: 20%;
+		top: 48%;
+		height: 65vh;
+		max-height: 346px;
+	}
+	.button {
+		max-width: 240px;
+		left: -48px;
+		top: 70%;
+		font-size: 16px;
+	}
+	.text {
+		/* font-size: 2.6vh;
+		line-height: 4.6vh; */
+		font-size: 15px;
+		line-height: 25px;
+		left: -48px;
+		top: 42%;
+	}
+	.title {
+		/* font-size: 6.3vh;
+		line-height: 8.3vh; */
+		font-size: 36px;
+		line-height: 46px;
+		left: -48px;
+		top: 13%;
+	}
+	.br1 {
+		display: none;
+	}
+	.br2 {
+		display: block;
+	}
+	.text:after {
+		content: '';
+		position: absolute;
+		background: #DCDCDC;
+		top: 57%;
+		left: 0;
+		height: 40%;
+		animation: .8s textttt;
+		animation-delay: .8s;
+	}
+	@keyframes textttt {
+		0% {
+			top: 96.5%;
+			width: 0;
+			height: 3%;
+		}
+		25% {
+			top: 96.5%;
+			left: 0;
+			width: 61%;
+			height: 3%;
+		}
+		50% {
+			top: 57%;
+			left: 0;
+			width: 61%;
+			height: 40%;
+		}
+		100% {
+			top: 57%;
+			left: 0;
+			width: 61%;
+			height: 0;
+		}
 	}
 }

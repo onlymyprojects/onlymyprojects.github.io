@@ -8,33 +8,40 @@ $(document).ready(function() {
 		$('#menu-line').addClass('menu-line');
 	});
 
+	$('#mobile-menu-disappear').click(function() {
+		$(this).css({'opacity': '0'});
+	});
+	$('.back').click(function() {
+		$('#mobile-menu-disappear').css({'opacity': '1'});
+	});
+
 
 	$('.instagram').hover(function() {
-		$(this).attr("src", "img/instagram2.png");
+		$(this).attr("src", "img/instagram2.svg");
 	});
 	$('.instagram').mouseout(function() {
-		$(this).attr("src", "img/instagram.png");
+		$(this).attr("src", "img/instagram.svg");
 	});
 
 	$('.facebook').hover(function() {
-		$(this).attr("src", "img/facebook2.png");
+		$(this).attr("src", "img/facebook2.svg");
 	});
 	$('.facebook').mouseout(function() {
-		$(this).attr("src", "img/facebook.png");
+		$(this).attr("src", "img/facebook.svg");
 	});
 
 	$('.Dribble').hover(function() {
-		$(this).attr("src", "img/Dribble2.png");
+		$(this).attr("src", "img/Dribble2.svg");
 	});
 	$('.Dribble').mouseout(function() {
-		$(this).attr("src", "img/Dribble.png");
+		$(this).attr("src", "img/Dribble.svg");
 	});
 
 	$('.Behance').hover(function() {
-		$(this).attr("src", "img/Behance2.png");
+		$(this).attr("src", "img/Behance2.svg");
 	});
 	$('.Behance').mouseout(function() {
-		$(this).attr("src", "img/Behance.png");
+		$(this).attr("src", "img/Behance.svg");
 	});
 
 
@@ -43,6 +50,6 @@ $(document).ready(function() {
 		$(this).attr("src", "img/Close2.svg");
 	});
 	$('.close-contact').mouseout(function() {
-		$(this).attr("src", "img/Close.png");
+		$(this).attr("src", "img/Close.svg");
 	});
 });

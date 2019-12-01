@@ -6,7 +6,7 @@ $(document).ready(function() {
 			$('.i1').removeClass('visibility').animate({'opacity': '0'}, 150);
 	    }, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block1.html');
+			$(location).attr('href', 'ecoride');
 		}, 1000);
 		$('.i1').mouseout(function() {
 			$('.i1').attr('src', 'img/ecoride-hover.png');
@@ -22,7 +22,7 @@ $(document).ready(function() {
 			$('.i2').removeClass('visibility').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block2.html');
+			$(location).attr('href', 'rmetre');
 		}, 1000);
 		$('.i2').mouseout(function() {
 			$('.i2').attr('src', 'img/rmetre-hover.png');
@@ -38,7 +38,7 @@ $(document).ready(function() {
 			$('.i3').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block3.html');
+			$(location).attr('href', 'yetikids');
 		}, 1000);
 		$('.i3').mouseout(function() {
 			$('.i3').attr('src', 'img/yetikids-hover.png');
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			$('.i4').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block4.html');
+			$(location).attr('href', 'restavrator');
 		}, 1000);
 		$('.i4').mouseout(function() {
 			$('.i4').attr('src', 'img/restavrator-hover.png');
@@ -70,7 +70,7 @@ $(document).ready(function() {
 			$('.i5').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block5.html');
+			$(location).attr('href', 'odyssey');
 		}, 1000);
 		$('.i5').mouseout(function() {
 			$('.i5').attr('src', 'img/odyssey-hover.png');
@@ -86,7 +86,7 @@ $(document).ready(function() {
 			$('.i6').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block6.html');
+			$(location).attr('href', 'avigo');
 		}, 1000);
 		$('.i6').mouseout(function() {
 			$('.i6').attr('src', 'img/avigo-hover.png');
@@ -102,7 +102,7 @@ $(document).ready(function() {
 			$('.i7').removeClass('visibility').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block7.html');
+			$(location).attr('href', 'sivart');
 		}, 1000);
 		$('.i7').mouseout(function() {
 			$('.i7').attr('src', 'img/sivart-hover.png');
@@ -118,7 +118,7 @@ $(document).ready(function() {
 			$('.i8').removeClass('visibility').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block8.html');
+			$(location).attr('href', 'planar');
 		}, 1000);
 		$('.i8').mouseout(function() {
 			$('.i8').attr('src', 'img/planar-hover.png');
@@ -134,7 +134,7 @@ $(document).ready(function() {
 			$('.i9').removeClass('visibility').animate({'opacity': '0'}, 150);
 	    }, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block9.html');
+			$(location).attr('href', 'porteryard');
 		}, 1000);
 		$('.i9').mouseout(function() {
 			$('.i9').attr('src', 'img/porter-hover.png');
@@ -150,7 +150,7 @@ $(document).ready(function() {
 			$('.i10').removeClass('visibility').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block10.html');
+			$(location).attr('href', 'magiccorn');
 		}, 1000);
 		$('.i10').mouseout(function() {
 			$('.i10').attr('src', 'img/magic-hover.png');
@@ -166,7 +166,7 @@ $(document).ready(function() {
 			$('.i11').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block11.html');
+			$(location).attr('href', 'hive');
 		}, 1000);
 		$('.i11').mouseout(function() {
 			$('.i11').attr('src', 'img/hive-hover.png');
@@ -182,7 +182,7 @@ $(document).ready(function() {
 			$('.i12').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block12.html');
+			$(location).attr('href', 'whaleberry');
 		}, 1000);
 		$('.i12').mouseout(function() {
 			$('.i12').attr('src', 'img/whaleberry-hover.png');
@@ -198,7 +198,7 @@ $(document).ready(function() {
 			$('.i13').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block13.html');
+			$(location).attr('href', 'everest');
 		}, 1000);
 		$('.i13').mouseout(function() {
 			$('.i13').attr('src', 'img/everest-hover.png');
@@ -214,7 +214,7 @@ $(document).ready(function() {
 			$('.i14').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block14.html');
+			$(location).attr('href', 'adelun');
 		}, 1000);
 		$('.i14').mouseout(function() {
 			$('.i14').attr('src', 'img/adelun-hover.png');
@@ -230,7 +230,7 @@ $(document).ready(function() {
 			$('.i15').removeClass('visibility').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block15.html');
+			$(location).attr('href', 'tennosushi');
 		}, 1000);
 		$('.i15').mouseout(function() {
 			$('.i15').attr('src', 'img/tenno-hover.png');
@@ -246,7 +246,7 @@ $(document).ready(function() {
 			$('.i16').removeClass('visibility').animate({'opacity': '0'}, 150);
 		}, 500);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio-block16.html');
+			$(location).attr('href', 'vitamins');
 		}, 1000);
 		$('.i16').mouseout(function() {
 			$('.i16').attr('src', 'img/vitamins-hover.png');
@@ -259,14 +259,14 @@ $(document).ready(function() {
 	$('.lm1').click(function() {
 		$('.i1, .i2, .i3, .i4, .i5, .i6, .i7, .i8').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio2.html');
+			$(location).attr('href', 'portfolio2');
 		}, 500);
 	});
 
 	$('.lm2').click(function() {
 		$('.i9, .i10, .i11, .i12, .i13, .i14, .i15, .i16').removeClass('visibility').removeClass('visibility2').animate({'opacity': '0'}, 150);
 		setTimeout(function(){
-			$(location).attr('href', 'portfolio.html');
+			$(location).attr('href', 'portfolio');
 		}, 500);
 	});
 });
