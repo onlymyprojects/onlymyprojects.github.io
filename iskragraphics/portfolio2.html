@@ -2,16 +2,21 @@
 <html>
 
 <head>
-  <title></title>
-  <link rel="shortcut icon" href="" />
-  <meta name="description" content="">
+  <title>Iskragraphics</title>
+  <link rel="shortcut icon" href="favicon.png" />
+  <meta property="og:title" content="Max Iskra">
+  <meta property="og:description" content="More than 7 years of UI, branding and
+    logotype design.">
+  <meta property="og:image" content="https://iskragraphics.com/snip.png">
+  <meta property="og:url" content="https://iskragraphics.com/">
+  <meta name="description" content="More than 7 years of UI, branding and
+    logotype design.">
   <meta name="keywords" content="">
   <meta name="author" content="">
   <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/portfolio.min.css">
   <link rel="stylesheet" type="text/css" href="css/general-style.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
@@ -19,12 +24,13 @@
 </head>
 
 <body style="background: #232323; overflow: hidden;">
+<div class="all">
 
-  <a href="index.html"><img src="img/logo.png" class="logo"></a>
+  <a href="https://iskragraphics.com/"><img src="img/logo.png" class="logo"></a>
 
   <div class="navbar navbar-default">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+      <button type="button" class="navbar-toggle" id="mobile-menu-disappear" data-toggle="collapse" data-target="#responsive-menu">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -32,8 +38,9 @@
     </div>
     <div class="collapse navbar-collapse" id="responsive-menu">
       <ul class="nav navbar-nav">
-        <li><a href="portfolio.html" class="button1" id="button1">PORTFOLIO</a></li>
-        <li><a href="index.html" class="button2" id="button2">HOME</a></li>
+        <li><a href="portfolio" class="button1" id="button1">PORTFOLIO</a></li>
+        <li><a href="https://iskragraphics.com/" class="button2" id="button2">HOME</a></li>
+        <li><a href="#" class="back navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">BACK</a></li>
       </ul>
     </div>
   </div>
@@ -49,7 +56,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6 mobile-b">
           <div class="block">
             <div class="orange-block orange-block2-8"></div>
             <img src="img/magic-passive.png" class="visibility i10">
@@ -63,7 +70,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6 mobile-b">
           <div class="block">
             <div class="orange-block orange-block4-6"></div>
             <img src="img/whaleberry-passive.png" class="visibility2 i12">
@@ -77,7 +84,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6 mobile-b">
           <div class="block">
             <div class="orange-block orange-block4-6"></div>
             <img src="img/adelun-passive.png" class="visibility2 i14">
@@ -91,7 +98,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6 mobile-b">
           <div class="block">
             <div class="orange-block orange-block2-8"></div>
             <img src="img/vitamins-passive.png" class="visibility i16">
@@ -100,30 +107,30 @@
       </div>
     </div>
 
-    <button class="load-more lm2 opacity-0">LOAD MORE</button>
-    
+    <button class="load-more lm2 opacity-0">PREV.</button>
+
   </div>
 
 
   <div class="social">
     <a href="https://www.instagram.com/iskragraphics/" target="_blank">
-      <img src="img/instagram.png" class="instagram">
+      <img src="img/instagram.svg" class="instagram">
     </a>
     <a href="https://www.facebook.com/iskragraphics/" target="_blank">
-      <img src="img/facebook.png" class="facebook">
+      <img src="img/facebook.svg" class="facebook">
     </a>
     <a href="http://dribbble.com/iskragraphics/" target="_blank">
-      <img src="img/Dribble.png" class="Dribble">
+      <img src="img/Dribble.svg" class="Dribble">
     </a>
     <a href="https://www.behance.net/iskragraphics/" target="_blank">
-      <img src="img/Behance.png" class="Behance">
+      <img src="img/Behance.svg" class="Behance">
     </a>
   </div>
   <div class="copyright-block cp">
     <p class="copyright">All Rights Reserved / 2019</p>
   </div>
   <a href="#" id="contact">
-    <img src="img/Message.png" class="contact">
+    <img src="img/Message.svg" class="contact">
   </a>
 
 
@@ -140,30 +147,46 @@
 
   <div class="page-contact hide" id="page-contact">
     <ul class="contact-menu">
-      <li><a href="index.html" class="button1">HOME</a></li>
-      <li style="margin-top: 50%;"><a href="portfolio.html" class="button2">PORTFOLIO</a></li>
+      <li><a href="https://iskragraphics.com/" class="button1">HOME</a></li>
+      <li style="margin-top: 50%;"><a href="portfolio" class="button2">PORTFOLIO</a></li>
     </ul>
 
-    <img src="img/Close.png" class="close-contact">
+    <img src="img/Close.svg" class="close-contact ">
 
-    <div style="position: absolute; left: 27%; top: 27%;">
+    <div class="form-title-position">
       <p class="form-title">Contact me</p>
     </div>
 
     <div class="form">
-      <form action="https://formspree.io/johnfeed@mail.ru" method="POST">
+      <form>
+
+
+        <input type="hidden" name="project_name" value="Iskragraphics">
+        <input type="hidden" name="admin_email" value="iskragraphics@gmail.com">
+        <input type="hidden" name="form_subject" value="Письмо пришло со страницы 'Portfolio №2'.">
+
+
         <p id="input-text1" style="top: 5%;">Name</p><br />
-        <input id="input1" class="input" style="top: 30%;" type="text" required="" placeholder="Name"
+        <input id="input1" class="input" name="Name" style="top: 30%;" type="text" required="" placeholder="Name"
           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'"><br />
         <p id="input-text2" style="top: 80%;">Email</p><br>
-        <input id="input2" class="input" style="top: 105%;" type="email" required="" placeholder="Email"
+        <input id="input2" class="input" name="Email" style="top: 105%;" type="email" required="" placeholder="Email"
           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"><br />
         <p id="input-text3" style="top: 155%;">Subject</p><br />
-        <input id="input3" class="input" style="top: 180%;" type="text" required="" placeholder="Subject"
+        <input id="input3" class="input" name="Subject" style="top: 180%;" type="text" required="" placeholder="Subject"
           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
         <input type="submit" value="SEND MESSAGE" class="send">
       </form>
     </div>
+  </div>
+
+
+
+  <div class="blur hidden"></div>
+  <div class="email-sent hidden">
+    <p class="email-sent-title">The e-mail was sent successfully!</p>
+    <p class="email-sent-text">I will contact you shortly.</p>
+    <button class="email-sent-button">OK</button>
   </div>
 
 
@@ -183,6 +206,12 @@
   <script type="text/javascript" src="js/menu-hover.js"></script>
   <script type="text/javascript" src="js/page-switch.js"></script>
   <script type="text/javascript" src="js/logo-hover.js"></script>
+  <script type="text/javascript" src="mail/script.js"></script>
+</div>
 </body>
+
+<div class="auto-rotation">
+  <img src="img/auto-rotation.png">
+</div>
 
 </html>
