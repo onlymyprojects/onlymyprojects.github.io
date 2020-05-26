@@ -1,0 +1,10 @@
+@mixin positionCenter {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+@mixin positionCenter2 {
+    left: 50%;
+    transform: translateX(-50%);
+}
