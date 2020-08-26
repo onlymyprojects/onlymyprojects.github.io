@@ -1,0 +1,69 @@
+body {
+    background: rgb(0, 2, 24) !important;
+}
+
+.main-img {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: 2s octopus infinite linear;
+}
+@keyframes octopus {
+    0% {
+        transform: translate(-50%, -47%);
+    }
+    50% {
+        transform: translate(-50%, -53%);
+    }
+    100% {
+        transform: translate(-50%, -47%);
+    }
+}
+
+.portfolio-img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 15px white;
+}
+
+.p-img-1, .p-img-2 {
+    left: 15%;
+}
+.p-img-1, .p-img-3 {
+    top: 15%;
+    animation: 2s p-img1 infinite linear;
+}
+@keyframes p-img1 {
+    0% {
+        top: 14%;
+    }
+    50% {
+        top: 16%;
+    }
+    100% {
+        top: 14%;
+    }
+}
+.p-img-2, .p-img-4 {
+    bottom: 15%;
+    animation: 2s p-img2 infinite linear;
+}
+@keyframes p-img2 {
+    0% {
+        bottom: 16%;
+    }
+    50% {
+        bottom: 14%;
+    }
+    100% {
+        bottom: 16%;
+    }
+}
+.p-img-3, .p-img-4 {
+    right: 15%;
+}
