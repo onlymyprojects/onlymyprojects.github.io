@@ -3,14 +3,14 @@ x = 0
 $('.menu').click(function () {
     if (x == 0) {
         $('body').css({ 'overflow-y': 'hidden' })
-        $('.navbar').css({ 'background': '#282532', 'transition': "0.3s" })
-        $("#navbarNav").show(300)
+        $('.navbar').css({ 'background': '#282532' })
+        $("#navbarNav").show()
         x = 1
     }
     else {
         $('body').css({ 'overflow-y': 'initial' })
-        $('.navbar').css({ 'background': '#6A6282', 'transition': "0.3s" })
-        $("#navbarNav").hide(300)
+        $('.navbar').css({ 'background': '#6A6282' })
+        $("#navbarNav").hide()
         x = 0;
     }
 })
