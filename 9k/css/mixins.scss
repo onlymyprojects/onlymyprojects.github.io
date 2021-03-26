@@ -1,0 +1,23 @@
+@mixin text ($fontFamily, $fontWeight, $fontSize, $color) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+}
+
+@mixin button ($width, $height, $fontSize, $margin, $fontFamily) {
+    display: flex;
+    background: $frequentlyUsedColor;
+    outline: none;
+    color: $textColor;
+    border: none;
+    width: $width;
+    height: $height;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    margin: $margin;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: $height;
+}
