@@ -8,7 +8,7 @@ $('.menu').click(function () {
         x = 1
     }
     else {
-        $("#navbarNav").hide(500)
+        $("#navbarNav").hide(200)
         $('body').css({ 'overflow-y': 'initial' })
         $('.navbar').css({ 'background': '#6A6282', 'transition': '0.5s' })
         x = 0;
