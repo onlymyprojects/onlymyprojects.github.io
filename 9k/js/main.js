@@ -2,13 +2,13 @@ x = 0
 
 $('.menu').click(function () {
     if (x == 0) {
-        $("#navbarNav").show(500)
+        $("#navbarNav").fadeIn(500)
         $('body').css({ 'overflow-y': 'hidden' })
         $('.navbar').css({ 'background': '#282532', 'transition': '0.5s' })
         x = 1
     }
     else {
-        $("#navbarNav").hide(500)
+        $("#navbarNav").fadeOut(500)
         $('body').css({ 'overflow-y': 'initial' })
         $('.navbar').css({ 'background': '#6A6282', 'transition': '0.5s' })
         x = 0;
@@ -95,9 +95,4 @@ $(document).ready(function () {
 
         e.preventDefault();
     });
-});
-
-// Do not hide mobile address bar
-$("html, body, #wrapper").css({
-    height: $(window).height()
 });
