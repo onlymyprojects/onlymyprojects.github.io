@@ -792,6 +792,7 @@ body {
                         .mobileContact {
                             display: initial;
                             margin-top: auto;
+                            margin-bottom: 35px;
 
                             .mobileNumber, .mobileMail, .mobileSocial {
                                 @include text($fontFamily2, normal, 18px, $textColor);
