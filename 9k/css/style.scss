@@ -66,8 +66,6 @@ body {
 
         header {
             .navbar {
-                // overflow: hidden;
-
                 hr {
                     display: none;
                     background: rgba(255, 255, 255, 0.5);;
@@ -652,7 +650,7 @@ body {
       @include text($fontFamily2, normal, 18px, black);
       text-align: left;
       margin-left: 50px;
-      margin-right: 70px;
+      margin-right: 50px;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -726,6 +724,12 @@ body {
   }
 
 //----Scrollbar----
+
+@media only screen and (min-width: 1854px) {
+    .popup-box1 {
+        direction: ltr;
+    }
+}
 
 
 @media only screen and (max-width: 1245px) {
@@ -1045,6 +1049,15 @@ body {
             br {
                 display: none;
             }
+        }
+    }
+
+    .popup-box5, .popup-box7 {
+        h3 {
+            transform: none; 
+            position: initial; 
+            margin-bottom: 50px; 
+            margin-top: 120px;
         }
     }
 
