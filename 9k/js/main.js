@@ -96,8 +96,3 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
-
-
-$("html, body, #wrapper").css({
-    height: $(window).height()
-});
