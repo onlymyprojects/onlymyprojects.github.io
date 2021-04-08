@@ -79,9 +79,7 @@ body {
                         margin-right: 12px;
         
                         a {
-                            color: $textColor;
-                            font-size: 20px;
-                            font-family: $fontFamily1;
+                            @include text($fontFamily1, 300, 20px, $textColor);
                         }
                     }
 
@@ -95,6 +93,7 @@ body {
                     margin-left: 25px;
                     margin-right: 15px;
                     line-height: initial;
+                    font-weight: 300;
     
                     img {
                         margin-right: 3px;
@@ -113,13 +112,14 @@ body {
         
                         a {
                             position: relative;
-                            @include text($fontFamily2, normal, 18px, $textColor);
+                            @include text($fontFamily2, 300, 18px, $textColor);
                             display: flex;
                             justify-content: center;
                         }
         
                         .number {
                             top: 25px;
+                            font-weight: 700;
                         }
         
                         .mail {
@@ -171,7 +171,7 @@ body {
     
             p {
                 margin-top: 35px;
-                @include text($fontFamily1, normal, 24px, white);
+                @include text($fontFamily1, 300, 24px, white);
 
                 .mobileBr2 {
                     display: none;
@@ -201,7 +201,7 @@ body {
             }
     
             p, a {
-                @include text($fontFamily2, normal, 18px, white);
+                @include text($fontFamily2, 300, 18px, white);
                 margin-top: 25px;
                 line-height: 24.5px;
             }
@@ -216,7 +216,7 @@ body {
                 @include text($fontFamily2, 700, 14px, white);
                 width: 405px;
                 height: 70px;
-                background: $frequentlyUsedColor;
+                background: #14374E;
                 border-radius: 36.5px;
                 display: flex;
                 align-items: center;
@@ -245,7 +245,7 @@ body {
         }
 
         p, a {
-            @include text($fontFamily2, normal, 18px, white);
+            @include text($fontFamily2, 300, 18px, white);
             line-height: 24.5px
         }
 
@@ -281,7 +281,7 @@ body {
                 justify-content: center;
 
                 p {
-                    @include text($fontFamily1, normal, 18px, white);
+                    @include text($fontFamily1, 300, 18px, white);
                     text-align: left;
                     line-height: 21px;
                     margin-left: 10px;
@@ -312,7 +312,7 @@ body {
                 margin-top: 5px;
 
                 p {
-                    @include text($fontFamily2, normal, 18px, white);
+                    @include text($fontFamily2, 300, 18px, white);
                     line-height: 24.5px;
                     text-align: left;
                     margin: 25px;
@@ -328,7 +328,7 @@ body {
             text-align: left;
 
             p {
-                @include text($fontFamily2, normal, 18px, white);
+                @include text($fontFamily2, 300, 18px, white);
                 margin-top: 25px;
                 line-height: 24.5px;
 
@@ -356,13 +356,13 @@ body {
                 }
 
                 h2 {
-                    @include text($fontFamily2, normal, 20px, white);
+                    @include text($fontFamily2, 300, 20px, white);
                     margin-top: -10px;
                     margin-bottom: 75px;
                 }
 
                 p {
-                    @include text($fontFamily2, normal, 18px, white);
+                    @include text($fontFamily2, 300, 18px, white);
                     text-align: left;
                     line-height: 24.5px;
                     margin-left: 15px;
@@ -390,7 +390,7 @@ body {
             }
 
             p {
-                @include text($fontFamily2, normal, 18px, white);
+                @include text($fontFamily2, 300, 18px, white);
                 line-height: 28px;
             }
 
@@ -411,8 +411,17 @@ body {
                     justify-content: center;
                     margin-left: -50px;
     
-                    img {
-                        margin: 7px;
+                    span {
+                        img {
+                            margin: 7px;
+                        }
+
+                        p {
+                            @include text($fontFamily1, 500, 15px, white);
+                            text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25);
+                            line-height: 17.5px;
+                            margin-top: -45px;
+                        }
                     }
                 }
             }
@@ -420,6 +429,19 @@ body {
 
         .splide {
             display: none;
+
+            span {
+                img {
+                    margin: 7px;
+                }
+
+                p {
+                    @include text($fontFamily1, 500, 15px, white);
+                    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25);
+                    line-height: 17.5px;
+                    margin-top: -45px;
+                }
+            }
         }
 
         .sliderTitle {
@@ -427,7 +449,7 @@ body {
         }
 
         .sliderText {
-            @include text($fontFamily1, normal, 18px, white);
+            @include text($fontFamily1, 300, 18px, white);
             margin-top: 10px;
             line-height: 21px;
         }
@@ -448,8 +470,7 @@ body {
                 }
 
                 p {
-                    @include text($fontFamily2, normal, 18px, white);
-                    font-family: 'Roboto', sans-serif;
+                    @include text($fontFamily2, 300, 18px, white);
                     line-height: 21px;
                     margin-top: 30px;
                 }
@@ -639,31 +660,43 @@ body {
       top: 50%;
       transform: translateY(-50%);
       line-height: 24.5px;
-    }
-    
-    .close-btn {
-      position:absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 30px;
-      -webkit-transition:all ease 0.5s;
-      transition:all ease 0.5s;
-      text-decoration:none;
-      opacity: .5;
-      
-      img {
-        width: auto;
-      }
-      
-      &:hover {
-        opacity: 1;
-      }
+      stroke: black;
+      position: fixed;
     }
   }
 
+  .close-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(33vw - 50px);
+    -webkit-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+    text-decoration:none;
+    opacity: .5;
+    z-index: 999;
+    
+    img {
+      width: auto;
+    }
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .popup-box2, .popup-box4, .popup-box5, .popup-box6, .popup-box7 {
+      direction: ltr;
+      &::-webkit-scrollbar {
+          background: white;
+      }
+  }
+
   .popup-box0 {
-    width: 50.5vw;
-    height: 75vh;
+    width: 55vw;
+    max-width: 970px;
+    height: 85vh;
+    max-height: 800px;
     left: 50%;
     top: 50%;
     direction: ltr;
@@ -727,6 +760,15 @@ body {
     transform: translate(-100%, -50%);
   }
 
+
+
+
+  .textBlockPosition {
+    transform: none !important;
+    position: initial !important;
+    margin-bottom: 50px;
+    margin-top: 120px;
+}
 
 // ----PopUp----
 
@@ -844,7 +886,7 @@ body {
                             margin-bottom: 40px;
 
                             .mobileNumber, .mobileMail, .mobileSocial {
-                                @include text($fontFamily2, normal, 18px, $textColor);
+                                @include text($fontFamily2, 300, 18px, $textColor);
                                 display: flex;
                                 margin-bottom: 30px;
                                 align-items: flex-start;
@@ -919,6 +961,10 @@ body {
                     margin-bottom: 0px;
                     margin-left: auto;
                     margin-right: auto;
+
+                    br {
+                        display: none
+                    }
                 }
             }
         }
@@ -966,6 +1012,7 @@ body {
                 background-image: url('../img/forest.png');
                 background-size: cover;
                 background-repeat: no-repeat;
+                border-radius: 5px;
             }
 
             .container {
@@ -1017,9 +1064,10 @@ body {
                         margin-right: auto;
                         display: block;
                         margin-bottom: 25px;
-                        width: 350px;
-                        height: 260px;
+                        width: 100%;
+                        height: 280px;
                         object-fit: cover;
+                        border-radius: 5px;
                     }
                 }
 
@@ -1095,6 +1143,14 @@ body {
                 }
             }
         }
+
+        .textBlockPosition {
+            margin-top: 50px;
+        }
+
+        .close-btn {
+            left: calc(100vw - 50px);
+        }
     }
 
     .popup-box {
@@ -1104,15 +1160,6 @@ body {
             br {
                 display: none;
             }
-        }
-    }
-
-    .popup-box5, .popup-box7 {
-        h3 {
-            transform: none; 
-            position: initial; 
-            margin-bottom: 50px; 
-            margin-top: 120px;
         }
     }
 
@@ -1137,13 +1184,15 @@ body {
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 414px) {
     body {
         .blockType1 {
             .partnershipObiectives {
                 p {
-                    width: 290px;
-                    height: 90px;
+                    width: 100%;
+                    height: 100px;
+                    padding-left: 15px;
+                    padding-right: 15px;
 
                     .mobileBr3 {
                         display: none;
@@ -1158,7 +1207,9 @@ body {
 
         .blockType2 {
             img {
-                width: 300px;
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
             }
         }
 
@@ -1192,6 +1243,15 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    .popup-box7 {
+        h3 {
+            transform: none; 
+            position: initial; 
+            margin-bottom: 50px; 
+            margin-top: 50px;
         }
     }
 }
