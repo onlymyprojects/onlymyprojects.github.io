@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script> -->
+    <link rel="stylesheet" href="../styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div class="table-container">
+        <div class="menu-wrapper">
+            <div class="menu">
+                <a href="#">
+                    <div class="logo"></div>
+                </a>
+
+                <div class="user-info">
+                    <div class="user-photo">
+
+                    </div>
+
+                    <div class="user-data">
+                        <div class="user-name">
+                            User2
+                        </div>
+
+                        <div class="time">
+                            08-02-2021 08:26:22
+                        </div>
+
+                        <div class="total-logins">
+                            Total logins: 6
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-list">
+                    <a href="#" class="menu-item">
+                        <div class="menu-item__logo dashboard"></div>
+                        <div class="menu-item__title" onclick="location.href='../index.html';">
+                            Dashboard
+                        </div>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item__container" onclick="getElementId(sales)">
+                            <div class="menu-item__logo sales"></div>
+                            <div class="menu-item__title">Sales</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="sub-menu-item__container" id="sales">
+                            <div class="sub-menu-item-sales">
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon order-flow"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../01_Order Flow/index.html';">Flow</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon fax"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../02_Fax Tool/index.html';">Fax Tool</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon buyer"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../03_Buyer Salesrep/index.html';">Buyer Salesrep</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon campaing"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../04_Campaign Report/index.html';">Campaign Report
+                                    </div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon content-icon"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../05_Content Category/index.html';">Content Category
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item__container" onclick="getElementId(product)">
+                            <div class="menu-item__logo product">
+
+                            </div>
+                            <div class="menu-item__title">
+                                Product
+                            </div>
+
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="sub-menu-item__container" id="product" style="display: block;">
+                            <div class="sub-menu-item-sales">
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon publishers"></div>
+                                    <div class="sub-menu-item__title">Publishers</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon audio"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../102_Vip Notification/index.html';">VIP Notification
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item__container" onclick="getElementId(traffic)">
+                            <div class="menu-item__logo traffic">
+
+                            </div>
+                            <div class="menu-item__title">
+                                Traffic
+                            </div>
+
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="sub-menu-item__container" id="traffic">
+                            <div class="sub-menu-item-sales">
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon status"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../201_Sugar Order Status/index.html';">Sugar Order
+                                        Status</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon fixedFee"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../202_FixedFee/index.html';">FixedFee</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon chart"></div>
+                                    <div class="sub-menu-item__title"
+                                        onclick="location.href='../203_IT Monitor/index.html';">IT Monitor</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item__container" onclick="getElementId(finance)">
+                            <div class="menu-item__logo finance">
+
+                            </div>
+                            <div class="menu-item__title">
+                                Finance
+                            </div>
+
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="sub-menu-item__container" id="finance">
+                            <div class="sub-menu-item-sales">
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon overview"></div>
+                                    <div class="sub-menu-item__title">Overview</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon euro"></div>
+                                    <div class="sub-menu-item__title">Surco/Serving Fee</div>
+                                </div>
+                                <div class="sub-menu-item">
+                                    <div class="sub-menu-item__icon recycling"></div>
+                                    <div class="sub-menu-item__title">Resold Surco (AppNexus)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="settings">
+
+                    <a href="#" class="settings-item">
+                        <div class="settings-item__logo">
+                        </div>
+
+                        <div class="settings-item__title">
+                            Settings
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-settings">
+                <div class="items-logo">
+                    <div class="notification-logo">
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="accordion">
+                    <div class="items-logo dropdown">
+                        <div class="dropdown-logo"></div>
+                    </div>
+                    <div class="items-sub-menu__container">
+                        <div class="items-sub-menu">
+                            <div class="account-settings">
+                                <div class="items-sub-menu-icon account-icon"></div>
+                                <div class="title">Account Settings</div>
+                            </div>
+                            <div class="help">
+                                <div class="items-sub-menu-icon help-icon"></div>
+                                <div class="title">Help</div>
+                            </div>
+                            <div class="sing-out-container">
+                                <div class="sing-out">
+                                    <div class="items-sub-menu-icon sign-out-icon"></div>
+                                    <div class="title">Sing Out</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-dashboard">
+                <div class="content-dashboard__title">
+                    Publishers
+                </div>
+                <div class="content-dashboard__content">
+                    ES AppNexus OK StickyAds OK AdForm OK improveDigital OK RubiconPerformance OK
+                </div>
+            </div>
+            <div class="section-container">
+                <div class="section" style="height: 150px;">
+                    <div class="section-container__all">
+                        <div class="section-container__publisher">
+                            <div class="select__name">Publishers</div>
+                            <div class="select-search__publisher">
+                                <select class="select__publisher">
+                                    <option selected value="value1">2001_Lation</option>
+                                    <option value="value2">2001_Lation</option>
+                                    <option value="value3">2002_Lation</option>
+                                    <option value="value4">2003_Lation</option>
+                                    <option value="value5">2004_Lation</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="section-container">
+                <div class="section mySection" style="height: auto; border-radius: 0; margin-bottom: 40px;">
+                    <div class="section-container__all" style="width: 1360px;">
+                        <div class="section-container__publisher" style="margin-left: 0;">
+                            <div class="select__name myButton" id="1">Settings</div>
+                            <div class="select__name myButton otherButtons otherButtonBegin" id="2">Sites</div>
+                            <div class="select__name myButton otherButtons" id="3">VIP</div>
+                            <div class="select__name myButton otherButtons" id="4">Payment</div>
+                            <div class="select__name myButton otherButtons" id="5">API Configuration</div>
+                            <div class="select__name myButton otherButtons otherButtonEnd" style="padding-right: 504px;"
+                                id="6">Stats</div>
+                        </div>
+                    </div>
+
+                    <div id="content1">
+                        <div style="width: 680px; margin-top: 70px;">
+                            <p>Information</p>
+                            <hr>
+                        </div>
+
+                        <div style="width: 680px; margin-left: 680px; margin-top: -71px;">
+                            <p>Information</p>
+                            <hr>
+                        </div>
+
+                        <div style="float: left;">
+                            <p style="float: left; opacity: .5; margin-left: 61px; margin-top: 50px;">Company Name:</p>
+                            <input type="text" placeholder="..." style="margin-top: 35px;">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 47px;">Company Address:</p>
+                            <input type="text" placeholder="...">
+                            <br>
+                            <p style="float: left; opacity: .5;">Company Zip Code:</p>
+                            <input type="text" placeholder="...">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 78px;">Company City:</p>
+                            <input type="text" placeholder="...">
+                        </div>
+
+                        <div style="margin-left: 690px; width: 500px; ">
+                            <p style="float: left; opacity: .5; margin-left: 94px; margin-top: 50px;">Name:</p>
+                            <input type="text" style="margin-top: 35px;">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 78px;">Address:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 114px;">Zip:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 110px;">City:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 99px;">Email:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 94px;">Phone:</p>
+                            <input type="text">
+
+                            <button style="margin-left: 175px;">Clean</button>
+                            <button style="margin-left: 20px;">Save</button>
+                        </div>
+                    </div>
+
+                    <div id="content2">
+                        Sites
+                    </div>
+
+                    <div id="content3">
+                        VIP
+                    </div>
+
+                    <div id="content4">
+                        Payment
+                    </div>
+
+                    <div id="content5">
+                        API Configuration
+                    </div>
+
+                    <div id="content6">
+                        Stats
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <div class="m-menu__wrapper" id="menu">
+        <div class="menu">
+            <div class="m-header__container">
+                <div class="m-header">
+                    <div class="m-icon m-close" onclick="hideAndShowMenu('closeMenu')"></div>
+                    <div class="m-icon m-logo"></div>
+                </div>
+            </div>
+    
+            <div class="user-info">
+                <div class="user-photo">
+    
+                </div>
+    
+                <div class="user-data">
+                    <div class="user-name">
+                        User2
+                    </div>
+    
+                    <div class="time">
+                        08-02-2021 08:26:22
+                    </div>
+    
+                    <div class="total-logins">
+                        Total logins: 6
+                    </div>
+                </div>
+            </div>
+    
+            <div class="menu-list">
+                <a href="#" class="menu-item">
+                    <div class="menu-item__logo dashboard"></div>
+                    <div class="menu-item__title" onclick="location.href='../index.html';">
+                        Dashboard
+                    </div>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-item__container" onclick="getElementId(Msales)">
+                        <div class="menu-item__logo sales"></div>
+                        <div class="menu-item__title">Sales</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="sub-menu-item__container" id="Msales">
+                        <div class="sub-menu-item-sales">
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon order-flow"></div>
+                                <div class="sub-menu-item__title" onclick="location.href='../01_Order Flow/index.html';">Order Flow</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon fax"></div>
+                                <div class="sub-menu-item__title" onclick="location.href='../02_Fax Tool/index.html';">Fax
+                                    Tool</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon buyer"></div>
+                                <div class="sub-menu-item__title"
+                                    onclick="location.href='../03_Buyer Salesrep/index.html';">Buyer Salesrep</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon campaing"></div>
+                                <div class="sub-menu-item__title"
+                                    onclick="location.href='../04_Campaign Report/index.html';">Campaign Report</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon content-icon"></div>
+                                <div class="sub-menu-item__title"
+                                    onclick="location.href='../05_Content Category/index.html';">Content Category</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-item__container" onclick="getElementId(Mproduct)">
+                        <div class="menu-item__logo product">
+    
+                        </div>
+                        <div class="menu-item__title">
+                            Product
+                        </div>
+    
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="sub-menu-item__container" id="Mproduct">
+                        <div class="sub-menu-item-sales">
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon publishers"></div>
+                                <div class="sub-menu-item__title">
+                                    Publishers</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon audio"></div>
+                                <div class="sub-menu-item__title"
+                                    onclick="location.href='../102_Vip Notification/index.html';">VIP Notification</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-item__container" onclick="getElementId(Mtraffic)">
+                        <div class="menu-item__logo traffic">
+    
+                        </div>
+                        <div class="menu-item__title">
+                            Traffic
+                        </div>
+    
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="sub-menu-item__container" id="Mtraffic">
+                        <div class="sub-menu-item-sales">
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon status"></div>
+                                <div class="sub-menu-item__title"
+                                    onclick="location.href='../201_Sugar Order Status/index.html';">Sugar Order Status</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon fixedFee"></div>
+                                <div class="sub-menu-item__title" onclick="location.href='../202_FixedFee/index.html';">
+                                    FixedFee</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon chart"></div>
+                                <div class="sub-menu-item__title" onclick="location.href='../203_IT Monitor/index.html';">IT
+                                    Monitor</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-item__container" onclick="getElementId(Mfinance)">
+                        <div class="menu-item__logo finance">
+    
+                        </div>
+                        <div class="menu-item__title">
+                            Finance
+                        </div>
+    
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="sub-menu-item__container" id="Mfinance">
+                        <div class="sub-menu-item-sales">
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon overview"></div>
+                                <div class="sub-menu-item__title">Overview</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon euro"></div>
+                                <div class="sub-menu-item__title">Surco/Serving Fee</div>
+                            </div>
+                            <div class="sub-menu-item">
+                                <div class="sub-menu-item__icon recycling"></div>
+                                <div class="sub-menu-item__title">Resold Surco (AppNexus)</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="m-settings">
+    
+                <a href="#" class="settings-item">
+                    <div class="settings-item__logo">
+                    </div>
+    
+                    <div class="settings-item__title">
+                        Settings
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="m-content" id="content">
+        <div class="m-header__container">
+            <div class="m-header">
+                <div class="m-icon m-menu" onclick="hideAndShowMenu('openMenu')"></div>
+                <div class="m-icon m-logo"></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="m-content">
+            <div class="content-dashboard">
+                <div class="content-dashboard__title">
+                    Publishers
+                </div>
+                <div class="content-dashboard__content">
+                    ES AppNexus OK StickyAds OK AdForm OK improveDigital OK RubiconPerformance OK
+                </div>
+            </div>
+            <div class="section-container">
+                <div class="section" style="height: 150px;">
+                    <div class="section-container__all">
+                        <div class="section-container__publisher">
+                            <div class="select__name">Publishers</div>
+                            <div class="select-search__publisher">
+                                <select class="select__publisher">
+                                    <option selected value="value1">2001_Lation</option>
+                                    <option value="value2">2001_Lation</option>
+                                    <option value="value3">2002_Lation</option>
+                                    <option value="value4">2003_Lation</option>
+                                    <option value="value5">2004_Lation</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="section-container">
+                <div class="section mySection" style="height: auto; border-radius: 0; margin-bottom: 40px;">
+                    <div class="section-container__all" style="width: 1360px;">
+                        <div class="section-container__publisher" style="margin-left: 0;">
+                            <div class="select__name myButton" id="1">Settings</div>
+                            <div class="select__name myButton otherButtons otherButtonBegin" id="2">Sites</div>
+                            <div class="select__name myButton otherButtons" id="3">VIP</div>
+                            <div class="select__name myButton otherButtons" id="4">Payment</div>
+                            <div class="select__name myButton otherButtons" id="5">API Configuration</div>
+                            <div class="select__name myButton otherButtons otherButtonEnd" style="padding-right: 504px;"
+                                id="6">Stats</div>
+                        </div>
+                    </div>
+
+                    <div id="content1">
+                        <div style="width: 680px; margin-top: 70px;">
+                            <p>Information</p>
+                            <hr>
+                        </div>
+
+                        <div style="width: 680px; margin-left: 680px; margin-top: -71px;">
+                            <p>Information</p>
+                            <hr>
+                        </div>
+
+                        <div style="float: left; width: 500px;">
+                            <p style="float: left; opacity: .5; margin-left: 61px; margin-top: 50px;">Company Name:</p>
+                            <input type="text" placeholder="..." style="margin-top: 35px;">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 47px;">Company Address:</p>
+                            <input type="text" placeholder="...">
+                            <br>
+                            <p style="float: left; opacity: .5;">Company Zip Code:</p>
+                            <input type="text" placeholder="...">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 78px;">Company City:</p>
+                            <input type="text" placeholder="...">
+                        </div>
+
+                        <div style="margin-left: 690px; width: 500px;">
+                            <p style="float: left; opacity: .5; margin-left: 94px; margin-top: 50px;">Name:</p>
+                            <input type="text" style="margin-top: 35px;">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 78px;">Address:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 114px;">Zip:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 110px;">City:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 99px;">Email:</p>
+                            <input type="text">
+                            <br>
+                            <p style="float: left; opacity: .5; margin-left: 94px;">Phone:</p>
+                            <input type="text">
+
+                            <button style="margin-left: 175px;">Clean</button>
+                            <button style="margin-left: 20px;">Save</button>
+                        </div>
+                    </div>
+
+                    <div id="content2">
+                        Sites
+                    </div>
+
+                    <div id="content3">
+                        VIP
+                    </div>
+
+                    <div id="content4">
+                        Payment
+                    </div>
+
+                    <div id="content5">
+                        API Configuration
+                    </div>
+
+                    <div id="content6">
+                        Stats
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+        <script src="../jquery/myJS.js"></script>
+        <script src="index.js"></script>
+        <script src="../index.js"></script>
+</body>
+
+</html>

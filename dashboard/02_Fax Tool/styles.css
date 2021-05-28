@@ -1,0 +1,553 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: Helvetica;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: rgba(35, 13, 54);
+}
+
+.table-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.menu-wrapper {
+    width: 25%;
+}
+
+.menu {
+    width: 100%;
+    background: linear-gradient(90deg, #160723 0%, rgba(35, 13, 54, 0.66) 100%);
+    min-height: 100vh;
+    padding-top: 19px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    background-image: url("images/logo.svg");
+    width: 120px;
+    height: 56px;
+    margin-left: 27px;
+}
+
+.user-info {
+    display: flex;
+    margin-top: 67px;
+    border-bottom: 1px solid #494E67;
+    padding-bottom: 17px;
+}
+
+.user-photo {
+    background-image: url("images/user-photo.svg");
+    width: 60px;
+    height: 60px;
+    margin-left: 27px;
+}
+
+.user-data {
+    margin-left: 18px;
+}
+
+.time {
+    font-size: 12px;
+}
+
+.user-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+
+.total-logins {
+    margin-top: 6px;
+    color: #cbcbcb;
+    font-size: 12px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard {
+    background-image: url("images/square.svg");
+}
+
+.sales {
+    background-image: url("images/dollar.svg");
+}
+
+.product {
+    background-image: url("images/planet.svg");
+}
+
+.traffic {
+    background-image: url("images/refresh.svg");
+}
+
+.finance {
+    background-image: url("images/bank-building.svg");
+}
+
+.euro {
+    background-image: url("images/euro.svg");
+}
+
+.menu-item {
+    padding: 27px 0 27px 27px;
+    border-bottom: 1px solid #494E67;
+    position: relative;
+}
+
+.menu-item:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item__container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:hover .menu-item__title {
+    color: #cbcbcb;
+}
+
+.arrow {
+    height: 12px;
+    width: 8px;
+    background-image: url("images/arrow.svg");
+    position: absolute;
+    right: 33px;
+    top: 34px;
+}
+
+.menu-item__logo {
+    width: 26px;
+    height: 26px;
+}
+
+.menu-item__title {
+    margin-left: 21px;
+}
+
+.sub-menu-item__container {
+    display: none;
+}
+
+.sub-menu-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 20px 20px 30px;
+}
+
+
+.sub-menu-item__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.order-flow {
+    background-image: url("images/order.svg");
+}
+
+.fax {
+    background-image: url("images/fax.svg");
+}
+
+.buyer {
+    background-image: url("images/buyer.svg");
+}
+
+.campaing {
+    background-image: url("images/download.svg");
+}
+
+.content-icon {
+    background-image: url("images/content.svg");
+}
+
+.settings {
+    margin-top: calc(100vh - 73vh);
+}
+
+.publishers {
+    background-image: url("images/monitor.svg");
+}
+
+.audio {
+    background-image: url("images/audio.svg");
+}
+
+.status {
+    background-image: url("images/union.svg");
+}
+
+.fixedFee {
+    background-image: url("images/card.svg");
+}
+
+.chart {
+    background-image: url("images/chart.svg");
+}
+
+.overview {
+    background-image: url("images/overview.svg");
+}
+
+.recycling {
+    background-image: url("images/recycling.svg");
+}
+
+
+.settings-item {
+    padding: 27px 0 27px 27px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #494E67;
+}
+
+.settings-item__logo {
+    width: 26px;
+    height: 26px;
+    background-image: url("images/settings.svg");
+}
+
+.settings-item__title {
+    margin-left: 21px;
+}
+
+.content {
+    width: 80%;
+}
+
+.content-settings {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.items-logo {
+    height: 54px;
+    width: 54px;
+    background: #595888;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+
+.dropdown {
+    margin: 0 43px 0 23px;
+}
+
+.notification-logo {
+    width: 24px;
+    height: 24px;
+    background-image: url("images/notification.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dropdown-logo {
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.items-sub-menu__container {
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    width: 200px;
+    height: 100px;
+}
+
+.items-sub-menu {
+    background-color: white;
+    padding: 10px 10px 0px 10px;
+    border-radius: 10px;
+}
+
+
+.items-sub-menu-icon {
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.account-settings {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.help {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.sing-out {
+    border-top: 1px solid black;
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.account-icon {
+    background-image: url("images/dropdown.svg");
+}
+
+.help-icon {
+    background-image: url("images/dropdown.svg");
+}
+
+.sign-out-icon {
+    background-image: url("images/dropdown.svg");
+}
+
+.title {
+    font-size: 14px;
+    color: black;
+}
+
+.content-dashboard {
+    height: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #160723 -68.56%, rgba(35, 13, 54, 0.66) 225.77%);
+}
+
+.content-dashboard__title {
+    margin-left: 40px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.content-dashboard__content {
+    margin-right: 40px;
+    color: #595888;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.section-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    width: 95%;
+    height: 681px;
+    background: #220D34;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25), 0px 20px 100px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+}
+
+.section-sub-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    background-color: #1D0B2C;
+    border: 1px solid rgba(89, 88, 136, 0.7);
+    border-bottom-left-radius: 10px;
+    padding: 10px 0 10px 60px;
+    height: 25px;
+    width: 85%;
+}
+
+.section-title {
+    font-size: 14px;
+    height: 40px;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fax-container {
+    margin: 50px;
+}
+
+.fax-wrapper {
+
+    border: 1px solid #595888;
+    border-radius: 20px;
+    display: flex;
+}
+
+.fax-menu {
+    width: 406px;
+}
+
+.fax-menu__list {
+    height: 56px;
+    border-color: #595888;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+}
+
+.fax-menu__list:last-child {
+    border-width: 0 1px 0 0;
+    height: 67px;
+}
+
+.fax-menu__title {
+    font-size: 14px;
+    width: 85%;
+}
+
+.fax-dashboard__container {
+    width: 100%;
+}
+
+.fax-dashboard__header {
+    position: relative;
+}
+
+.fax-dashboard-header__input {
+    width: auto;
+    height: 56px;
+    padding: 0 41px;
+    border-color: #595888;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fax-dashboard-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10px;
+    width: 12px;
+    position: absolute;
+    right: 31px;
+    top: 25px;
+}
+
+.done {
+    background-image: url(images/done.svg);
+}
+
+.fax-dashboard-main__container {
+    height: 341px;
+    width: 100%;
+}
+
+.fax-dashboard-footer__input {
+    height: 68px;
+    padding: 0 41px;
+    border-color: #595888;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-company {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #220D34;
+    color: #fff;
+}
+
+.btn-send {
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 48px;
+    background: #55B5DF;
+    border-radius: 10px;
+    margin-left: 52px;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+    border: none;}
+
+.btn-send:hover {
+    background: #595888;
+    box-shadow: 0 0 2px 1px
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    /* ----Scroll Bar---- */
+    /* width */
+    .section-container::-webkit-scrollbar {
+        height: 4px;
+        position: absolute;
+        background: #595888;
+        border-radius: 10px;
+        margin-left: 27px;
+    }
+    /* Track */
+    .section-container::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    /* Handle */
+    .section-container::-webkit-scrollbar-thumb {
+        background: #6F52ED;
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    .section-container::-webkit-scrollbar-thumb:hover {
+        background: #a192e6;
+    }
+    /* ----Scroll Bar---- */
+}
