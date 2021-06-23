@@ -19,9 +19,13 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: url("../img/bg.png");
+    background-image: url("../img/bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
+
+    .row {
+        height: 100vh;
+    }
 
     .global-border {
         position: absolute;
@@ -46,8 +50,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 94px;
-        margin-left: 83px;
+        margin-top: 12.5vh;
+        margin-left: 6.076134699853587vw;
+        z-index: 1;
 
         &:hover {
             color: white;
@@ -58,14 +63,20 @@ body {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 60px;
+        top: 6vh;
+        width: 6.5vw;
+        max-width: 113px;
+        height: 16vh;
+        max-height: 113px;
     }
 
     .cart {
         margin-left: auto;
-        margin-top: 83px;
-        margin-right: 101px;
+        margin-top: 11.5vh;
+        margin-right: 7.3vw;
         font-family: "cafe-francoise", sans-serif;
+        height: 60px;
+        z-index: 1;
 
         p {
             color: white;
@@ -108,80 +119,100 @@ body {
     }
 
     .content {
-        .mainImg {
-            width: 581px;
-            height: 366px;
-            margin-left: 80px;
-            margin-top: 60px;
-            float: left;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
 
-            .mainImgBorder {
-                position: absolute;
-                z-index: 1;
-            }
+        .position {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            .img2 {
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
+            .mainImg {
+                width: 42vw;
+                max-width: 581px;
+                height: 58vh;
+                max-height: 366px;
+                margin-right: 43px;
+                margin-top: 11vh;
+                float: left;
 
-        .text {
-            float: left;
-            margin-top: 90px;
-            margin-left: 43px;
+                .mainImgBorder {
+                    position: absolute;
+                    z-index: 1;
+                    width: 42vw;
+                    max-width: 581px;
+                    height: 58vh;
+                    max-height: 366px;
+                }
 
-            h1 {
-                font-family: "chalkboy", sans-serif;
-                font-size: 36px;
-                color: $siteMainColor;
-            }
-
-            .first {
-                font-family: "Helvetica", "Arial", sans-serif;
-                opacity: 0.7;
-                font-style: italic;
-                font-size: 12px;
-                color: white;
-                line-height: 13.8px;
-            }
-
-            .second {
-                font-family: "Helvetica", "Arial", sans-serif;
-                font-size: 14px;
-                color: white;
-                line-height: 16.1px;
-            }
-
-            .butt {
-                color: white;
-                font-family: "cafe-francoise", sans-serif;
-                font-size: 12px;
-                border: none;
-                background: transparent;
-                margin-top: 5px;
-                margin-left: 3px;
-
-                &:hover {
-                    text-decoration: underline;
+                .img2 {
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 40.5vw;
+                    max-width: 559px;
+                    height: 54.4vh;
+                    max-height: 343px;
                 }
             }
 
-            .butt1 {
-                background-image: url("../img/button1.svg");
-                background-repeat: no-repeat;
-                width: 209px;
-                height: 38px;
-            }
+            .text {
+                float: left;
+                margin-top: 90px;
 
-            .butt2 {
-                background-image: url("../img/button2.svg");
-                background-repeat: no-repeat;
-                width: 207px;
-                height: 41px;
-                margin-left: 10px;
+                h1 {
+                    font-family: "chalkboy", sans-serif;
+                    font-size: 36px;
+                    color: $siteMainColor;
+                }
+
+                .first {
+                    font-family: "Helvetica", "Arial", sans-serif;
+                    opacity: 0.7;
+                    font-style: italic;
+                    font-size: 12px;
+                    color: white;
+                    line-height: 13.8px;
+                }
+
+                .second {
+                    font-family: "Helvetica", "Arial", sans-serif;
+                    font-size: 14px;
+                    color: white;
+                    line-height: 16.1px;
+                }
+
+                .butt {
+                    color: white;
+                    font-family: "cafe-francoise", sans-serif;
+                    font-size: 12px;
+                    border: none;
+                    background: transparent;
+                    margin-top: 5px;
+                    margin-left: 3px;
+                    outline: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .butt1 {
+                    background-image: url("../img/button1.svg");
+                    background-repeat: no-repeat;
+                    width: 209px;
+                    height: 38px;
+                }
+
+                .butt2 {
+                    background-image: url("../img/button2.svg");
+                    background-repeat: no-repeat;
+                    width: 207px;
+                    height: 41px;
+                    margin-left: 10px;
+                }
             }
         }
 
@@ -193,22 +224,25 @@ body {
                 position: absolute;
                 font-family: "cafe-francoise", sans-serif;
                 font-size: 12px;
-                margin-top: 37px;
-                color: #CED0D1;
+                margin-top: 2vh;
+                color: #ced0d1;
             }
 
             .arr1 {
                 transform: scaleX(-1);
-                opacity: .4;
                 margin-right: 3px;
+            }
+
+            .opacity {
+                opacity: 0.4;
             }
 
             .arr2 {
                 margin-left: 3px;
             }
-            
-            img {
-                margin-top: 53px;
+
+            a, .dot {
+                margin-top: 4.5vh;
             }
         }
     }
