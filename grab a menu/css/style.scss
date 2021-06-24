@@ -42,10 +42,12 @@ body {
     .back {
         color: white;
         font-family: "chalkboy", sans-serif;
-        font-size: 36px;
-        width: 267px;
-        height: 38px;
+        font-size: 5.76vh;
+        width: 42.72vh;
+        height: 6.08vh;
         background-image: url("../img/back.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -62,11 +64,8 @@ body {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 6vh;
-        width: 6.5vw;
-        max-width: 113px;
-        height: 16vh;
-        max-height: 113px;
+        top: 8vh;
+        height: 14vh;
     }
 
     .cart {
@@ -74,7 +73,7 @@ body {
         margin-top: 11.5vh;
         margin-right: 7.3vw;
         font-family: "cafe-francoise", sans-serif;
-        height: 60px;
+        height: 9.6vh;
         z-index: 1;
 
         p {
@@ -84,21 +83,22 @@ body {
             top: 50%;
             transform: translateY(-50%);
             margin-right: 14px;
-            font-size: 14px;
+            font-size: 2.24vh;
             opacity: 0.4;
         }
 
         a {
             img {
                 transition: 0.3s;
+                height: 9.6vh;
             }
 
             span {
                 color: $siteMainColor;
                 position: absolute;
-                margin-top: 40px;
-                margin-left: -15.5px;
-                font-size: 14px;
+                margin-top: 6.2vh;
+                right: 7.95vw;
+                font-size: 2.24vh;
                 transition: 0.3s;
             }
 
@@ -109,8 +109,8 @@ body {
                 }
 
                 span {
-                    margin-top: 41.5px;
-                    margin-left: -13.5px;
+                    margin-top: 6.6vh;
+                    right: 7.78vw;
                     transition: 0.3s;
                 }
             }
@@ -128,21 +128,17 @@ body {
             align-items: center;
 
             .mainImg {
-                width: 42vw;
-                max-width: 581px;
-                height: 58vh;
-                max-height: 366px;
-                margin-right: 43px;
+                width: 40vw;
+                height: 56vh;
+                margin-right: 3.1478770131771596vw;
                 margin-top: 11vh;
                 float: left;
 
                 .mainImgBorder {
                     position: absolute;
                     z-index: 1;
-                    width: 42vw;
-                    max-width: 581px;
-                    height: 58vh;
-                    max-height: 366px;
+                    width: 40vw;
+                    height: 56vh;
                 }
 
                 .img2 {
@@ -150,10 +146,8 @@ body {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 40.5vw;
-                    max-width: 559px;
-                    height: 54.4vh;
-                    max-height: 343px;
+                    width: 38.5vw;
+                    height: 52.4vh;
                 }
             }
 
@@ -163,7 +157,7 @@ body {
 
                 h1 {
                     font-family: "chalkboy", sans-serif;
-                    font-size: 36px;
+                    font-size: 5.76vh;
                     color: $siteMainColor;
                 }
 
@@ -171,22 +165,22 @@ body {
                     font-family: "Helvetica", "Arial", sans-serif;
                     opacity: 0.7;
                     font-style: italic;
-                    font-size: 12px;
+                    font-size: 1.92vh;
                     color: white;
-                    line-height: 13.8px;
+                    line-height: 2.208vh;
                 }
 
                 .second {
                     font-family: "Helvetica", "Arial", sans-serif;
-                    font-size: 14px;
+                    font-size: 2.24vh;
                     color: white;
-                    line-height: 16.1px;
+                    line-height: 2.5760000000000005vh;
                 }
 
                 .butt {
                     color: white;
                     font-family: "cafe-francoise", sans-serif;
-                    font-size: 12px;
+                    font-size: 1.92vh;
                     border: none;
                     background: transparent;
                     margin-top: 5px;
@@ -201,16 +195,18 @@ body {
                 .butt1 {
                     background-image: url("../img/button1.svg");
                     background-repeat: no-repeat;
-                    width: 209px;
-                    height: 38px;
+                    background-size: cover;
+                    width: 33.44vh;
+                    height: 6.08vh;
                 }
 
                 .butt2 {
                     background-image: url("../img/button2.svg");
                     background-repeat: no-repeat;
-                    width: 207px;
-                    height: 41px;
-                    margin-left: 10px;
+                    background-size: cover;
+                    width: 33.12vh;
+                    height: 6.56vh;
+                    margin-left: 0.7320644216691069vw;
                 }
             }
         }
@@ -222,14 +218,15 @@ body {
             p {
                 position: absolute;
                 font-family: "cafe-francoise", sans-serif;
-                font-size: 12px;
+                font-size: 1.92vh;
                 margin-top: 2vh;
                 color: #ced0d1;
             }
 
             .arr1 {
                 transform: scaleX(-1);
-                margin-right: 3px;
+                margin-right: 0.21961932650073207vw;
+                height: 4.16vh;
             }
 
             .opacity {
@@ -237,11 +234,17 @@ body {
             }
 
             .arr2 {
-                margin-left: 3px;
+                margin-left: 0.21961932650073207vw;
+                height: 4.16vh;
             }
 
-            a, .dot {
+            a{
                 margin-top: 4.5vh;
+            }
+
+            .dot {
+                height: 1.3vh;
+                margin-top: 5.9vh;
             }
         }
     }
