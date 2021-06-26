@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Carme&display=swap");
 
 @font-face {
     font-family: cafe-francoise;
@@ -28,9 +29,9 @@ body {
 
     .global-border {
         position: absolute;
-        margin: 30px;
-        width: calc(100vw - 60px);
-        height: calc(100vh - 60px);
+        margin: 3.84vh 1.98vw 3.84vh 1.98vw;
+        width: calc(100vw - 3.96vw);
+        height: calc(100vh - 7.68vh);
         user-select: none;
     }
 
@@ -68,11 +69,11 @@ body {
         height: 14vh;
     }
 
-    .cart {
+    .address {
         margin-left: auto;
         margin-top: 11.5vh;
         margin-right: 7.3vw;
-        font-family: "cafe-francoise", sans-serif;
+        font-family: "Helvetica", "Arial", sans-serif;
         height: 9.6vh;
         z-index: 1;
 
@@ -84,36 +85,10 @@ body {
             transform: translateY(-50%);
             margin-right: 14px;
             font-size: 2.24vh;
-            opacity: 0.4;
         }
 
-        a {
-            img {
-                transition: 0.3s;
-                height: 9.6vh;
-            }
-
-            span {
-                color: $siteMainColor;
-                position: absolute;
-                margin-top: 6.2vh;
-                right: 7.95vw;
-                font-size: 2.24vh;
-                transition: 0.3s;
-            }
-
-            &:hover {
-                img {
-                    transform: scale(1.1);
-                    transition: 0.3s;
-                }
-
-                span {
-                    margin-top: 6.6vh;
-                    right: 7.78vw;
-                    transition: 0.3s;
-                }
-            }
+        img {
+            height: 9.6vh;
         }
     }
 
@@ -229,22 +204,141 @@ body {
                 height: 4.16vh;
             }
 
-            .opacity {
-                opacity: 0.4;
-            }
-
             .arr2 {
                 margin-left: 0.21961932650073207vw;
                 height: 4.16vh;
             }
 
-            a{
+            a {
                 margin-top: 4.5vh;
+                opacity: 0.4;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
             }
 
             .dot {
                 height: 1.3vh;
                 margin-top: 5.9vh;
+            }
+        }
+    }
+
+    .popup {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+
+        .content-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 121.44vh;
+            height: 76.48vh;
+            background-image: url("../img/popup.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            h1 {
+                color: white;
+                font-family: "chalkboy", sans-serif;
+                font-size: 7.68vh;
+                text-align: center;
+                margin-top: 8.16vh;
+            }
+
+            a {
+                position: absolute;
+                top: 8.8vh;
+                right: 4.026354319180088vw;
+                transition: 0.3s;
+
+                img {
+                    width: 2.562225475841874vw;
+                    height: 5.6vh;
+                }
+
+                &:hover {
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                }
+            }
+
+            .input1,
+            .input5 {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            .input2-3-4 {
+                display: flex;
+                justify-content: center;
+            }
+
+            input,
+            .input5 {
+                height: 5.12vh;
+                background: transparent;
+                border: 1px solid white;
+                border-radius: 4px;
+                outline: none;
+                color: white;
+                padding-left: 1.0980966325036603vw;
+
+                &::placeholder {
+                    font-family: "Carme", sans-serif;
+                    font-size: 1.92vh;
+                    color: white;
+                    opacity: 0.7;
+                }
+            }
+
+            .input1 {
+                width: 46.70571010248902vw;
+                margin-top: 7.2vh;
+            }
+
+            .input2,
+            .input3,
+            .input4 {
+                width: 15.080527086383603vw;
+                margin: 0 0.36603221083455345vw 0 0.36603221083455345vw;
+                margin-top: 1.6vh;
+            }
+
+            .input5 {
+                margin-top: 1.6vh;
+                width: 46.70571010248902vw;
+                height: 13.6vh;
+                resize: none;
+            }
+
+            .btn-popup {
+                color: $siteMainColor;
+                font-family: "cafe-francoise", sans-serif;
+                font-size: 2.24vh;
+                border: none;
+                background: transparent;
+                outline: none;
+                background-image: url("../img/btn-popup.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 41.52vh;
+                height: 8.08vh;
+                float: right;
+                margin-top: 8.48vh;
+                margin-right: 8.72vh;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
