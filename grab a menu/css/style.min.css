@@ -192,7 +192,7 @@ template {
     min-height: 100vh;
     padding: 9vh 0;
     color: #fff;
-    background: url(../img/background.jpg) no-repeat;
+    background: url(../img/background.webp) no-repeat;
     background-size: 100% 100%
 }
 
