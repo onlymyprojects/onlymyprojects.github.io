@@ -9,3 +9,11 @@ $(".popup, #close").click(function() {
 })
 
 $('.content-popup').click(function(){return false;});
+
+$('.burger').click(function() {
+    $('.mobile-menu-fadeIn-fadeOut').fadeIn()
+})
+
+$('#mobile-close').click(function() {
+    $('.mobile-menu-fadeIn-fadeOut').fadeOut()
+})
