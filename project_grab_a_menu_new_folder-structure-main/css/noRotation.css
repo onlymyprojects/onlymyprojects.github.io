@@ -1,0 +1,18 @@
+.noRotation {
+    display: none;
+}
+
+@media screen and (max-width: 991px) and (orientation: landscape) {
+    .preloader {
+        display: none !important;
+    }
+
+    .noRotation {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 16vw;
+    }
+}
