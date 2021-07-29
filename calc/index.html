@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Sans', sans-serif;
+            /* border: 1px solid red; */
+        }
+
+        .myCalc {
+            width: 405px;
+            height: 580px;
+            border: 4px solid #E5E5E5;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myCalc h1,
+        .myCalc h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 29px;
+        }
+
+        .myCalc h1 {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .myCalc h2 {
+            color: #145670;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .myCalc .myRange {
+            display: flex;
+            align-items: center;
+            margin-top: 82px;
+            justify-content: center;
+        }
+
+        .myCalc .myRange .change {
+            width: 20px;
+            height: 20px;
+            background: #29AAE2;
+            color: white;
+            border-radius: 50%;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .myCalc .myRange input[type=range] {
+            -webkit-appearance: none;
+            width: 325px;
+        }
+
+        .myCalc .myRange input[type=range]::-webkit-slider-runnable-track {
+            height: 2px;
+            cursor: pointer;
+            background: #145670;
+        }
+
+        .myCalc .myRange input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 40px;
+            border-radius: 10px;
+            background: url('https://svgshare.com/i/ZcS.svg');
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -9px;
+        }
+
+        .myCalc h3,
+        .myCalc h4 {
+            font-size: 15px;
+            color: #6F6F6F;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+
+        .myCalc h3 {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .myCalc h4 {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .myCalc h5 {
+            float: left;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .myCalc h6 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 10px;
+            color: #145670;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .myCalc .btn {
+            width: 227px;
+            height: 43px;
+            background: #29AAE2;
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .myCalc .details {
+            text-align: center;
+            color: #6F6F6F;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .myPopup {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+            top: 0;
+            z-index: 99;
+            /* display: none; */
+        }
+
+        .myPopup .myPopup-content {
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* overflow-y: scroll; */
+        }
+
+        .myPopup .myPopup-content .close {
+            float: right;
+        }
+
+        .myPopup .myPopup-content h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #145670;
+            text-align: center;
+            margin-top: 17px;
+        }
+
+        .myPopup .myPopup-content .myTable,
+        .myPopup .myPopup-content #myTable {
+            border-collapse: collapse;
+            font-size: 18px;
+            text-align: center;
+            margin: 30px;
+        }
+
+        .myPopup .myPopup-content #myTable {
+            margin-top: 0;
+        }
+
+        .myPopup .myPopup-content .myTable tr td,
+        .myPopup .myPopup-content .myTable tr th,
+        .myPopup .myPopup-content #myTable tr td,
+        .myPopup .myPopup-content #myTable tr th {
+            border: 1px solid #145670;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(1) {
+            width: 168px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(2) {
+            width: 220px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(3) {
+            width: 228px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(4) {
+            width: 190px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(1) {
+            background: #89DBFF;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(1),
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(3),
+        .myPopup .myPopup-content .myTable tr:nth-child(3) td:nth-child(1),
+        .myPopup .myPopup-content .myTable tr:nth-child(3) td:nth-child(3) {
+            background: #CEF0FF;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(1) {
+            width: 51px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(2) {
+            width: 121px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(3) {
+            width: 113px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(4) {
+            width: 90px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(5) {
+            width: 89px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(6),
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(7) {
+            width: 114px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(8) {
+            width: 109px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) {
+            background: #89DBFF;
+        }
+
+        .myPopup .myPopup-content #myTable tr td:nth-child(1),
+        .myPopup .myPopup-content #myTable tr td:nth-child(3),
+        .myPopup .myPopup-content #myTable tr td:nth-child(5),
+        .myPopup .myPopup-content #myTable tr td:nth-child(7) {
+            background: #CEF0FF;
+        }
+
+        .myPopup .myPopup-content #myTable tr td:nth-child(8) {
+            background: #89DBFF;
+        }
+
+
+
+
+        @media only screen and (max-width: 991px) {
+            .myPopup .myPopup-content {
+                overflow-y: scroll;
+                width: 80%;
+            }
+
+            .myPopup .myPopup-content .first,
+            .myPopup .myPopup-content .second {
+                overflow-x: scroll;
+            }
+
+            .myPopup .myPopup-content .myTable,
+            .myPopup .myPopup-content #myTable {
+                margin: 0;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myCalc">
+        <h1>Сумма кредита</h1>
+        <h2><output for="range1" id="output1">4000</output> lei</h2>
+        <div class="myRange">
+            <button id="minus1" class="change">-</button>
+            <input id="range1" type="range" min="1000" max="20000" step="1000" value="4000">
+            <button id="plus1" class="change">+</button>
+        </div>
+        <h3>1000 MDL</h3>
+        <h4>20000 MDL</h4>
+
+        <br><br>
+
+        <h1>Срок</h1>
+        <h2><output for="range2" id="output2">4</output> мес.</h2>
+        <div class="myRange">
+            <button id="minus2" class="change">-</button>
+            <input id="range2" type="range" min="1" max="12" step="1" value="4">
+            <button id="plus2" class="change">+</button>
+        </div>
+        <h3>1 мес.</h3>
+        <h4>12 мес.</h4>
+
+        <br><br><br>
+
+        <hr>
+
+        <br>
+
+        <h5>Сумма возврата </h5>
+        <h6>1000 MDL</h6>
+
+        <br><br>
+
+        <h5>Комисионные</h5>
+        <h6>1000 MDL</h6>
+
+        <br><br>
+
+        <h5>Ежемесячный платеж</h5>
+        <h6>1000 MDL</h6>
+
+        <button class="btn">Оставить заявку</button>
+        <p class="details">Подробнее</p>
+    </div>
+
+    <div class="myPopup">
+        <div class="myPopup-content">
+            <a href="#" class="close"><img src="https://svgshare.com/i/ZcX.svg" alt=""></a>
+
+            <h1>Преддоговорная информация</h1>
+
+            <div class="first">
+                <table class="myTable">
+                    <tr>
+                        <th colspan="4">Detalii Calcul</th>
+                    </tr>
+                    <tr>
+                        <td>Dobanda anula electiva (DAE)</td>
+                        <td>Total comisioane</td>
+                        <td>Total de plata</td>
+                        <td>Total dobanda</td>
+                    </tr>
+                    <tr>
+                        <td>90.8773%</td>
+                        <td>1 012.02</td>
+                        <td>6 012.02</td>
+                        <td>0.00</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="second">
+                <table id="myTable">
+                    <tr>
+                        <th>Luna</th>
+                        <th>Data</th>
+                        <th>Sold credit</th>
+                        <th>Principal</th>
+                        <th>Dobânda</th>
+                        <th>Rata lunară</th>
+                        <th>Comisioane</th>
+                        <th>Rata Lunară Totală (DAE)</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $("#minus1").click(function (event) {
+            zoom("out", 1)
+        })
+
+        $("#minus2").click(function (event) {
+            zoom("out", 2)
+        })
+
+        $("#plus1").click(function (event) {
+            zoom("in", 1)
+        })
+
+        $("#plus2").click(function (event) {
+            zoom("in", 2)
+        })
+
+        $("#range1").on('input change', function (event) {
+            $('#output1').text($(event.currentTarget).val())
+        })
+
+        $("#range2").on('input change', function (event) {
+            $('#output2').text($(event.currentTarget).val())
+        })
+
+        function zoom(direction, nr) {
+            if (nr == 1) {
+                var slider = $("#range1")
+            }
+            else {
+                var slider = $("#range2")
+            }
+
+            var step = parseInt(slider.attr('step'), 10)
+            var currentSliderValue = parseInt(slider.val(), 10)
+            var newStepValue = currentSliderValue + step
+
+            if (direction === "out") {
+                newStepValue = currentSliderValue - step
+            } else {
+                newStepValue = currentSliderValue + step
+            }
+
+            slider.val(newStepValue).change()
+        }
+
+
+
+
+        createTable($('#myTable'), 12, 8)
+
+        function createTable(parent, rows, cols) {
+            var table = $('#myTable')
+
+            for (var i = 0; i < rows; i++) {
+                var tr = $('<tr></tr>')
+
+                for (var j = 0; j < cols; j++) {
+                    var td = $('<td></td>')
+
+                    if (j == 0) {
+                        td.text(i + 1)
+                    }
+                    else {
+                        td.text('lalala')
+                    }
+
+                    tr.append(td)
+                }
+
+                table.append(tr)
+            }
+
+            parent.append(table)
+        }
+
+
+
+
+        $(".details").click(function () {
+            $(".myPopup").fadeIn()
+        })
+
+        $(".myPopup, .close").click(function () {
+            $(".myPopup").fadeOut()
+        })
+
+        $('.myPopup-content').click(function () { return false; });
+    </script>
+</body>
+
+</html>
