@@ -12,7 +12,6 @@
             margin: 0;
             padding: 0;
             font-family: 'PT Sans', sans-serif;
-            /* border: 1px solid red; */
         }
 
         .myCalc {
@@ -136,13 +135,26 @@
             margin-left: auto;
             margin-right: auto;
             display: block;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .myCalc .btn:hover {
+            background: #29aae2b0;
+            transition: .3s;
         }
 
         .myCalc .details {
-            text-align: center;
             color: #6F6F6F;
             margin-top: 10px;
             cursor: pointer;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myCalc .details:hover {
+            text-decoration: underline;
         }
 
         .myPopup {
@@ -347,7 +359,7 @@
         <h5>Ежемесячный платеж</h5>
         <h6><span id="calcResult3">1142</span> MDL</h6>
 
-        <button class="btn">Оставить заявку</button>
+        <button class="btn" onclick="window.location.href='https://onlinecredite.md/ru/podat-onlajn-zayavku.html'">Оставить заявку</button>
         <p class="details">Подробнее</p>
     </div>
 
