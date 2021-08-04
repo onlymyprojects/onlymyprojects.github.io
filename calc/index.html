@@ -146,7 +146,6 @@
 
         .myCalc .details {
             color: #6F6F6F;
-            margin-top: 10px;
             cursor: pointer;
             width: fit-content;
             margin-left: auto;
@@ -154,10 +153,20 @@
             font-size: 18px;
         }
 
+        .myCalc .hr {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .myCalc .info {
             font-size: 18px;
             text-align: center;
             margin: 15px 20px 15px 20px;
+        }
+
+        .myCalc .info2 {
+            text-align: left;
         }
 
         .myCalc .details:hover {
@@ -192,7 +201,7 @@
             font-weight: 700;
             color: #145670;
             text-align: center;
-            margin-top: 17px;
+            margin: 17px 20px 0 20px;
         }
 
         .myPopup .myPopup-content .myTable,
@@ -200,7 +209,7 @@
             border-collapse: collapse;
             font-size: 18px;
             text-align: center;
-            margin: 30px;
+            margin: 0 30px 30px 30px;
             width: 805px;
         }
 
@@ -235,10 +244,8 @@
             background: #89DBFF;
         }
 
-        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(1),
-        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(3),
-        .myPopup .myPopup-content .myTable tr:nth-child(3) td:nth-child(1),
-        .myPopup .myPopup-content .myTable tr:nth-child(3) td:nth-child(3) {
+        .myPopup .myPopup-content .myTable tr td:nth-child(1),
+        .myPopup .myPopup-content .myTable tr td:nth-child(3) {
             background: #CEF0FF;
         }
 
@@ -286,6 +293,18 @@
             background: #89DBFF;
         }
 
+        .myPopup .myPopup-content .third {
+            height: 60vh;
+            overflow-y: scroll;
+        }
+
+        .myPopup .myPopup-content .third table th,
+        .myPopup .myPopup-content .third table td {
+            text-align: left;
+            padding: 0 20px 0 20px;
+            vertical-align: top;
+        }
+
 
 
 
@@ -301,7 +320,8 @@
             }
 
             .myPopup .myPopup-content .first,
-            .myPopup .myPopup-content .second {
+            .myPopup .myPopup-content .second,
+            .myPopup .myPopup-content .third {
                 overflow-x: scroll;
             }
 
@@ -310,13 +330,9 @@
                 margin: 0;
             }
 
-            .myPopup .myPopup-content .myTable {
-                margin-top: 30px;
-            }
-
             .myPopup .myPopup-content .second {
                 margin-top: 30px;
-                max-height: 25vh;
+                max-height: 44.5vh;
                 overflow-y: scroll;
             }
         }
@@ -369,25 +385,35 @@
         <button class="btn"
             onclick="window.location.href='https://onlinecredite.md/ru/podat-onlajn-zayavku.html'">Оставить
             заявку</button>
-        <p class="details">Детальная информация по кредиту</p>
+        <br>
+        <p class="details" id="details1">Детальная информация по кредиту</p>
+        <p class="details" id="details2">Преддоговоргая информация</p>
 
         <br>
 
         <p class="info">Creditele pot fi achitate oricind integral! Comisionul se va aplica doar pentru perioada
             utilizata!</p>
-        <p class="info"><b>Exemplu reprezentativ:</b> împrumuți 2000 lei pentru 61 de zile, rata dobânzii este de 15%,
-            va
-            trebui să rambursezi 2600 lei.
-            Dobânda anuală efectivă (DAE) 382%.
-            Termenul minim de rambursare este de 61 de zile.
-            Termenul maxim de rambursare este de 6 luni.</p>
+
+        <hr class="hr">
+
+        <p class="info info2"><b>Exemplu reprezentativ:</b>
+            Valoarea totală plătibilă pentru un împrumut în sumă de 5 000 MDL acordat pe un termen de 12 luni constituie
+            6960 MDL, care include:
+            <br><br>
+            -Suma împrumutului acordat 5 000 MDL;<br>
+            -Suma dobânzii aferente împrumutului 0 MDL;<br>
+            -Comision pentru acordarea împrumutului 1960 MDL;<br>
+            -Rata exprimată în procent anual (DAE) constituie 90.02%.
+        </p>
     </div>
 
-    <div class="myPopup">
+    <div class="myPopup myPopup1">
         <div class="myPopup-content">
             <a href="#" class="close"><img src="https://svgshare.com/i/ZcX.svg" alt=""></a>
 
             <h1>Преддоговорная информация</h1>
+
+            <br>
 
             <div class="first">
                 <table class="myTable">
@@ -401,9 +427,9 @@
                         <td>Total dobanda</td>
                     </tr>
                     <tr>
-                        <td id="dae"></td>
-                        <td id="comision"></td>
-                        <td id="total"></td>
+                        <td class="dae"></td>
+                        <td class="comision"></td>
+                        <td class="total"></td>
                         <td>0.00%</td>
                     </tr>
                 </table>
@@ -422,6 +448,305 @@
                         <th>Rata Lunară Totală (DAE)</th>
                     </tr>
                 </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="myPopup myPopup2">
+        <div class="myPopup-content">
+            <a href="#" class="close"><img src="https://svgshare.com/i/ZcX.svg" alt=""></a>
+
+            <h1>Informații standard privind creditul pentru consumatori
+                (informație precontractuală)
+            </h1>
+
+            <br>
+
+            <div class="third">
+                <table class="myTable">
+                    <tr>
+                        <th colspan="2">1.Numele/denumirea și datele de contact ale Creditorului</th>
+                    </tr>
+                    <tr>
+                        <td>Creditor</td>
+                        <td>O.C.N.”ONLINE CREDIT” S.R.L.</td>
+                    </tr>
+                    <tr>
+                        <td>Adresă</td>
+                        <td>Mun.Chișinău, bd.Mircea cel Bătrîn, nr.12/2, of.301</td>
+                    </tr>
+                    <tr>
+                        <td>Nr. de telefon</td>
+                        <td>(+373)60371300</td>
+                    </tr>
+                    <tr>
+                        <td>Adresa de e-mail</td>
+                        <td>info@onlinecredite.md</td>
+                    </tr>
+                    <tr>
+                        <td>Adresa web</td>
+                        <td>www.onlinecredite.md</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">2.Descrierea principalelor caracteristici ale produselor de creditare</th>
+                    </tr>
+                    <tr>
+                        <td>Tipul creditului</td>
+                        <td>Credit nebancar pe termen scurt</td>
+                    </tr>
+                    <tr>
+                        <td>Valoarea totală a creditului</td>
+                        <td><span class="total"></span> MDL</td>
+                    </tr>
+                    <tr>
+                        <td>Condițiile care reglemenează tragerea creditului
+                            Însemnă modul și momentul de obținere a banilor
+                        </td>
+                        <td>Tragerea creditului are loc în mediul on-line sau off-line după parcurgerea următorilor
+                            pași: <br>
+                            Acceptarea condițiilor de acordare a creditului de către O.C.N. “ONLINE CREDIT” S.R.L. și
+                            consimțământul cu privire la prelucrarea datelor cu caracter personal și verificarea
+                            informației disponibile în baza de date a birourilor istoriilor de credit, furnizate prin
+                            intermediul aplicației furnizate on-line sau offline, în scopul analizei încheierii unui
+                            eventual contract de credit. <br>
+                            Citirea și acceptarea ofertei organizației de creditare nebancare expuse în informația
+                            precontractuală. <br>
+                            După aprobarea creditului nebancar, semnarea contractului la unul din oficiile organizației
+                            sau prin intermediul codului unic expediat prin SMS.
+                            În dependență de modalitatea de primire indicată (virament/numerar), mijloacele bănești sunt
+                            transferate în contul debitorului sau se ridică în numerar cu buletinul de identitate
+                            valabil la una din sucursalele companiei, agențiile cu terminale RunPay mini.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Durata contractului de credit</td>
+                        <td class="month"></td>
+                    </tr>
+                    <tr>
+                        <td>Ratele și dacă este cazul, ordinea în care acestea vor fi alocate</td>
+                        <td>Rambursarea creditului nebancar, achitarea dobânzii calculate și comisioanelor aferente se
+                            efectuează pînă la scadență. <br>
+                            Ordinea de încasare a plăților efectuate: <br>
+                            <ol style="margin-left: 40px;">
+                                <li>Penalitățile calculate</li>
+                                <li>Comisionul de acordare a creditului</li>
+                                <li>Dobânda calculată</li>
+                                <li>Corpul creditului</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suma totală pe care va trebui să o achitaţi</td>
+                        <td>Cu condiția respectării clauzelor contractuale: <br>
+                            <span class="comision"></span> MDL
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">3.Costurile creditului</th>
+                    </tr>
+                    <tr>
+                        <td>Rata dobînzii aferente creditului sau, dacă este cazul, diferite rate ale dobînzii care se
+                            aplică contractului de credit</td>
+                        <td>Rata dobânzii aferente creditului nebancar pentru o zi calendaristică constituie:
+                            <br>
+                            0 % (fixă)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dobânda anuală efectivă (DAE) <br>
+                            Costul total al creditului exprimat ca procentaj annual din valoarea totală a creditului.
+                            <br><br>
+                            Exemplu reprezentativ
+                        </td>
+                        <td>DAE constituie: <br>
+                            <span class="dae"></span> %
+                            <br><br><br><br>
+                            Exemplu: <br>
+                            Valoarea creditului nebancar – 5000 MDL <br>
+                            Durata creditului nebancar – 30 zile <br>
+                            Valoarea totală plătibilă de către consumator – 5275 MDL <br>
+                            Comision de acordare: 275 MDL <br>
+                            Dobânda calculata: 0 MDL <br>
+                            DAE –90.12 %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pentru obţinerea creditului sau pentru obţinerea creditului conform clauzelor şi condiţiilor
+                            convenite, este obligatoriu să se încheie: <br>
+                            – un contract de asigurare pentru garantarea creditului; sau <br>
+                            – un contract privind un alt serviciu accesoriu?
+                        </td>
+                        <td><br><br><br><br>
+                            Nu
+                            <br><br>
+                            Nu
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Costuri aferente</th>
+                    </tr>
+                    <tr>
+                        <td>Suma costurilor aferente utilizării unui mijloc specific de plată (de exemplu, a cardului de
+                            credit)</td>
+                        <td>Comisionul perceput de terți pentru eliberarea mijloacelor bănești: <br><br>
+                            <ul style="margin-left: 20px;">
+                                <li>Eliberare mijloacelor bănești în numerar prin oficiul O.C.N. “ONLINE CREDIT ” SRL –
+                                    comisionul 0%;</li>
+                                <li>Transfer pe contul bancar sau pe contul de card: ontractua pentru transfer perceput
+                                    de
+                                    O.C.N. “ONLINE CREDIT” SRL – 0%, însă banca în care aveți contul dvs. Poate percepe
+                                    o taxă
+                                    pentru creditarea sumei în contul dvs., în conformitate cu tarifele sale;</li>
+                                <li>Transferul mijloacelor bănești în portofelul electronic RunPay cu ridicarea sumei în
+                                    numerar de la orice terminal RunPay Mini ( ontractua 1%).</li>
+                            </ul>
+                            <br>
+                            Comision perceput de terți pentru achitarea creditului și plăților aferente: <br><br>
+                            <ul style="margin-left: 20px;">
+                                <li>Achitare în numerar prin oficiul O.C.N. “ONLINE CREDIT” S.R.L.: ( ontractua 0%);
+                                </li>
+                                <li>Achitare în numerar la una din filialele băncii BC FINCOMBANK SA ( ontractua 7 lei)
+                                </li>
+                                <li>Achitare în numerar prin terminale de plată: RunPay ( ontractua 1%)</li>
+                                <li>Achitare online: myrunpay.com ( ontractua 1%)</li>
+                            </ul>
+                            <br>
+                            Transfer bancar în contul O.C.N.”ONLINE CREDIT” S.R.L. (codul fiscal 1015600030484):
+                            BC”FINCOMBANK” SA, , Cod bancar – FTMDMD2X847
+                            IBAN MD19FT222460200000522498
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Orice alte costuri rezultate din ontractual de credit</td>
+                        <td>Comision pentru acordarea creditului: <br>
+                            ? MDL
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Costuri în caz de întîrziere la plată
+                            Plăţile neefectuate ar putea să aibă consecinţe grave pentru dumneavoastră (de exemplu,
+                            vînzare silită) şi să îngreuneze obţinerea de credite
+                        </td>
+                        <td>Vi se va percepe o penalitate în mărime de <b>1% minim 20 MDL pentru fiecare zi de
+                                întîrziere a
+                                plății</b>, aplicată la suma datorată pentru toata perioada de întîrziere. Penalitatea
+                            se
+                            calculează pînă la data achitării integrale a sumei datorate.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">4.Alte ontra juridice importante</th>
+                    </tr>
+                    <tr>
+                        <td>Dreptul de revocare <br> Aveţi dreptul să renunţaţi la ontractual de credit în termen de 14
+                            zile calendaristice</td>
+                        <td>Da</td>
+                    </tr>
+                    <tr>
+                        <td>Rambursare anticipată <br>
+                            Aveţi dreptul la rambursare anticipată totală sau parţială a creditului în orice moment
+                        </td>
+                        <td>Dvs aveți dreptul la rambursarea anticipată totală sau parțială a creditului nebancar în
+                            orice moment. Nu se aplică costuri suplimentare în cazul rambursării anticipate a creditului
+                            nebancar.</td>
+                    </tr>
+                    <tr>
+                        <td>Consultarea unei baze de date
+                            Creditorul trebuie să vă informeze imediat şi gratuit asupra rezultatelor consultării unei
+                            baze de date în cazul în care cererea de creditare este respinsă în baza acestei consultări.
+                            Acest lucru nu se aplică în cazul în care furnizarea unor astfel de informaţii este
+                            interzisă prin lege sau contravine obiectivelor de ordine publică sau de securitate publică
+                        </td>
+                        <td>Da</td>
+                    </tr>
+                    <tr>
+                        <td>Dreptul la un proiect de contract de credit <br>
+                            Aveţi dreptul ca, la cerere, să obţineţi gratuit un exemplar al proiectului de contract de
+                            credit. Această dispoziţie nu se aplică în cazul în care, în momentul cererii, creditorul nu
+                            doreşte să încheie contractul de credit cu dumneavoastră
+                        </td>
+                        <td>Da</td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Perioada de timp pe parcursul căreia creditorul este ţinut să-și respecte obligaţiile
+                            precontractuale
+                        </td>
+                        <td>Această informaţie este valabilă 15 zile din momentul prezentării.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">5. Informaţii suplimentare care trebuie oferite în cazul comercializării la
+                            distanţă a serviciilor financiare</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">a) referitoare la creditor</th>
+                    </tr>
+                    <tr>
+                        <td>Înregistrare</td>
+                        <td>Organizația de Creditare Nebancară “ONLINE CREDIT” S.R.L.
+                            IDNO 1015600030484 <br><br>
+                            Înregistrată în registrul organizațiilor de creditare nebancară conform Hotarîrii CNPF
+                            nr.6/7 din 11.02.2019.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Autoritatea de supraveghere
+                        </td>
+                        <td>Agenția pentru Protecția Consumatorilor Adresa: MD-2012, mun. Chișinău,
+                            str. Vasile Alecsandri, nr. 78, etaj 1, bir.101,102 <br><br>
+                            Linia directă: (+373 22) 74-14-64 <br><br>
+                            Linia verde 080028028 (apel gratuit din raioanele Republicii Moldova)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">b) referitoare la contractul de credit</th>
+                    </tr>
+                    <tr>
+                        <td>Exercitarea dreptului de revocare</td>
+                        <td>Împrumutatul are la dispoziție 14 zile calendaristice după încheierea contractului pentru a
+                            revoca contractul, în conformitate cu legea, fără a invoca motive. În asemenea caz
+                            împrumutatul va rambursa Împrumutătorului suma oferită de credit și va plăti dobînda
+                            aferentă acesteia de la data oferirii sumei pînă la data rambursării acesteia. Pentru a-și
+                            exercita dreptul menționat, împrumutatul va transmite o notificare unilaterală de revocare a
+                            contratului menționînd numele, prenumele și numărul contractului. Consecințele neexercitării
+                            dreptului de revocare conform dispozițiilor și condițiilor descrise mai sus, reprezintă
+                            imposibilitatea de a înceta contractul prin intermediul dreptului de revocare.</td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Legea luată de creditor ca bază pentru stabilirea raporturilor cu dumneavoastră înainte de
+                            încheierea contractului de credit
+                        </td>
+                        <td>Activitatea organizației de creditare nebancare întru stabilirea relațiilor cu potențialii
+                            clienți este guvernată de Legislația Republicii Moldova.</td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Regimul lingvistic
+                        </td>
+                        <td>Informaţiile şi termenii contractuali se vor furniza în limba de stat. Cu consimţămîntul
+                            dumneavoastră, intenţionăm să comunicăm în limba de stat pe durata contractului de credit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">c) referitoare la căi de atac</th>
+                    </tr>
+                    <tr>
+                        <td>Existenţa şi posibilitatea recurgerii la o procedură extrajudiciară de contestare şi la o
+                            cale de atac</td>
+                        <td>Orice neînțelegere poate fi soluționată în mod amiabil prin notificarea Părții. În
+                            cazul imposibilității găsirii unei soluții agreate de ambele părți, atunci cazul poate fi
+                            soluționat de instanța de judecată.</td>
+                    </tr>
+                </table>
+
+                <h1>Prin prezenta, confirm că am luat cunoștință cu informația precontractuală și nu am necesitatea
+                    de a
+                    folosi termenul de cel puțin 15 zile calendaristice, pentru a analiza informația oferită. Astfel,
+                    solicit de a semna imediat contractul de credit nebancar.</h1>
+
+                <br>
             </div>
         </div>
     </div>
@@ -1700,19 +2025,23 @@
 
 
 
-        $(".details").click(function () {
+        $("#details1, #details2").click(function () {
+            var sum = parseInt($("#range1").val())
+            var nrMonth = parseInt($("#range2").val())
+
+            $('.dae').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][0] * 100) / 100).toFixed(2) + '%')
+            $('.comision').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][3] * 100) / 100).toFixed(2))
+            $('.total').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][2] * 100) / 100).toFixed(2))
+            $('.month').text(nrMonth)
+        })
+
+
+
+
+        $("#details1").click(function () {
             var sum = parseInt($("#range1").val())
             var nrMonth = parseInt($("#range2").val())
             var soldCredit = sum
-
-
-
-
-            $('#dae').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][0] * 100) / 100).toFixed(2) + '%')
-            $('#comision').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][3] * 100) / 100).toFixed(2))
-            $('#total').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][2] * 100) / 100).toFixed(2))
-
-
 
             createTable($('#myTable'), nrMonth + 1, 8)
 
@@ -1764,8 +2093,6 @@
                         }
                         else if (j == 1 && i == 0) {
                             td.text(output)
-
-                            var track = months + 1
                         }
                         else if (j == 1) {
                             if (i == 1) {
@@ -1816,7 +2143,11 @@
                 }
             }
 
-            $(".myPopup").fadeIn()
+            $(".myPopup1").fadeIn()
+        })
+
+        $("#details2").click(function () {
+            $(".myPopup2").fadeIn()
         })
 
         $(".myPopup, .close").click(function () {
