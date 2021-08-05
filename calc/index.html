@@ -346,7 +346,7 @@
 <body>
     <div class="myCalc">
         <h1>Сумма кредита</h1>
-        <h2><output for="range1" id="output1">4000</output> lei</h2>
+        <h2><output id="output1">4000</output> lei</h2>
         <div class="myRange">
             <button id="minus1" class="change">-</button>
             <input id="range1" type="range" min="1000" max="20000" step="1000" value="4000">
@@ -358,7 +358,7 @@
         <br><br>
 
         <h1>Срок</h1>
-        <h2><output for="range2" id="output2">4</output> мес.</h2>
+        <h2><output id="output2">4</output> мес.</h2>
         <div class="myRange">
             <button id="minus2" class="change">-</button>
             <input id="range2" type="range" min="1" max="12" step="1" value="4">
@@ -502,7 +502,7 @@
                     </tr>
                     <tr>
                         <td>Valoarea totală a creditului</td>
-                        <td><span class="total"></span> MDL</td>
+                        <td><span class="sum"></span> MDL</td>
                     </tr>
                     <tr>
                         <td>Condițiile care reglemenează tragerea creditului
@@ -544,7 +544,7 @@
                     <tr>
                         <td>Suma totală pe care va trebui să o achitaţi</td>
                         <td>Cu condiția respectării clauzelor contractuale: <br>
-                            <span class="comision"></span> MDL
+                            <span class="total"></span> MDL
                         </td>
                     </tr>
                     <tr>
@@ -625,7 +625,7 @@
                     <tr>
                         <td>Orice alte costuri rezultate din ontractual de credit</td>
                         <td>Comision pentru acordarea creditului: <br>
-                            ? MDL
+                            <span class="comision">?</span> MDL
                         </td>
                     </tr>
                     <tr>
@@ -2038,6 +2038,7 @@
             $('.comision').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][3] * 100) / 100).toFixed(2))
             $('.total').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][2] * 100) / 100).toFixed(2))
             $('.month').text(nrMonth)
+            $('.sum').text(sum)
         })
 
 
