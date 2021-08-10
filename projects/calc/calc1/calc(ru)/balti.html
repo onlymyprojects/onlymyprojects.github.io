@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="suma">Сумма кредита</label>
+    <input type="text" id="suma">
+
+
+
+
+    <script type="text/javascript">
+        function GetParam(name) {
+            var start = location.search.indexOf("?" + name + "=");
+            if (start < 0) start = location.search.indexOf("&" + name + "=");
+            if (start < 0) return '';
+            start += name.length + 2;
+            var end = location.search.indexOf("&", start) - 1;
+            if (end < 0) end = location.search.length;
+            var result = '';
+            for (var i = start; i <= end; i++) {
+                var c = location.search.charAt(i);
+                result = result + (c == '+' ? ' ' : c);
+            }
+            return unescape(result);
+        }
+
+        document.getElementById("suma").value = GetParam('suma');
+    </script>
+</body>
+</html>

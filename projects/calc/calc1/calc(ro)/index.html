@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form id="myForm"
+        style="font-family: 'Open Sans', sans-serif; font-weight: bold; width: auto; max-width: 700px; border: 1px solid rgb(194, 1, 1); border-radius: 20px; margin-left: auto; margin-right: auto; display: block;">
+        <label for="input1">
+            <p style="margin-left: 25px;">Suma creditului: <span id="span1"
+                    style="font-size: 25px; color: rgb(194, 1, 1);">1000</span> lei</p>
+        </label>
+        <input id="input1" name="suma" type="range" min="1000" max="15000" step="500" value="1000"
+            style="width: 90%; margin-left: auto; margin-right: auto; display: block; background: rgb(194, 1, 1);">
+        <label for="input2">
+            <p style="margin-left: 25px;">Termen de credit: <span id="span2"
+                    style="font-size: 25px; color: rgb(194, 1, 1);">7</span> zile</p>
+        </label>
+        <input id="input2" type="range" min="7" max="30" step="1" value="7"
+            style="width: 90%; margin-left: auto; margin-right: auto; display: block;"><br>
+
+        <div style="border-top: 1px solid rgb(194, 1, 1); border-bottom: 1px solid rgb(194, 1, 1);">
+            <p style="margin-left: 25px;">Suma rambursării: <span id="rambursarea" style="font-size: 20px;">1077</span>
+                lei</p>
+
+            <p style="margin-left: 25px;">Costul creditului: <span id="costul" style="font-size: 20px;">77</span>
+                lei</p>
+
+            <p style="margin-left: 25px;">DAE - dobânda anuală efectivă: <span id="dae"
+                    style="font-size: 20px;">0</span> %</p>
+        </div>
+
+        <div style="margin: 10px; text-align: center;">
+            <input type="submit" id="submit1" onmouseover="hover(this)" onmouseout="noHover(this)" value="Chișinău"
+                style="width: 130px; height: 30px; font-size: 18px; background: rgb(194, 1, 1); border: 2px solid rgb(194, 1, 1); outline: none; border-radius: 30px; color: white; margin: 10px;">
+            <input type="submit" id="submit2" onmouseover="hover(this)" onmouseout="noHover(this)" value="Bălți"
+                style="width: 130px; height: 30px; font-size: 18px; background: rgb(194, 1, 1); border: 2px solid rgb(194, 1, 1); outline: none; border-radius: 30px; color: white; margin: 10px;">
+        </div>
+    </form>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#input1").on('input', function () {
+            $('#span1').text(this.value);
+
+            x = parseInt(this.value);
+            y = $("#input2").val();
+            z = x * y * 0.011;
+
+            $('#rambursarea').text(z + x)
+
+            $('#costul').text(z)
+        });
+        $("#submit1").on('click', function () {
+            $('#myForm').attr('action', 'chisinau.html');
+        });
+
+        $("#input2").on('input', function () {
+            $('#span2').text(this.value);
+
+            x = parseInt($("#input1").val());
+            y = this.value;
+            z = x * y * 0.011;
+
+            $('#rambursarea').text(z + x)
+
+            $('#costul').text(z)
+        });
+        $("#submit2").on('click', function () {
+            $('#myForm').attr('action', 'balti.html');
+        });
+    </script>
+
+    <script>
+        function hover(x) {
+            x.style.background = "white";
+            x.style.color = "rgb(194, 1, 1)";
+            x.style.transition = "0.3s";
+        }
+
+        function noHover(x) {
+            x.style.background = "rgb(194, 1, 1)";
+            x.style.color = "white";
+            x.style.transition = "0.3s";
+        }
+
+
+
+        year = document.getElementById("dae").innerHTML = new Date().getFullYear();
+        trueFalse = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+
+        if (trueFalse == true) {
+            document.getElementById("dae").innerHTML = "402.6";
+        }
+        else {
+            document.getElementById("dae").innerHTML = "401.5";
+        }
+    </script>
+</body>
+
+</html>

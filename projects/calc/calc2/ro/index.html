@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        .myCalc {
+            width: 405px;
+            height: auto;
+            border: 4px solid #E5E5E5;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myCalc h1,
+        .myCalc h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 29px;
+        }
+
+        .myCalc h1 {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .myCalc h2 {
+            color: #145670;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .myCalc .myRange {
+            display: flex;
+            align-items: center;
+            margin-top: 82px;
+            justify-content: center;
+            width: calc(100% - 40px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myCalc .myRange .change {
+            width: 20px;
+            height: 20px;
+            background: #29AAE2;
+            color: white;
+            border-radius: 50%;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .myCalc .myRange input[type=range] {
+            -webkit-appearance: none;
+            width: calc(100% - 40px);
+        }
+
+        .myCalc .myRange input[type=range]::-webkit-slider-runnable-track {
+            height: 2px;
+            cursor: pointer;
+            background: #145670;
+        }
+
+        .myCalc .myRange input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 40px;
+            border-radius: 10px;
+            background: url('https://svgshare.com/i/ZcS.svg');
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -9px;
+        }
+
+        .myCalc h3,
+        .myCalc h4 {
+            font-size: 15px;
+            color: #6F6F6F;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+
+        .myCalc h3 {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .myCalc h4 {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .myCalc h5 {
+            float: left;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .myCalc h6 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 10px;
+            color: #145670;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .myCalc .btn {
+            width: 227px;
+            height: 43px;
+            background: #29AAE2;
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .myCalc .btn:hover {
+            background: #29aae2b0;
+            transition: .3s;
+        }
+
+        .myCalc .details {
+            color: #6F6F6F;
+            cursor: pointer;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+        }
+
+        .myCalc .hr {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myCalc .info {
+            font-size: 18px;
+            text-align: center;
+            margin: 15px 20px 15px 20px;
+        }
+
+        .myCalc .info2 {
+            text-align: left;
+        }
+
+        .myCalc .details:hover {
+            text-decoration: underline;
+        }
+
+        .myPopup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+            top: 0;
+            z-index: 99;
+            display: none;
+        }
+
+        .myPopup .myPopup-content {
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .myPopup .myPopup-content .close {
+            position: absolute;
+            right: 0;
+        }
+
+        .myPopup .myPopup-content h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #145670;
+            text-align: center;
+            margin: 17px 20px 0 20px;
+        }
+
+        .myPopup .myPopup-content .myTable,
+        .myPopup .myPopup-content #myTable {
+            border-collapse: collapse;
+            font-size: 18px;
+            text-align: center;
+            margin: 0 30px 30px 30px;
+            width: 805px;
+        }
+
+        .myPopup .myPopup-content #myTable {
+            margin-top: 0;
+        }
+
+        .myPopup .myPopup-content .myTable tr td,
+        .myPopup .myPopup-content .myTable tr th,
+        .myPopup .myPopup-content #myTable tr td,
+        .myPopup .myPopup-content #myTable tr th {
+            border: 1px solid #145670;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(1) {
+            width: 168px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(2) {
+            width: 220px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(3) {
+            width: 228px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(2) td:nth-child(4) {
+            width: 190px;
+        }
+
+        .myPopup .myPopup-content .myTable tr:nth-child(1) {
+            background: #89DBFF;
+        }
+
+        .myPopup .myPopup-content .myTable tr td:nth-child(1),
+        .myPopup .myPopup-content .myTable tr td:nth-child(3) {
+            background: #CEF0FF;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(1) {
+            width: 51px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(2) {
+            width: 121px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(3) {
+            width: 113px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(4) {
+            width: 90px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(5) {
+            width: 89px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(6),
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(7) {
+            width: 114px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) th:nth-child(8) {
+            width: 109px;
+        }
+
+        .myPopup .myPopup-content #myTable tr:nth-child(1) {
+            background: #89DBFF;
+        }
+
+        .myPopup .myPopup-content #myTable tr td:nth-child(1),
+        .myPopup .myPopup-content #myTable tr td:nth-child(3),
+        .myPopup .myPopup-content #myTable tr td:nth-child(5),
+        .myPopup .myPopup-content #myTable tr td:nth-child(7) {
+            background: #CEF0FF;
+        }
+
+        .myPopup .myPopup-content #myTable tr td:nth-child(8) {
+            background: #89DBFF;
+        }
+
+        .myPopup .myPopup-content .third {
+            height: 60vh;
+            overflow-y: scroll;
+        }
+
+        .myPopup .myPopup-content .third table th,
+        .myPopup .myPopup-content .third table td {
+            text-align: left;
+            padding: 0 20px 0 20px;
+            vertical-align: top;
+        }
+
+
+
+
+        @media only screen and (max-width: 991px) {
+            .myCalc {
+                width: 95%;
+            }
+
+            .myPopup .myPopup-content {
+                width: 90vw;
+                padding: 0 10px 10px 10px;
+                max-height: 95vh;
+            }
+
+            .myPopup .myPopup-content .third {
+                height: 73vh;
+            }
+
+            .myPopup .myPopup-content .first,
+            .myPopup .myPopup-content .second,
+            .myPopup .myPopup-content .third {
+                overflow-x: scroll;
+            }
+
+            .myPopup .myPopup-content .myTable,
+            .myPopup .myPopup-content #myTable {
+                margin: 0;
+            }
+
+            .myPopup .myPopup-content .second {
+                margin-top: 30px;
+                max-height: 44.5vh;
+                overflow-y: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myCalc">
+        <h1>Suma creditului</h1>
+        <h2><output id="output1">4000</output> lei</h2>
+        <div class="myRange">
+            <button id="minus1" class="change">-</button>
+            <input id="range1" type="range" min="1000" max="20000" step="1000" value="4000">
+            <button id="plus1" class="change">+</button>
+        </div>
+        <h3>1000 MDL</h3>
+        <h4>20000 MDL</h4>
+
+        <br><br>
+
+        <h1>Termen</h1>
+        <h2><output id="output2">4</output> luni</h2>
+        <div class="myRange">
+            <button id="minus2" class="change">-</button>
+            <input id="range2" type="range" min="1" max="12" step="1" value="4">
+            <button id="plus2" class="change">+</button>
+        </div>
+        <h3>1 lună</h3>
+        <h4>12 luni</h4>
+
+        <br><br><br>
+
+        <hr>
+
+        <br>
+
+        <h5>Suma rambursării</h5>
+        <h6><span id="calcResult1">4568</span> MDL</h6>
+
+        <br><br>
+
+        <h5>Comision</h5>
+        <h6><span id="calcResult2">568</span> MDL</h6>
+
+        <br><br>
+
+        <h5>Plata lunară</h5>
+        <h6><span id="calcResult3">1142</span> MDL</h6>
+
+        <button class="btn"
+            onclick="window.location.href='https://onlinecredite.md/ru/podat-onlajn-zayavku.html'">Trimiteți cererea dvs</button>
+        <br>
+        <p class="details" id="details1">Informații detaliate despre împrumut</p>
+        <br>
+        <p class="details" id="details2">Informații precontractuale</p>
+
+        <br>
+
+        <p class="info">Creditele pot fi achitate oricind integral! Comisionul se va aplica doar pentru perioada
+            utilizata!</p>
+
+        <hr class="hr">
+
+        <p class="info info2"><b>Exemplu reprezentativ:</b>
+            Valoarea totală plătibilă pentru un împrumut în sumă de 5 000 MDL acordat pe un termen de 12 luni constituie
+            6960 MDL, care include:
+            <br><br>
+            -Suma împrumutului acordat 5 000 MDL;<br>
+            -Suma dobânzii aferente împrumutului 0 MDL;<br>
+            -Comision pentru acordarea împrumutului 1960 MDL;<br>
+            -Rata exprimată în procent anual (DAE) constituie 90.02%.
+        </p>
+    </div>
+
+    <div class="myPopup myPopup1">
+        <div class="myPopup-content">
+            <a href="#" class="close"><img src="https://svgshare.com/i/ZcX.svg" alt=""></a>
+
+            <h1>Преддоговорная информация</h1>
+
+            <br>
+
+            <div class="first">
+                <table class="myTable">
+                    <tr>
+                        <th colspan="4">Detalii Calcul</th>
+                    </tr>
+                    <tr>
+                        <td>Dobanda anula electiva (DAE)</td>
+                        <td>Total comisioane</td>
+                        <td>Total de plata</td>
+                        <td>Total dobanda</td>
+                    </tr>
+                    <tr>
+                        <td class="dae"></td>
+                        <td class="comision"></td>
+                        <td class="total"></td>
+                        <td>0.00%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="second">
+                <table id="myTable">
+                    <tr>
+                        <th>Luna</th>
+                        <th>Data</th>
+                        <th>Sold credit</th>
+                        <th>Principal</th>
+                        <th>Dobânda</th>
+                        <th>Rata lunară</th>
+                        <th>Comisioane</th>
+                        <th>Rata Lunară Totală (DAE)</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="myPopup myPopup2">
+        <div class="myPopup-content">
+            <a href="#" class="close"><img src="https://svgshare.com/i/ZcX.svg" alt=""></a>
+
+            <h1>Informații standard privind creditul pentru consumatori
+                (informație precontractuală)
+            </h1>
+
+            <br>
+
+            <div class="third">
+                <table class="myTable">
+                    <tr>
+                        <th colspan="2">1.Numele/denumirea și datele de contact ale Creditorului</th>
+                    </tr>
+                    <tr>
+                        <td>Creditor</td>
+                        <td>O.C.N.”ONLINE CREDIT” S.R.L.</td>
+                    </tr>
+                    <tr>
+                        <td>Adresă</td>
+                        <td>Mun.Chișinău, bd.Mircea cel Bătrîn, nr.12/2, of.301</td>
+                    </tr>
+                    <tr>
+                        <td>Nr. de telefon</td>
+                        <td>(+373)60371300</td>
+                    </tr>
+                    <tr>
+                        <td>Adresa de e-mail</td>
+                        <td>info@onlinecredite.md</td>
+                    </tr>
+                    <tr>
+                        <td>Adresa web</td>
+                        <td>www.onlinecredite.md</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">2.Descrierea principalelor caracteristici ale produselor de creditare</th>
+                    </tr>
+                    <tr>
+                        <td>Tipul creditului</td>
+                        <td>Credit nebancar pe termen scurt</td>
+                    </tr>
+                    <tr>
+                        <td>Valoarea totală a creditului</td>
+                        <td><span class="sum"></span> MDL</td>
+                    </tr>
+                    <tr>
+                        <td>Condițiile care reglemenează tragerea creditului
+                            Însemnă modul și momentul de obținere a banilor
+                        </td>
+                        <td>Tragerea creditului are loc în mediul on-line sau off-line după parcurgerea următorilor
+                            pași: <br>
+                            Acceptarea condițiilor de acordare a creditului de către O.C.N. “ONLINE CREDIT” S.R.L. și
+                            consimțământul cu privire la prelucrarea datelor cu caracter personal și verificarea
+                            informației disponibile în baza de date a birourilor istoriilor de credit, furnizate prin
+                            intermediul aplicației furnizate on-line sau offline, în scopul analizei încheierii unui
+                            eventual contract de credit. <br>
+                            Citirea și acceptarea ofertei organizației de creditare nebancare expuse în informația
+                            precontractuală. <br>
+                            După aprobarea creditului nebancar, semnarea contractului la unul din oficiile organizației
+                            sau prin intermediul codului unic expediat prin SMS.
+                            În dependență de modalitatea de primire indicată (virament/numerar), mijloacele bănești sunt
+                            transferate în contul debitorului sau se ridică în numerar cu buletinul de identitate
+                            valabil la una din sucursalele companiei, agențiile cu terminale RunPay mini.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Durata contractului de credit</td>
+                        <td class="month"></td>
+                    </tr>
+                    <tr>
+                        <td>Ratele și dacă este cazul, ordinea în care acestea vor fi alocate</td>
+                        <td>Rambursarea creditului nebancar, achitarea dobânzii calculate și comisioanelor aferente se
+                            efectuează pînă la scadență. <br>
+                            Ordinea de încasare a plăților efectuate: <br>
+                            <ol style="margin-left: 40px;">
+                                <li>Penalitățile calculate</li>
+                                <li>Comisionul de acordare a creditului</li>
+                                <li>Dobânda calculată</li>
+                                <li>Corpul creditului</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suma totală pe care va trebui să o achitaţi</td>
+                        <td>Cu condiția respectării clauzelor contractuale: <br>
+                            <span class="total"></span> MDL
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">3.Costurile creditului</th>
+                    </tr>
+                    <tr>
+                        <td>Rata dobînzii aferente creditului sau, dacă este cazul, diferite rate ale dobînzii care se
+                            aplică contractului de credit</td>
+                        <td>Rata dobânzii aferente creditului nebancar pentru o zi calendaristică constituie:
+                            <br>
+                            0 % (fixă)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dobânda anuală efectivă (DAE) <br>
+                            Costul total al creditului exprimat ca procentaj annual din valoarea totală a creditului.
+                            <br><br>
+                            Exemplu reprezentativ
+                        </td>
+                        <td>DAE constituie: <br>
+                            <span class="dae"></span> %
+                            <br><br><br><br>
+                            Exemplu: <br>
+                            Valoarea creditului nebancar – 5000 MDL <br>
+                            Durata creditului nebancar – 30 zile <br>
+                            Valoarea totală plătibilă de către consumator – 5275 MDL <br>
+                            Comision de acordare: 275 MDL <br>
+                            Dobânda calculata: 0 MDL <br>
+                            DAE –90.12 %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pentru obţinerea creditului sau pentru obţinerea creditului conform clauzelor şi condiţiilor
+                            convenite, este obligatoriu să se încheie: <br>
+                            – un contract de asigurare pentru garantarea creditului; sau <br>
+                            – un contract privind un alt serviciu accesoriu?
+                        </td>
+                        <td><br><br><br><br>
+                            Nu
+                            <br><br>
+                            Nu
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Costuri aferente</th>
+                    </tr>
+                    <tr>
+                        <td>Suma costurilor aferente utilizării unui mijloc specific de plată (de exemplu, a cardului de
+                            credit)</td>
+                        <td>Comisionul perceput de terți pentru eliberarea mijloacelor bănești: <br><br>
+                            <ul style="margin-left: 20px;">
+                                <li>Eliberare mijloacelor bănești în numerar prin oficiul O.C.N. “ONLINE CREDIT ” SRL –
+                                    comisionul 0%;</li>
+                                <li>Transfer pe contul bancar sau pe contul de card: ontractua pentru transfer perceput
+                                    de
+                                    O.C.N. “ONLINE CREDIT” SRL – 0%, însă banca în care aveți contul dvs. Poate percepe
+                                    o taxă
+                                    pentru creditarea sumei în contul dvs., în conformitate cu tarifele sale;</li>
+                                <li>Transferul mijloacelor bănești în portofelul electronic RunPay cu ridicarea sumei în
+                                    numerar de la orice terminal RunPay Mini ( ontractua 1%).</li>
+                            </ul>
+                            <br>
+                            Comision perceput de terți pentru achitarea creditului și plăților aferente: <br><br>
+                            <ul style="margin-left: 20px;">
+                                <li>Achitare în numerar prin oficiul O.C.N. “ONLINE CREDIT” S.R.L.: ( ontractua 0%);
+                                </li>
+                                <li>Achitare în numerar la una din filialele băncii BC FINCOMBANK SA ( ontractua 7 lei)
+                                </li>
+                                <li>Achitare în numerar prin terminale de plată: RunPay ( ontractua 1%)</li>
+                                <li>Achitare online: myrunpay.com ( ontractua 1%)</li>
+                            </ul>
+                            <br>
+                            Transfer bancar în contul O.C.N.”ONLINE CREDIT” S.R.L. (codul fiscal 1015600030484):
+                            BC”FINCOMBANK” SA, , Cod bancar – FTMDMD2X847
+                            IBAN MD19FT222460200000522498
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Orice alte costuri rezultate din ontractual de credit</td>
+                        <td>Comision pentru acordarea creditului: <br>
+                            <span class="comision">?</span> MDL
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Costuri în caz de întîrziere la plată
+                            Plăţile neefectuate ar putea să aibă consecinţe grave pentru dumneavoastră (de exemplu,
+                            vînzare silită) şi să îngreuneze obţinerea de credite
+                        </td>
+                        <td>Vi se va percepe o penalitate în mărime de <b>1% minim 20 MDL pentru fiecare zi de
+                                întîrziere a
+                                plății</b>, aplicată la suma datorată pentru toata perioada de întîrziere. Penalitatea
+                            se
+                            calculează pînă la data achitării integrale a sumei datorate.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">4.Alte ontra juridice importante</th>
+                    </tr>
+                    <tr>
+                        <td>Dreptul de revocare <br> Aveţi dreptul să renunţaţi la ontractual de credit în termen de 14
+                            zile calendaristice</td>
+                        <td>Da</td>
+                    </tr>
+                    <tr>
+                        <td>Rambursare anticipată <br>
+                            Aveţi dreptul la rambursare anticipată totală sau parţială a creditului în orice moment
+                        </td>
+                        <td>Dvs aveți dreptul la rambursarea anticipată totală sau parțială a creditului nebancar în
+                            orice moment. Nu se aplică costuri suplimentare în cazul rambursării anticipate a creditului
+                            nebancar.</td>
+                    </tr>
+                    <tr>
+                        <td>Consultarea unei baze de date
+                            Creditorul trebuie să vă informeze imediat şi gratuit asupra rezultatelor consultării unei
+                            baze de date în cazul în care cererea de creditare este respinsă în baza acestei consultări.
+                            Acest lucru nu se aplică în cazul în care furnizarea unor astfel de informaţii este
+                            interzisă prin lege sau contravine obiectivelor de ordine publică sau de securitate publică
+                        </td>
+                        <td>Da</td>
+                    </tr>
+                    <tr>
+                        <td>Dreptul la un proiect de contract de credit <br>
+                            Aveţi dreptul ca, la cerere, să obţineţi gratuit un exemplar al proiectului de contract de
+                            credit. Această dispoziţie nu se aplică în cazul în care, în momentul cererii, creditorul nu
+                            doreşte să încheie contractul de credit cu dumneavoastră
+                        </td>
+                        <td>Da</td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Perioada de timp pe parcursul căreia creditorul este ţinut să-și respecte obligaţiile
+                            precontractuale
+                        </td>
+                        <td>Această informaţie este valabilă 15 zile din momentul prezentării.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">5. Informaţii suplimentare care trebuie oferite în cazul comercializării la
+                            distanţă a serviciilor financiare</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">a) referitoare la creditor</th>
+                    </tr>
+                    <tr>
+                        <td>Înregistrare</td>
+                        <td>Organizația de Creditare Nebancară “ONLINE CREDIT” S.R.L.
+                            IDNO 1015600030484 <br><br>
+                            Înregistrată în registrul organizațiilor de creditare nebancară conform Hotarîrii CNPF
+                            nr.6/7 din 11.02.2019.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Autoritatea de supraveghere
+                        </td>
+                        <td>Agenția pentru Protecția Consumatorilor Adresa: MD-2012, mun. Chișinău,
+                            str. Vasile Alecsandri, nr. 78, etaj 1, bir.101,102 <br><br>
+                            Linia directă: (+373 22) 74-14-64 <br><br>
+                            Linia verde 080028028 (apel gratuit din raioanele Republicii Moldova)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">b) referitoare la contractul de credit</th>
+                    </tr>
+                    <tr>
+                        <td>Exercitarea dreptului de revocare</td>
+                        <td>Împrumutatul are la dispoziție 14 zile calendaristice după încheierea contractului pentru a
+                            revoca contractul, în conformitate cu legea, fără a invoca motive. În asemenea caz
+                            împrumutatul va rambursa Împrumutătorului suma oferită de credit și va plăti dobînda
+                            aferentă acesteia de la data oferirii sumei pînă la data rambursării acesteia. Pentru a-și
+                            exercita dreptul menționat, împrumutatul va transmite o notificare unilaterală de revocare a
+                            contratului menționînd numele, prenumele și numărul contractului. Consecințele neexercitării
+                            dreptului de revocare conform dispozițiilor și condițiilor descrise mai sus, reprezintă
+                            imposibilitatea de a înceta contractul prin intermediul dreptului de revocare.</td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Legea luată de creditor ca bază pentru stabilirea raporturilor cu dumneavoastră înainte de
+                            încheierea contractului de credit
+                        </td>
+                        <td>Activitatea organizației de creditare nebancare întru stabilirea relațiilor cu potențialii
+                            clienți este guvernată de Legislația Republicii Moldova.</td>
+                    </tr>
+                    <tr>
+                        <td>Dacă este cazul: <br>
+                            Regimul lingvistic
+                        </td>
+                        <td>Informaţiile şi termenii contractuali se vor furniza în limba de stat. Cu consimţămîntul
+                            dumneavoastră, intenţionăm să comunicăm în limba de stat pe durata contractului de credit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">c) referitoare la căi de atac</th>
+                    </tr>
+                    <tr>
+                        <td>Existenţa şi posibilitatea recurgerii la o procedură extrajudiciară de contestare şi la o
+                            cale de atac</td>
+                        <td>Orice neînțelegere poate fi soluționată în mod amiabil prin notificarea Părții. În
+                            cazul imposibilității găsirii unei soluții agreate de ambele părți, atunci cazul poate fi
+                            soluționat de instanța de judecată.</td>
+                    </tr>
+                </table>
+
+                <h1>Prin prezenta, confirm că am luat cunoștință cu informația precontractuală și nu am necesitatea
+                    de a
+                    folosi termenul de cel puțin 15 zile calendaristice, pentru a analiza informația oferită. Astfel,
+                    solicit de a semna imediat contractul de credit nebancar.</h1>
+
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        // credit data
+
+        var data = new Array();
+
+        for (i = 0; i < 20; i++) {
+            data[i] = new Array();
+
+            for (j = 0; j < 12; j++) {
+                data[i][j] = new Array()
+            }
+        }
+
+        data[0][0][0] = 90.12
+        data[0][0][1] = 1055
+        data[0][0][2] = 1055
+        data[0][0][3] = 55
+
+        data[1][0][0] = 90.12
+        data[1][0][1] = 2110
+        data[1][0][2] = 2110
+        data[1][0][3] = 110
+
+        data[2][0][0] = 90.12
+        data[2][0][1] = 3165
+        data[2][0][2] = 3165
+        data[2][0][3] = 165
+
+        data[3][0][0] = 90.12
+        data[3][0][1] = 4220
+        data[3][0][2] = 4220
+        data[3][0][3] = 220
+
+        data[4][0][0] = 90.12
+        data[4][0][1] = 5275
+        data[4][0][2] = 5275
+        data[4][0][3] = 275
+
+        data[5][0][0] = 90.12
+        data[5][0][1] = 6330
+        data[5][0][2] = 6330
+        data[5][0][3] = 330
+
+        data[6][0][0] = 90.12
+        data[6][0][1] = 7385
+        data[6][0][2] = 7385
+        data[6][0][3] = 385
+
+        data[7][0][0] = 90.12
+        data[7][0][1] = 8440
+        data[7][0][2] = 8440
+        data[7][0][3] = 440
+
+        data[8][0][0] = 90.12
+        data[8][0][1] = 9495
+        data[8][0][2] = 9495
+        data[8][0][3] = 495
+
+        data[9][0][0] = 90.12
+        data[9][0][1] = 10550
+        data[9][0][2] = 10550
+        data[9][0][3] = 550
+
+        data[10][0][0] = 90.12
+        data[10][0][1] = 11605
+        data[10][0][2] = 11605
+        data[10][0][3] = 605
+
+        data[11][0][0] = 90.12
+        data[11][0][1] = 12660
+        data[11][0][2] = 12660
+        data[11][0][3] = 660
+
+        data[12][0][0] = 90.12
+        data[12][0][1] = 13715
+        data[12][0][2] = 13715
+        data[12][0][3] = 715
+
+        data[13][0][0] = 90.12
+        data[13][0][1] = 14770
+        data[13][0][2] = 14770
+        data[13][0][3] = 770
+
+        data[14][0][0] = 90.12
+        data[14][0][1] = 15825
+        data[14][0][2] = 15825
+        data[14][0][3] = 825
+
+        data[15][0][0] = 90.12
+        data[15][0][1] = 16880
+        data[15][0][2] = 16880
+        data[15][0][3] = 880
+
+        data[16][0][0] = 90.12
+        data[16][0][1] = 17935
+        data[16][0][2] = 17935
+        data[16][0][3] = 935
+
+        data[17][0][0] = 90.12
+        data[17][0][1] = 18990
+        data[17][0][2] = 18990
+        data[17][0][3] = 990
+
+        data[18][0][0] = 90.12
+        data[18][0][1] = 20045
+        data[18][0][2] = 20045
+        data[18][0][3] = 1045
+
+        data[19][0][0] = 90.12
+        data[19][0][1] = 21100
+        data[19][0][2] = 21100
+        data[19][0][3] = 1100
+
+        data[0][1][0] = 91.20
+        data[0][1][1] = 542
+        data[0][1][2] = 1084
+        data[0][1][3] = 84
+
+        data[1][1][0] = 91.20
+        data[1][1][1] = 1084
+        data[1][1][2] = 2168
+        data[1][1][3] = 168
+
+        data[2][1][0] = 90.25
+        data[2][1][1] = 1625
+        data[2][1][2] = 3250
+        data[2][1][3] = 250
+
+        data[3][1][0] = 91.20
+        data[3][1][1] = 2168
+        data[3][1][2] = 4336
+        data[3][1][3] = 336
+
+        data[4][1][0] = 91.20
+        data[4][1][1] = 2710
+        data[4][1][2] = 5420
+        data[4][1][3] = 420
+
+        data[5][1][0] = 90.25
+        data[5][1][1] = 3250
+        data[5][1][2] = 6500
+        data[5][1][3] = 500
+
+        data[6][1][0] = 90.39
+        data[6][1][1] = 3792
+        data[6][1][2] = 7584
+        data[6][1][3] = 584
+
+        data[7][1][0] = 90.85
+        data[7][1][1] = 4335
+        data[7][1][2] = 8670
+        data[7][1][3] = 670
+
+        data[8][1][0] = 90.25
+        data[8][1][1] = 4875
+        data[8][1][2] = 9750
+        data[8][1][3] = 750
+
+        data[9][1][0] = 90.63
+        data[9][1][1] = 5418
+        data[9][1][2] = 10836
+        data[9][1][3] = 836
+
+        data[10][1][0] = 90.68
+        data[10][1][1] = 5960
+        data[10][1][2] = 11920
+        data[10][1][3] = 920
+
+        data[11][1][0] = 90.25
+        data[11][1][1] = 6500
+        data[11][1][2] = 13000
+        data[11][1][3] = 1000
+
+        data[12][1][0] = 90.98
+        data[12][1][1] = 7045
+        data[12][1][2] = 14090
+        data[12][1][3] = 1090
+
+        data[13][1][0] = 90.59
+        data[13][1][1] = 7585
+        data[13][1][2] = 15170
+        data[13][1][3] = 1170
+
+        data[14][1][0] = 90.25
+        data[14][1][1] = 8125
+        data[14][1][2] = 16250
+        data[14][1][3] = 1250
+
+        data[15][1][0] = 90.85
+        data[15][1][1] = 8670
+        data[15][1][2] = 17340
+        data[15][1][3] = 1340
+
+        data[16][1][0] = 90.53
+        data[16][1][1] = 9210
+        data[16][1][2] = 18420
+        data[16][1][3] = 1420
+
+        data[17][1][0] = 90.25
+        data[17][1][1] = 9750
+        data[17][1][2] = 19500
+        data[17][1][3] = 1500
+
+        data[18][1][0] = 90.01
+        data[18][1][1] = 10290
+        data[18][1][2] = 20580
+        data[18][1][3] = 1580
+
+        data[19][1][0] = 90.49
+        data[19][1][1] = 10835
+        data[19][1][2] = 21670
+        data[19][1][3] = 1670
+
+        data[0][2][0] = 91.21
+        data[0][2][1] = 371
+        data[0][2][2] = 1113
+        data[0][2][3] = 113
+
+        data[1][2][0] = 91.20
+        data[1][2][1] = 742
+        data[1][2][2] = 2276
+        data[1][2][3] = 276
+
+        data[2][2][0] = 90.16
+        data[2][2][1] = 1112
+        data[2][2][2] = 3336
+        data[2][2][3] = 336
+
+        data[3][2][0] = 91.20
+        data[3][2][1] = 1484
+        data[3][2][2] = 4452
+        data[3][2][3] = 452
+
+        data[4][2][0] = 90.57
+        data[4][2][1] = 1854
+        data[4][2][2] = 5562
+        data[4][2][3] = 562
+
+        data[5][2][0] = 90.68
+        data[5][2][1] = 2225
+        data[5][2][2] = 6675
+        data[5][2][3] = 675
+
+        data[6][2][0] = 90.75
+        data[6][2][1] = 2596
+        data[6][2][2] = 7788
+        data[6][2][3] = 788
+
+        data[7][2][0] = 90.42
+        data[7][2][1] = 2966
+        data[7][2][2] = 8898
+        data[7][2][3] = 898
+
+        data[8][2][0] = 90.16
+        data[8][2][1] = 3336
+        data[8][2][2] = 10008
+        data[8][2][3] = 1008
+
+        data[9][2][0] = 90.57
+        data[9][2][1] = 3708
+        data[9][2][2] = 11124
+        data[9][2][3] = 1124
+
+        data[10][2][0] = 90.92
+        data[10][2][1] = 4080
+        data[10][2][2] = 12240
+        data[10][2][3] = 1240
+
+        data[11][2][0] = 90.68
+        data[11][2][1] = 4450
+        data[11][2][2] = 13350
+        data[11][2][3] = 1350
+
+        data[12][2][0] = 90.48
+        data[12][2][1] = 4820
+        data[12][2][2] = 14460
+        data[12][2][3] = 1460
+
+        data[13][2][0] = 90.30
+        data[13][2][1] = 5190
+        data[13][2][2] = 15570
+        data[13][2][3] = 1570
+
+        data[14][2][0] = 90.16
+        data[14][2][1] = 5560
+        data[14][2][2] = 16680
+        data[14][2][3] = 1680
+
+        data[15][2][0] = 90.81
+        data[15][2][1] = 5934
+        data[15][2][2] = 17802
+        data[15][2][3] = 1802
+
+        data[16][2][0] = 90.28
+        data[16][2][1] = 6302
+        data[16][2][2] = 18906
+        data[16][2][3] = 1906
+
+        data[17][2][0] = 90.68
+        data[17][2][1] = 6675
+        data[17][2][2] = 20025
+        data[17][2][3] = 2025
+
+        data[18][2][0] = 90.54
+        data[18][2][1] = 7045
+        data[18][2][2] = 21135
+        data[18][2][3] = 2135
+
+        data[19][2][0] = 90.42
+        data[19][2][1] = 7415
+        data[19][2][2] = 22245
+        data[19][2][3] = 2245
+
+        data[0][3][0] = 89.15
+        data[0][3][1] = 285
+        data[0][3][2] = 1140
+        data[0][3][3] = 140
+
+        data[1][3][0] = 89.15
+        data[1][3][1] = 570
+        data[1][3][2] = 2280
+        data[1][3][3] = 280
+
+        data[2][3][0] = 90.24
+        data[2][3][1] = 856
+        data[2][3][2] = 3424
+        data[2][3][3] = 424
+
+        data[3][3][0] = 90.79
+        data[3][3][1] = 1142
+        data[3][3][2] = 4568
+        data[3][3][3] = 568
+
+        data[4][3][0] = 90.46
+        data[4][3][1] = 1427
+        data[4][3][2] = 5708
+        data[4][3][3] = 708
+
+        data[5][3][0] = 90.24
+        data[5][3][1] = 1712
+        data[5][3][2] = 6848
+        data[5][3][3] = 848
+
+        data[6][3][0] = 91.50
+        data[6][3][1] = 2000
+        data[6][3][2] = 8000
+        data[6][3][3] = 1000
+
+        data[7][3][0] = 90.79
+        data[7][3][1] = 2284
+        data[7][3][2] = 9136
+        data[7][3][3] = 1136
+
+        data[8][3][0] = 90.98
+        data[8][3][1] = 2570
+        data[8][3][2] = 10280
+        data[8][3][3] = 1280
+
+        data[9][3][0] = 90.79
+        data[9][3][1] = 2855
+        data[9][3][2] = 11420
+        data[9][3][3] = 1420
+
+        data[10][3][0] = 90.64
+        data[10][3][1] = 3140
+        data[10][3][2] = 12560
+        data[10][3][3] = 1560
+
+        data[11][3][0] = 90.52
+        data[11][3][1] = 3425
+        data[11][3][2] = 13700
+        data[11][3][3] = 1700
+
+        data[12][3][0] = 90.41
+        data[12][3][1] = 3710
+        data[12][3][2] = 14840
+        data[12][3][3] = 1840
+
+        data[13][3][0] = 90.32
+        data[13][3][1] = 3995
+        data[13][3][2] = 15980
+        data[13][3][3] = 1980
+
+        data[14][3][0] = 90.24
+        data[14][3][1] = 4280
+        data[14][3][2] = 17120
+        data[14][3][3] = 2120
+
+        data[15][3][0] = 90.18
+        data[15][3][1] = 4565
+        data[15][3][2] = 18260
+        data[15][3][3] = 2260
+
+        data[16][3][0] = 90.11
+        data[16][3][1] = 4850
+        data[16][3][2] = 19400
+        data[16][3][3] = 2400
+
+        data[17][3][0] = 90.98
+        data[17][3][1] = 5140
+        data[17][3][2] = 20560
+        data[17][3][3] = 2560
+
+        data[18][3][0] = 90.88
+        data[18][3][1] = 5425
+        data[18][3][2] = 21700
+        data[18][3][3] = 2700
+
+        data[19][3][0] = 90.79
+        data[19][3][1] = 5710
+        data[19][3][2] = 22840
+        data[19][3][3] = 2840
+
+        data[0][4][0] = 89.52
+        data[0][4][1] = 234
+        data[0][4][2] = 1170
+        data[0][4][3] = 170
+
+        data[1][4][0] = 89.52
+        data[1][4][1] = 468
+        data[1][4][2] = 2340
+        data[1][4][3] = 340
+
+        data[2][4][0] = 89.52
+        data[2][4][1] = 702
+        data[2][4][2] = 3510
+        data[2][4][3] = 510
+
+        data[3][4][0] = 89.52
+        data[3][4][1] = 936
+        data[3][4][2] = 4680
+        data[3][4][3] = 680
+
+        data[4][4][0] = 90.87
+        data[4][4][1] = 1172
+        data[4][4][2] = 5860
+        data[4][4][3] = 860
+
+        data[5][4][0] = 90.08
+        data[5][4][1] = 1405
+        data[5][4][2] = 7025
+        data[5][4][3] = 1025
+
+        data[6][4][0] = 90.48
+        data[6][4][1] = 1640
+        data[6][4][2] = 8200
+        data[6][4][3] = 1200
+
+        data[7][4][0] = 90.79
+        data[7][4][1] = 1875
+        data[7][4][2] = 9375
+        data[7][4][3] = 1375
+
+        data[8][4][0] = 90.27
+        data[8][4][1] = 2108
+        data[8][4][2] = 10540
+        data[8][4][3] = 1540
+
+        data[9][4][0] = 90.20
+        data[9][4][1] = 2342
+        data[9][4][2] = 11710
+        data[9][4][3] = 1710
+
+        data[10][4][0] = 90.13
+        data[10][4][1] = 2576
+        data[10][4][2] = 12880
+        data[10][4][3] = 1880
+
+        data[11][4][0] = 90.64
+        data[11][4][1] = 2812
+        data[11][4][2] = 14060
+        data[11][4][3] = 2060
+
+        data[12][4][0] = 90.56
+        data[12][4][1] = 3046
+        data[12][4][2] = 15230
+        data[12][4][3] = 2230
+
+        data[13][4][0] = 90.48
+        data[13][4][1] = 3280
+        data[13][4][2] = 16400
+        data[13][4][3] = 2400
+
+        data[14][4][0] = 90.64
+        data[14][4][1] = 3515
+        data[14][4][2] = 17575
+        data[14][4][3] = 2575
+
+        data[15][4][0] = 90.79
+        data[15][4][1] = 3750
+        data[15][4][2] = 18750
+        data[15][4][3] = 2750
+
+        data[16][4][0] = 90.91
+        data[16][4][1] = 3985
+        data[16][4][2] = 19925
+        data[16][4][3] = 2925
+
+        data[17][4][0] = 90.08
+        data[17][4][1] = 4215
+        data[17][4][2] = 21075
+        data[17][4][3] = 3075
+
+        data[18][4][0] = 90.23
+        data[18][4][1] = 4450
+        data[18][4][2] = 22250
+        data[18][4][3] = 3250
+
+        data[19][4][0] = 90.36
+        data[19][4][1] = 4685
+        data[19][4][2] = 23425
+        data[19][4][3] = 3425
+
+        data[0][5][0] = 89.50
+        data[0][5][1] = 200
+        data[0][5][2] = 1200
+        data[0][5][3] = 200
+
+        data[1][5][0] = 89.51
+        data[1][5][1] = 400
+        data[1][5][2] = 2400
+        data[1][5][3] = 400
+
+        data[2][5][0] = 89.51
+        data[2][5][1] = 600
+        data[2][5][2] = 3600
+        data[2][5][3] = 600
+
+        data[3][5][0] = 91.21
+        data[3][5][1] = 802
+        data[3][5][2] = 4812
+        data[3][5][3] = 812
+
+        data[4][5][0] = 90.87
+        data[4][5][1] = 1002
+        data[4][5][2] = 6012
+        data[4][5][3] = 1012
+
+        data[5][5][0] = 90.64
+        data[5][5][1] = 1202
+        data[5][5][2] = 7212
+        data[5][5][3] = 1212
+
+        data[6][5][0] = 90.48
+        data[6][5][1] = 1402
+        data[6][5][2] = 8412
+        data[6][5][3] = 1412
+
+        data[7][5][0] = 90.36
+        data[7][5][1] = 1602
+        data[7][5][2] = 9612
+        data[7][5][3] = 1612
+
+        data[8][5][0] = 90.26
+        data[8][5][1] = 1802
+        data[8][5][2] = 10812
+        data[8][5][3] = 1812
+
+        data[9][5][0] = 90.19
+        data[9][5][1] = 2002
+        data[9][5][2] = 12012
+        data[9][5][3] = 2012
+
+        data[10][5][0] = 90.75
+        data[10][5][1] = 2204
+        data[10][5][2] = 13224
+        data[10][5][3] = 2224
+
+        data[11][5][0] = 90.93
+        data[11][5][1] = 2405
+        data[11][5][2] = 14430
+        data[11][5][3] = 2430
+
+        data[12][5][0] = 90.82
+        data[12][5][1] = 2605
+        data[12][5][2] = 15630
+        data[12][5][3] = 2630
+
+        data[13][5][0] = 90.72
+        data[13][5][1] = 2805
+        data[13][5][2] = 16830
+        data[13][5][3] = 2830
+
+        data[14][5][0] = 90.64
+        data[14][5][1] = 3005
+        data[14][5][2] = 18030
+        data[14][5][3] = 3030
+
+        data[15][5][0] = 90.57
+        data[15][5][1] = 3205
+        data[15][5][2] = 19230
+        data[15][5][3] = 3230
+
+        data[16][5][0] = 90.71
+        data[16][5][1] = 3406
+        data[16][5][2] = 20436
+        data[16][5][3] = 3436
+
+        data[17][5][0] = 90.45
+        data[17][5][1] = 3605
+        data[17][5][2] = 21630
+        data[17][5][3] = 3630
+
+        data[18][5][0] = 90.40
+        data[18][5][1] = 3805
+        data[18][5][2] = 22830
+        data[18][5][3] = 3830
+
+        data[19][5][0] = 90.36
+        data[19][5][1] = 4005
+        data[19][5][2] = 24030
+        data[19][5][3] = 4030
+
+        data[0][6][0] = 90.23
+        data[0][6][1] = 176
+        data[0][6][2] = 1232
+        data[0][6][3] = 232
+
+        data[1][6][0] = 90.24
+        data[1][6][1] = 352
+        data[1][6][2] = 2464
+        data[1][6][3] = 464
+
+        data[2][6][0] = 90.24
+        data[2][6][1] = 528
+        data[2][6][2] = 3696
+        data[2][6][3] = 696
+
+        data[3][6][0] = 90.24
+        data[3][6][1] = 704
+        data[3][6][2] = 4928
+        data[3][6][3] = 928
+
+        data[4][6][0] = 90.24
+        data[4][6][1] = 880
+        data[4][6][2] = 6160
+        data[4][6][3] = 1160
+
+        data[5][6][0] = 90.24
+        data[5][6][1] = 1056
+        data[5][6][2] = 7392
+        data[5][6][3] = 1392
+
+        data[6][6][0] = 90.24
+        data[6][6][1] = 1232
+        data[6][6][2] = 8624
+        data[6][6][3] = 1624
+
+        data[7][6][0] = 90.24
+        data[7][6][1] = 1408
+        data[7][6][2] = 9856
+        data[7][6][3] = 1856
+
+        data[8][6][0] = 90.24
+        data[8][6][1] = 1584
+        data[8][6][2] = 11088
+        data[8][6][3] = 2088
+
+        data[9][6][0] = 90.24
+        data[9][6][1] = 1760
+        data[9][6][2] = 12320
+        data[9][6][3] = 2320
+
+        data[10][6][0] = 90.24
+        data[10][6][1] = 1936
+        data[10][6][2] = 13552
+        data[10][6][3] = 2552
+
+        data[11][6][0] = 90.24
+        data[11][6][1] = 2112
+        data[11][6][2] = 14784
+        data[11][6][3] = 2784
+
+        data[12][6][0] = 90.77
+        data[12][6][1] = 2290
+        data[12][6][2] = 16030
+        data[12][6][3] = 3030
+
+        data[13][6][0] = 90.48
+        data[13][6][1] = 2465
+        data[13][6][2] = 17255
+        data[13][6][3] = 3255
+
+        data[14][6][0] = 90.24
+        data[14][6][1] = 2640
+        data[14][6][2] = 18480
+        data[14][6][3] = 3480
+
+        data[15][6][0] = 90.02
+        data[15][6][1] = 2815
+        data[15][6][2] = 19705
+        data[15][6][3] = 3705
+
+        data[16][6][0] = 90.24
+        data[16][6][1] = 2992
+        data[16][6][2] = 20944
+        data[16][6][3] = 3944
+
+        data[17][6][0] = 90.62
+        data[17][6][1] = 3170
+        data[17][6][2] = 22190
+        data[17][6][3] = 4190
+
+        data[18][6][0] = 90.42
+        data[18][6][1] = 3345
+        data[18][6][2] = 23415
+        data[18][6][3] = 4415
+
+        data[19][6][0] = 90.24
+        data[19][6][1] = 3520
+        data[19][6][2] = 24640
+        data[19][6][3] = 4640
+
+        data[0][7][0] = 90.58
+        data[0][7][1] = 158
+        data[0][7][2] = 1264
+        data[0][7][3] = 264
+
+        data[1][7][0] = 90.58
+        data[1][7][1] = 316
+        data[1][7][2] = 2528
+        data[1][7][3] = 528
+
+        data[2][7][0] = 90.58
+        data[2][7][1] = 474
+        data[2][7][2] = 3792
+        data[2][7][3] = 792
+
+        data[3][7][0] = 90.58
+        data[3][7][1] = 632
+        data[3][7][2] = 5056
+        data[3][7][3] = 1056
+
+        data[4][7][0] = 90.58
+        data[4][7][1] = 790
+        data[4][7][2] = 6320
+        data[4][7][3] = 1320
+
+        data[5][7][0] = 90.58
+        data[5][7][1] = 948
+        data[5][7][2] = 7584
+        data[5][7][3] = 1584
+
+        data[6][7][0] = 90.09
+        data[6][7][1] = 1105
+        data[6][7][2] = 8840
+        data[6][7][3] = 1840
+
+        data[7][7][0] = 90.58
+        data[7][7][1] = 1264
+        data[7][7][2] = 10112
+        data[7][7][3] = 2112
+
+        data[8][7][0] = 90.58
+        data[8][7][1] = 1422
+        data[8][7][2] = 11376
+        data[8][7][3] = 2376
+
+        data[9][7][0] = 90.58
+        data[9][7][1] = 1580
+        data[9][7][2] = 12640
+        data[9][7][3] = 2640
+
+        data[10][7][0] = 90.58
+        data[10][7][1] = 1738
+        data[10][7][2] = 13904
+        data[10][7][3] = 2904
+
+        data[11][7][0] = 90.30
+        data[11][7][1] = 1895
+        data[11][7][2] = 15160
+        data[11][7][3] = 3160
+
+        data[12][7][0] = 90.85
+        data[12][7][1] = 2055
+        data[12][7][2] = 16440
+        data[12][7][3] = 3440
+
+        data[13][7][0] = 90.09
+        data[13][7][1] = 2210
+        data[13][7][2] = 17680
+        data[13][7][3] = 3680
+
+        data[14][7][0] = 90.58
+        data[14][7][1] = 2370
+        data[14][7][2] = 18960
+        data[14][7][3] = 3960
+
+        data[15][7][0] = 90.58
+        data[15][7][1] = 2528
+        data[15][7][2] = 20224
+        data[15][7][3] = 4224
+
+        data[16][7][0] = 90.38
+        data[16][7][1] = 2685
+        data[16][7][2] = 21480
+        data[16][7][3] = 4480
+
+        data[17][7][0] = 90.77
+        data[17][7][1] = 2845
+        data[17][7][2] = 22760
+        data[17][7][3] = 4760
+
+        data[18][7][0] = 90.22
+        data[18][7][1] = 3000
+        data[18][7][2] = 24000
+        data[18][7][3] = 5000
+
+        data[19][7][0] = 90.58
+        data[19][7][1] = 3160
+        data[19][7][2] = 25280
+        data[19][7][3] = 5280
+
+        data[0][8][0] = 90.67
+        data[0][8][1] = 144
+        data[0][8][2] = 1296
+        data[0][8][3] = 296
+
+        data[1][8][0] = 90.67
+        data[1][8][1] = 288
+        data[1][8][2] = 2592
+        data[1][8][3] = 592
+
+        data[2][8][0] = 90.67
+        data[2][8][1] = 432
+        data[2][8][2] = 3888
+        data[2][8][3] = 888
+
+        data[3][8][0] = 90.67
+        data[3][8][1] = 576
+        data[3][8][2] = 5184
+        data[3][8][3] = 1184
+
+        data[4][8][0] = 90.66
+        data[4][8][1] = 720
+        data[4][8][2] = 6480
+        data[4][8][3] = 1480
+
+        data[5][8][0] = 90.66
+        data[5][8][1] = 864
+        data[5][8][2] = 7776
+        data[5][8][3] = 1776
+
+        data[6][8][0] = 90.66
+        data[6][8][1] = 1008
+        data[6][8][2] = 9072
+        data[6][8][3] = 2072
+
+        data[7][8][0] = 90.66
+        data[7][8][1] = 1152
+        data[7][8][2] = 10368
+        data[7][8][3] = 2368
+
+        data[8][8][0] = 90.28
+        data[8][8][1] = 1295
+        data[8][8][2] = 11655
+        data[8][8][3] = 2655
+
+        data[9][8][0] = 90.66
+        data[9][8][1] = 1440
+        data[9][8][2] = 12960
+        data[9][8][3] = 2960
+
+        data[10][8][0] = 90.98
+        data[10][8][1] = 1585
+        data[10][8][2] = 14265
+        data[10][8][3] = 3265
+
+        data[11][8][0] = 90.67
+        data[11][8][1] = 1728
+        data[11][8][2] = 15552
+        data[11][8][3] = 3552
+
+        data[12][8][0] = 90.67
+        data[12][8][1] = 1872
+        data[12][8][2] = 16848
+        data[12][8][3] = 3848
+
+        data[13][8][0] = 90.42
+        data[13][8][1] = 2015
+        data[13][8][2] = 18135
+        data[13][8][3] = 4135
+
+        data[14][8][0] = 90.66
+        data[14][8][1] = 2160
+        data[14][8][2] = 19440
+        data[14][8][3] = 4440
+
+        data[15][8][0] = 90.88
+        data[15][8][1] = 2305
+        data[15][8][2] = 20745
+        data[15][8][3] = 4745
+
+        data[16][8][0] = 90.66
+        data[16][8][1] = 2448
+        data[16][8][2] = 22032
+        data[16][8][3] = 5032
+
+        data[17][8][0] = 90.28
+        data[17][8][1] = 2590
+        data[17][8][2] = 23310
+        data[17][8][3] = 5310
+
+        data[18][8][0] = 90.48
+        data[18][8][1] = 2735
+        data[18][8][2] = 24615
+        data[18][8][3] = 5615
+
+        data[19][8][0] = 90.66
+        data[19][8][1] = 2880
+        data[19][8][2] = 25920
+        data[19][8][3] = 5920
+
+        data[0][9][0] = 91.25
+        data[0][9][1] = 133
+        data[0][9][2] = 1330
+        data[0][9][3] = 330
+
+        data[1][9][0] = 91.25
+        data[1][9][1] = 266
+        data[1][9][2] = 2660
+        data[1][9][3] = 660
+
+        data[2][9][0] = 90.11
+        data[2][9][1] = 398
+        data[2][9][2] = 3980
+        data[2][9][3] = 980
+
+        data[3][9][0] = 89.55
+        data[3][9][1] = 530
+        data[3][9][2] = 5300
+        data[3][9][3] = 1300
+
+        data[4][9][0] = 90.57
+        data[4][9][1] = 664
+        data[4][9][2] = 6640
+        data[4][9][3] = 1640
+
+        data[5][9][0] = 90.11
+        data[5][9][1] = 796
+        data[5][9][2] = 7960
+        data[5][9][3] = 1960
+
+        data[6][9][0] = 90.76
+        data[6][9][1] = 930
+        data[6][9][2] = 9300
+        data[6][9][3] = 2300
+
+        data[7][9][0] = 90.40
+        data[7][9][1] = 1062
+        data[7][9][2] = 10620
+        data[7][9][3] = 2620
+
+        data[8][9][0] = 90.49
+        data[8][9][1] = 1195
+        data[8][9][2] = 11950
+        data[8][9][3] = 2950
+
+        data[9][9][0] = 90.57
+        data[9][9][1] = 1328
+        data[9][9][2] = 13280
+        data[9][9][3] = 3280
+
+        data[10][9][0] = 90.32
+        data[10][9][1] = 1460
+        data[10][9][2] = 14600
+        data[10][9][3] = 3600
+
+        data[11][9][0] = 90.96
+        data[11][9][1] = 1595
+        data[11][9][2] = 15950
+        data[11][9][3] = 3950
+
+        data[12][9][0] = 90.20
+        data[12][9][1] = 1725
+        data[12][9][2] = 17250
+        data[12][9][3] = 4250
+
+        data[13][9][0] = 90.76
+        data[13][9][1] = 1860
+        data[13][9][2] = 18600
+        data[13][9][3] = 4600
+
+        data[14][9][0] = 90.11
+        data[14][9][1] = 1990
+        data[14][9][2] = 19900
+        data[14][9][3] = 4900
+
+        data[15][9][0] = 90.61
+        data[15][9][1] = 2125
+        data[15][9][2] = 21250
+        data[15][9][3] = 5250
+
+        data[16][9][0] = 90.05
+        data[16][9][1] = 2255
+        data[16][9][2] = 22550
+        data[16][9][3] = 5550
+
+        data[17][9][0] = 90.49
+        data[17][9][1] = 2390
+        data[17][9][2] = 23900
+        data[17][9][3] = 5900
+
+        data[18][9][0] = 90.89
+        data[18][9][1] = 2525
+        data[18][9][2] = 25250
+        data[18][9][3] = 6250
+
+        data[19][9][0] = 90.40
+        data[19][9][1] = 2655
+        data[19][9][2] = 26550
+        data[19][9][3] = 6550
+
+        data[0][10][0] = 91.57
+        data[0][10][1] = 124
+        data[0][10][2] = 1364
+        data[0][10][3] = 364
+
+        data[1][10][0] = 91.57
+        data[1][10][1] = 248
+        data[1][10][2] = 2728
+        data[1][10][3] = 728
+
+        data[2][10][0] = 89.31
+        data[2][10][1] = 370
+        data[2][10][2] = 4070
+        data[2][10][3] = 1070
+
+        data[3][10][0] = 90.72
+        data[3][10][1] = 495
+        data[3][10][2] = 5445
+        data[3][10][3] = 1445
+
+        data[4][10][0] = 90.21
+        data[4][10][1] = 618
+        data[4][10][2] = 6798
+        data[4][10][3] = 1798
+
+        data[5][10][0] = 90.44
+        data[5][10][1] = 742
+        data[5][10][2] = 8162
+        data[5][10][3] = 2162
+
+        data[6][10][0] = 90.12
+        data[6][10][1] = 865
+        data[6][10][2] = 9515
+        data[6][10][3] = 2515
+
+        data[7][10][0] = 90.72
+        data[7][10][1] = 990
+        data[7][10][2] = 10890
+        data[7][10][3] = 2890
+
+        data[8][10][0] = 90.07
+        data[8][10][1] = 1112
+        data[8][10][2] = 12232
+        data[8][10][3] = 3232
+
+        data[9][10][0] = 90.22
+        data[9][10][1] = 1236
+        data[9][10][2] = 13596
+        data[9][10][3] = 3596
+
+        data[10][10][0] = 90.34
+        data[10][10][1] = 1360
+        data[10][10][2] = 14960
+        data[10][10][3] = 3960
+
+        data[11][10][0] = 90.72
+        data[11][10][1] = 1485
+        data[11][10][2] = 16335
+        data[11][10][3] = 4335
+
+        data[12][10][0] = 90.53
+        data[12][10][1] = 1608
+        data[12][10][2] = 17688
+        data[12][10][3] = 4688
+
+        data[13][10][0] = 90.12
+        data[13][10][1] = 1730
+        data[13][10][2] = 19030
+        data[13][10][3] = 5030
+
+        data[14][10][0] = 90.44
+        data[14][10][1] = 1855
+        data[14][10][2] = 20405
+        data[14][10][3] = 5405
+
+        data[15][10][0] = 90.72
+        data[15][10][1] = 1980
+        data[15][10][2] = 21780
+        data[15][10][3] = 5780
+
+        data[16][10][0] = 89.98
+        data[16][10][1] = 2100
+        data[16][10][2] = 23100
+        data[16][10][3] = 6100
+
+        data[17][10][0] = 90.25
+        data[17][10][1] = 2225
+        data[17][10][2] = 24475
+        data[17][10][3] = 6475
+
+        data[18][10][0] = 90.50
+        data[18][10][1] = 2350
+        data[18][10][2] = 25850
+        data[18][10][3] = 6850
+
+        data[19][10][0] = 90.72
+        data[19][10][1] = 2475
+        data[19][10][2] = 27225
+        data[19][10][3] = 7225
+
+        data[0][11][0] = 90.03
+        data[0][11][1] = 116
+        data[0][11][2] = 1392
+        data[0][11][3] = 392
+
+        data[1][11][0] = 90.01
+        data[1][11][1] = 232
+        data[1][11][2] = 2784
+        data[1][11][3] = 784
+
+        data[2][11][0] = 90.02
+        data[2][11][1] = 348
+        data[2][11][2] = 4176
+        data[2][11][3] = 1176
+
+        data[3][11][0] = 90.86
+        data[3][11][1] = 465
+        data[3][11][2] = 5580
+        data[3][11][3] = 1580
+
+        data[4][11][0] = 90.02
+        data[4][11][1] = 580
+        data[4][11][2] = 6960
+        data[4][11][3] = 1960
+
+        data[5][11][0] = 90.02
+        data[5][11][1] = 696
+        data[5][11][2] = 8352
+        data[5][11][3] = 2352
+
+        data[6][11][0] = 90.02
+        data[6][11][1] = 812
+        data[6][11][2] = 9744
+        data[6][11][3] = 2744
+
+        data[7][11][0] = 90.02
+        data[7][11][1] = 928
+        data[7][11][2] = 11136
+        data[7][11][3] = 3136
+
+        data[8][11][0] = 90.39
+        data[8][11][1] = 1045
+        data[8][11][2] = 12540
+        data[8][11][3] = 3540
+
+        data[9][11][0] = 90.02
+        data[9][11][1] = 1160
+        data[9][11][2] = 13920
+        data[9][11][3] = 3920
+
+        data[10][11][0] = 90.63
+        data[10][11][1] = 1278
+        data[10][11][2] = 15336
+        data[10][11][3] = 4336
+
+        data[11][11][0] = 90.86
+        data[11][11][1] = 1395
+        data[11][11][2] = 16740
+        data[11][11][3] = 4740
+
+        data[12][11][0] = 90.53
+        data[12][11][1] = 1510
+        data[12][11][2] = 18120
+        data[12][11][3] = 5120
+
+        data[13][11][0] = 90.26
+        data[13][11][1] = 1625
+        data[13][11][2] = 19500
+        data[13][11][3] = 5500
+
+        data[14][11][0] = 90.02
+        data[14][11][1] = 1740
+        data[14][11][2] = 20880
+        data[14][11][3] = 5880
+
+        data[15][11][0] = 90.86
+        data[15][11][1] = 1860
+        data[15][11][2] = 22320
+        data[15][11][3] = 6320
+
+        data[16][11][0] = 90.61
+        data[16][11][1] = 1975
+        data[16][11][2] = 23700
+        data[16][11][3] = 6700
+
+        data[17][11][0] = 90.39
+        data[17][11][1] = 2090
+        data[17][11][2] = 25080
+        data[17][11][3] = 7080
+
+        data[18][11][0] = 90.19
+        data[18][11][1] = 2205
+        data[18][11][2] = 26460
+        data[18][11][3] = 7460
+
+        data[19][11][0] = 90.02
+        data[19][11][1] = 2320
+        data[19][11][2] = 27840
+        data[19][11][3] = 7840
+
+        // credit data
+
+
+
+
+        $("#minus1").click(function (event) {
+            zoom("out", 1)
+        })
+
+        $("#minus2").click(function (event) {
+            zoom("out", 2)
+        })
+
+        $("#plus1").click(function (event) {
+            zoom("in", 1)
+        })
+
+        $("#plus2").click(function (event) {
+            zoom("in", 2)
+        })
+
+        $("#range1").on('input change', function (event) {
+            $('#output1').text($(event.currentTarget).val())
+            $('#calcResult1').text(data[parseInt($(event.currentTarget).val()) / 1000 - 1][parseInt($("#range2").val() - 1)][2])
+            $('#calcResult2').text(data[parseInt($(event.currentTarget).val()) / 1000 - 1][parseInt($("#range2").val() - 1)][3])
+            $('#calcResult3').text(data[parseInt($(event.currentTarget).val()) / 1000 - 1][parseInt($("#range2").val() - 1)][1])
+        })
+
+        $("#range2").on('input change', function (event) {
+            $('#output2').text($(event.currentTarget).val())
+            $('#calcResult1').text(data[parseInt($("#range1").val()) / 1000 - 1][parseInt($(event.currentTarget).val() - 1)][2])
+            $('#calcResult2').text(data[parseInt($("#range1").val()) / 1000 - 1][parseInt($(event.currentTarget).val() - 1)][3])
+            $('#calcResult3').text(data[parseInt($("#range1").val()) / 1000 - 1][parseInt($(event.currentTarget).val() - 1)][1])
+        })
+
+        function zoom(direction, nr) {
+            if (nr == 1) {
+                var slider = $("#range1")
+            }
+            else {
+                var slider = $("#range2")
+            }
+
+            var step = parseInt(slider.attr('step'), 10)
+            var currentSliderValue = parseInt(slider.val(), 10)
+            var newStepValue = currentSliderValue + step
+
+            if (direction === "out") {
+                newStepValue = currentSliderValue - step
+            } else {
+                newStepValue = currentSliderValue + step
+            }
+
+            slider.val(newStepValue).change()
+        }
+
+
+
+
+        $("#details1, #details2").click(function () {
+            var sum = parseInt($("#range1").val())
+            var nrMonth = parseInt($("#range2").val())
+
+            $('.dae').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][0] * 100) / 100).toFixed(2) + '%')
+            $('.comision').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][3] * 100) / 100).toFixed(2))
+            $('.total').text((Math.round(data[sum / 1000 - 1][nrMonth - 1][2] * 100) / 100).toFixed(2))
+            $('.month').text(nrMonth)
+            $('.sum').text(sum)
+        })
+
+
+
+
+        $("#details1").click(function () {
+            var sum = parseInt($("#range1").val())
+            var nrMonth = parseInt($("#range2").val())
+            var soldCredit = sum
+
+            createTable($('#myTable'), nrMonth + 1, 8)
+
+            function createTable(parent, rows, cols) {
+                $('.editableTable').remove()
+
+                var date = new Date();
+
+                var months = date.getMonth();
+                var days = date.getDate();
+                var years = date.getFullYear()
+
+                var output = years + '/' +
+                    (months + 1 < 10 ? '0' : '') + (months + 1) + '/' +
+                    (days < 10 ? '0' : '') + days;
+
+                var newdate = new Date(years, months, days);
+
+                for (var i = 0; i < rows; i++) {
+                    var tr = $('<tr class="editableTable"></tr>')
+
+                    for (var j = 0; j < cols; j++) {
+                        var td = $('<td class="editableTable"></td>')
+
+                        if (j == 0) {
+                            td.text(i)
+                        }
+                        else if (i == 0 && j == 3 || i == 0 && j == 4 || i == 0 && j == 5 || i == 0 && j == 6) {
+                            td.text((Math.round(0 * 100) / 100).toFixed(2))
+                        }
+                        else if (j == 2 && i == 0 || j == 7 && i == 0) {
+                            td.text((Math.round(sum * 100) / 100).toFixed(2))
+                        }
+                        else if (j == 7) {
+                            td.text('-' + (Math.round(data[sum / 1000 - 1][nrMonth - 1][1] * 100) / 100).toFixed(2))
+                        }
+                        else if (j == 6) {
+                            td.text((Math.round(data[sum / 1000 - 1][nrMonth - 1][3] / nrMonth * 100) / 100).toFixed(2))
+                        }
+                        else if (j == 5 || j == 3) {
+                            td.text((Math.round((data[sum / 1000 - 1][nrMonth - 1][1] - data[sum / 1000 - 1][nrMonth - 1][3] / nrMonth) * 100) / 100).toFixed(2))
+                        }
+                        else if (j == 4) {
+                            td.text((Math.round(0 * 100) / 100).toFixed(2))
+                        }
+                        else if (j == 2) {
+                            td.text((Math.round(soldCredit * 100) / 100).toFixed(2))
+                            soldCredit = soldCredit - (Math.round((data[sum / 1000 - 1][nrMonth - 1][1] - data[sum / 1000 - 1][nrMonth - 1][3] / nrMonth) * 100) / 100).toFixed(2)
+                        }
+                        else if (j == 1 && i == 0) {
+                            td.text(output)
+                        }
+                        else if (j == 1) {
+                            if (i == 1) {
+                                if (months + 1 == 2) {
+                                    newdate.setDate(newdate.getDate() + 30);
+                                }
+                                else {
+                                    var daysInMonth = new Date(years, months + 1, 0).getDate();
+                                    newdate.setDate(newdate.getDate() + (daysInMonth - 1));
+                                }
+                            }
+                            else if (i > 1) {
+                                if (months == 1
+                                    || months == 3
+                                    || months == 5
+                                    || months == 7
+                                    || months == 8
+                                    || months == 10
+                                    || months == 12) {
+                                    newdate.setDate(newdate.getDate() + 31);
+                                }
+                                else if (months == 2
+                                    || months == 4
+                                    || months == 6
+                                    || months == 9
+                                    || months == 11) {
+                                    newdate.setDate(newdate.getDate() + 30);
+                                }
+                            }
+
+                            months = newdate.getMonth() + 1;
+
+                            var newMonths = newdate.getMonth() + 1;
+                            var newDays = newdate.getDate();
+                            var newYears = newdate.getFullYear()
+
+                            var newOutput = newYears + '/' +
+                                (newMonths < 10 ? '0' : '') + newMonths + '/' +
+                                (newDays < 10 ? '0' : '') + newDays;
+
+                            td.text(newOutput)
+                        }
+
+                        tr.append(td)
+                    }
+
+                    parent.append(tr)
+                }
+            }
+
+            $(".myPopup1").fadeIn()
+        })
+
+        $("#details2").click(function () {
+            $(".myPopup2").fadeIn()
+        })
+
+        $(".myPopup, .close").click(function () {
+            $(".myPopup").fadeOut()
+        })
+
+        $('.myPopup-content').click(function () { return false; });
+    </script>
+</body>
+
+</html>
