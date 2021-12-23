@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>File Compressor</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' href='styles.css'>
+</head>
+
+<body>
+	<div class="content">
+		<br>
+		<h1 id="heading">COMPRIMA SAU DE-COMPRIMA FISIERUL TAU IN DOI PASI !!</h1>
+		<br><br>
+		<hr><br>
+		<div>
+			<div class="myUpload myUpload1">
+				<img src="assets/text_file_icon.png" id="textImg">
+				<h2>PASUL 1: Incarca Fisierul</h2>
+			</div>
+			<br><br>
+			<div id="step1">
+				<div class="myUpload myUpload2">
+					<br>
+					<form method="post" enctype="multipart/form-data" class="form" id="fileform">
+						<input type="file" id="uploadfile" class="input">
+						<label for="uploadfile" class="myLabel">CLICK (doar fisiere .txt)</label>
+						<br><br><br>
+						<input type="button" id="submitbtn" class="input" value="Trimite">
+					</form>
+				</div>
+			</div>
+			<br><br>
+			<hr><br>
+			<div class="myUpload myUpload1">
+				<img src="assets/option.jpg" id="optionsImg">
+				<h2>PASUL 2: Alege Optiunea</h2>
+			</div>
+			<div id="step2">
+				<br>
+				<button type="button" id="encode" class="button myLabel2">COMPRIMA</button>
+				<button type="button" id="decode" class="button myLabel2">DE-COMPRIMA</button>
+				<br>
+			</div>
+			<br><br>
+			<hr><br>
+			<span id="text4">
+				<button type="button" class="myLabel2" style="background: rgb(137, 137, 255);"
+					onclick="location.reload()">CLICK - pentru a incepe din nou </button>
+			</span>
+		</div>
+	</div>
+
+	<script src='script.js' type="text/javascript"></script>
+</body>
+
+</html>

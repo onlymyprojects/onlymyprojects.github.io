@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cuprum', sans-serif;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.content {
+    width: fit-content;
+    border: 5px solid #E5E5E5;
+    margin: 20px auto 20px auto;
+    display: block;
+    padding: 20px;
+}
+
+.myUpload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myUpload1 {
+    margin-top: 20px;
+}
+
+#textImg {
+    width: 100px;
+    margin-right: 10px;
+}
+
+#uploadfile {
+    width: 170px;
+    position: absolute;
+    margin-left: 99px;
+}
+
+.myLabel {
+    font-size: 20px;
+    color: white;
+    background: rgb(255, 86, 86);
+    padding: 10px 25px 10px 25px;
+    box-shadow: -5px 5px 2px grey;
+    position: relative;
+    right: 33px;
+}
+
+.myLabel:active {
+    right: 36px;
+    top: 3px;
+    box-shadow: -2px 2px 2px grey;
+}
+
+#submitbtn {
+    font-size: 25px;
+    color: rgb(137, 137, 255);
+    background: transparent;
+    padding: 5px 30px 5px 30px;
+    outline: none;
+    border: 2px solid rgb(137, 137, 255);
+    border-radius: 30px;
+    transition: .3s;
+}
+
+#submitbtn:hover {
+    transition: .3s;
+    color: white;
+    background: rgb(137, 137, 255);
+}
+
+#optionsImg {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.myLabel2 {
+    font-size: 20px;
+    color: white;
+    background: rgb(255, 86, 86);
+    padding: 10px 25px 10px 25px;
+    box-shadow: -5px 5px 2px grey;
+    position: relative;
+    border: none;
+    outline: none;
+    margin: 10px;
+}
+
+.myLabel2:active {
+    right: 3px;
+    top: 3px;
+    box-shadow: -2px 2px 2px grey;
+}
+
+#doneImg {
+    width: 80px;
+}
